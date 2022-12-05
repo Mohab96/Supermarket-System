@@ -1,1 +1,1 @@
-# supermarketSystem
+# Supermarket system
