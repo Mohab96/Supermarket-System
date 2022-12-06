@@ -15,6 +15,7 @@ namespace supermarketSystem
         public Form1()
         {
             InitializeComponent();
+            //test
         }
     }
 }
