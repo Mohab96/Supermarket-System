@@ -25,22 +25,22 @@ namespace supermarketSystem
             this.cashBalance = cashBalance;
 
             string path = "CustomerID_" + Id;
-            Program.writeOnFile(path, fullName);
-            Program.writeOnFile(path, password);
-            Program.writeOnFile(path, email);
-            Program.writeOnFile(path, phoneNumber);
-            Program.writeOnFile(path, address);
-            Program.writeOnFile(path, id);
-            Program.writeOnFile(path, cashBalance.ToString());
+            Global.writeOnFile(path, fullName);
+            Global.writeOnFile(path, password);
+            Global.writeOnFile(path, email);
+            Global.writeOnFile(path, phoneNumber);
+            Global.writeOnFile(path, address);
+            Global.writeOnFile(path, id);
+            Global.writeOnFile(path, cashBalance.ToString());
         }
 
         void updateFile(int idx, string val)
         {
             string path = "CustomerID_" + Id;
-            List<string> data = Program.readFromFile(path);
+            List<string> data = Global.readFromFile(path);
             data[idx] = val;
             foreach (var item in data)
-                Program.writeOnFile(path, item);
+                Global.writeOnFile(path, item);
         }
 
         public string FullName
