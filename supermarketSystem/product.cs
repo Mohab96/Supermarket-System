@@ -17,25 +17,31 @@ namespace supermarketSystem
         private double price;
         private double discount;
         private DateTime expirydate;
-        private PictureBox image ;
+        private PictureBox image;
+        string imgUrl; /// (mohab) => (mas) : need this to be able to load the image when the databse loads
 
-        public product(string name ,int quantity , double price,double discount , DateTime expirydate, PictureBox image)
+        /// (mohab) => (mas) : Finish the class with files and add the body of the setters 
+
+        public product(string name, int quantity, double price, double discount, DateTime expirydate, string imgUrl)
         {
+            /// (mohab) => (mas) : I removed picturebox from the parameters and added the url of the image to be able to load it form the files
             this.name = name;
             this.quantity = quantity;
             this.price = price;
             this.discount = discount;
             this.expirydate = expirydate;
-            this.image = image;
+            this.imgUrl = imgUrl;
+
+            /// (mohab) => (mas) : add update the files here
         }
 
-
+        /// (mohab) => (mas) : add the body of the setters
         public string Name { get; set; }
         public int Quantity { get; set; }
         public int Price { get; set; }
         public int Discount { get; set; }
         public int Expirydate { get; set; }
-        public int Image { get; set; } 
+        public int Image { get; set; }
 
     }
 }
