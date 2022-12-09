@@ -24,6 +24,7 @@ namespace supermarketSystem
             this.phoneNumber = phoneNumber;
             this.id = id;
             string path = "AdminID_" + this.id + ".txt";
+            Global.writeOnFile(path, String.Empty);
             Global.writeOnFile(path, fullName);
             Global.writeOnFile(path, password);
             Global.writeOnFile(path, email);
@@ -36,6 +37,7 @@ namespace supermarketSystem
             string path = "AdminID_" + this.id + ".txt";
             List<string> data = Global.readFromFile(path);
             data[idx] = val;
+            Global.writeOnFile(path, String.Empty);
             foreach (var item in data)
                 Global.writeOnFile(path, item);
         }
