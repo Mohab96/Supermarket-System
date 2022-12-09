@@ -24,19 +24,19 @@ namespace supermarketSystem
             this.phoneNumber = phoneNumber;
             this.id = id;
             string path = "AdminID_" + this.id;
-            Program.writeOnFile(path, fullName);
-            Program.writeOnFile(path, password);
-            Program.writeOnFile(path, email);
-            Program.writeOnFile(path, phoneNumber);
-            Program.writeOnFile(path, id);
+            Global.writeOnFile(path, fullName);
+            Global.writeOnFile(path, password);
+            Global.writeOnFile(path, email);
+            Global.writeOnFile(path, phoneNumber);
+            Global.writeOnFile(path, id);
         }
         void updateFile(int idx, string val)
         {
             string path = "AdminID_" + this.id;
-            List<string> data = Program.readFromFile(path);
+            List<string> data = Global.readFromFile(path);
             data[idx] = val;
             foreach (var item in data)
-                Program.writeOnFile(path, item);
+                Global.writeOnFile(path, item);
         }
 
         // Properties 
