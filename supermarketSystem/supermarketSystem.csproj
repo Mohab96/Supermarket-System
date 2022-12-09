@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="invoice.cs" />
+    <Compile Include="loadDatabase.cs" />
     <Compile Include="product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +66,11 @@
     </Compile>
     <Compile Include="QuantityForm.Designer.cs">
       <DependentUpon>QuantityForm.cs</DependentUpon>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -80,6 +86,8 @@
     </Compile>
     <EmbeddedResource Include="QuantityForm.resx">
       <DependentUpon>QuantityForm.cs</DependentUpon>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

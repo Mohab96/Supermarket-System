@@ -11,7 +11,7 @@ namespace supermarketSystem
         string fullName, password, email, phoneNumber, address, id;
         double cashBalance;
         List<Tuple<string, int>> cart = new List<Tuple<string, int>>(); // product id and quantity
-        List<string> purchaseLog = new List<string>(); // all invoices for this customer
+        List<string> invoicesIDs = new List<string>(); // all invoices for this customer (it was purchaseLog)
 
         public customer(string fullName, string password, string email,
             string phoneNumber, string address, string id, double cashBalance)
@@ -24,7 +24,8 @@ namespace supermarketSystem
             this.id = id;
             this.cashBalance = cashBalance;
 
-            string path = "CustomerID_" + Id;
+            string path = "CustomerID_" + id + ".txt";
+            Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
             Global.writeOnFile(path, fullName);
             Global.writeOnFile(path, password);
             Global.writeOnFile(path, email);
@@ -32,13 +33,17 @@ namespace supermarketSystem
             Global.writeOnFile(path, address);
             Global.writeOnFile(path, id);
             Global.writeOnFile(path, cashBalance.ToString());
+
+            path = "invoicesIDs_" + id + ".txt";
+            invoicesIDs = Global.readFromFile(path);
         }
 
         void updateFile(int idx, string val)
         {
-            string path = "CustomerID_" + Id;
+            string path = "CustomerID_" + id + ".txt";
             List<string> data = Global.readFromFile(path);
             data[idx] = val;
+            Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
             foreach (var item in data)
                 Global.writeOnFile(path, item);
         }
@@ -113,17 +118,17 @@ namespace supermarketSystem
             }
         }
 
-        void addToCart(string productId)
+        public void addToCart(string productId)
         {
             // form to take the quantity of that product
         }
 
-        void proceedToCheckout()
+        public void proceedToCheckout()
         {
             // Pay form
         }
 
-        void customerMainMenu()
+        public void customerMainMenu()
         {
             // User main menu form
         }

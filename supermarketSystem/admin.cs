@@ -23,18 +23,21 @@ namespace supermarketSystem
             this.email = email;
             this.phoneNumber = phoneNumber;
             this.id = id;
-            string path = "AdminID_" + this.id;
+            string path = "AdminID_" + this.id + ".txt";
+            Global.writeOnFile(path, String.Empty);
             Global.writeOnFile(path, fullName);
             Global.writeOnFile(path, password);
             Global.writeOnFile(path, email);
             Global.writeOnFile(path, phoneNumber);
             Global.writeOnFile(path, id);
         }
+
         void updateFile(int idx, string val)
         {
-            string path = "AdminID_" + this.id;
+            string path = "AdminID_" + this.id + ".txt";
             List<string> data = Global.readFromFile(path);
             data[idx] = val;
+            Global.writeOnFile(path, String.Empty);
             foreach (var item in data)
                 Global.writeOnFile(path, item);
         }
