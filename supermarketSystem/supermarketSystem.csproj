@@ -47,7 +47,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accessLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accessLog.Designer.cs">
+      <DependentUpon>accessLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin.cs" />
+    <Compile Include="adminMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminMainMenu.Designer.cs">
+      <DependentUpon>adminMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="customer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -58,7 +82,12 @@
     <Compile Include="Global.cs" />
     <Compile Include="invoice.cs" />
     <Compile Include="loadDatabase.cs" />
-    <Compile Include="map.cs" />
+    <Compile Include="payForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payForm.Designer.cs">
+      <DependentUpon>payForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +102,12 @@
     </Compile>
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userMainMenu.Designer.cs">
+      <DependentUpon>userMainMenu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
