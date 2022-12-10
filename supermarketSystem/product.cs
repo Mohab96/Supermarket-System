@@ -49,7 +49,7 @@ namespace supermarketSystem
         
         void updateFile(int idx, string val)
         {
-            string path = "productID_" + id + ".txt";
+            string path = "ProductID_" + id + ".txt";
             List<string> productdata = Global.readFromFile(path);
             productdata[idx] = val;
             Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
@@ -107,11 +107,10 @@ namespace supermarketSystem
             }
         }
 
-        /// (mas) => (mohab) : 
+     
         public string Image
         {
             /// search about this 
-
             get { return imgUrl; }
             set
             {
