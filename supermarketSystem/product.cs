@@ -34,7 +34,7 @@ namespace supermarketSystem
             this.expirydate = expirydate;
             this.imgUrl = imgUrl;
 
-            string path = "productname" + productname + ".txt";
+            string path = "productname_" + productname + ".txt";
 
             Global.writeOnFile(path, String.Empty);
             Global.writeOnFile(path, productname);

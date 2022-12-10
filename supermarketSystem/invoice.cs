@@ -29,7 +29,7 @@ namespace supermarketSystem
             this.discountPer = discountPer ;
             this.totalprice = totalprice;
 
-            string path = "invoice id : " + id + ".txt";
+            string path = "invoiceid_" + id + ".txt";
             Global.writeOnFile(path, String.Empty);
             Global.writeOnFile(path, date.ToString());
             Global.writeOnFile(path, tax.ToString());
