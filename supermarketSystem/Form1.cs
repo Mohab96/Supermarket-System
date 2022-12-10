@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace supermarketSystem
 {
-
     public partial class Form1 : Form
     {
         public Form1()
@@ -21,7 +20,7 @@ namespace supermarketSystem
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide(); // hiding the current form 
-            Signup signup=new Signup(); //taking object of the signup form 
+            Signup signup = new Signup(); //taking object of the signup form 
             signup.ShowDialog();  //showing the contents of the signup form
             this.Close();  // closing the current form to avoid memory issues 
         }
@@ -38,12 +37,12 @@ namespace supermarketSystem
                 // show the user main menu 
                 return;
             }
-            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text)) 
+            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text))
             {
-                // show the admin main meu 
+                // show the admin main menu 
                 return;
             }
-            MessageBox.Show("Sorry..invalid Email or password"); 
+            MessageBox.Show("Sorry..invalid Email or password");
 
         }
     }

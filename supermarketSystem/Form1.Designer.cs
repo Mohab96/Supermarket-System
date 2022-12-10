@@ -118,7 +118,7 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Loginbutton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
