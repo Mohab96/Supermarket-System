@@ -14,27 +14,26 @@ namespace supermarketSystem
     {
         private string productname;
         private int quantity;
+        private string id ;
         private double price;
         private int discount;
         private DateTime expirydate;
-        /// private PictureBox image;
-        string imgUrl; /// (mas) => (mohab) : i dont understand this var
+        private PictureBox image;
+        string imgUrl; 
 
-        /// (mohab) => (mas) : Finish the class with files and add the body of the setters 
-        /// (mas) => (mohab) : خلصانه
+       
 
-        public product(string productname, int quantity, double price, int  discount, DateTime expirydate, string imgUrl)
+        public product(string productname, int quantity,string id , double price, int  discount, DateTime expirydate, string imgUrl)
         {
-            /// (mohab) => (mas) : I removed picturebox from the parameters and added the url of the image to be able to load it form the files
-            /// (mas) => (mohab) : هعديهالك المرادي
+           
             this.productname = productname;
             this.quantity = quantity;
             this.price = price;
             this.discount = discount;
             this.expirydate = expirydate;
-            this.imgUrl = imgUrl;
+            this.imgUrl = imgUrl; ///method : take url and put the pic in pic box
 
-            string path = "productname_" + productname + ".txt";
+            string path = "ProductID_" + id + ".txt";
 
             Global.writeOnFile(path, String.Empty);
             Global.writeOnFile(path, productname);
@@ -45,15 +44,12 @@ namespace supermarketSystem
             Global.writeOnFile(path, imgUrl.ToString());
             
 
-
-            /// (mas) => (mohab) : done ya 3tlaan
         }
 
-        /// (mas) => (mohab) : i copied this fun "updateFile" from custmer class and make an edit on my copy
-        /// because there are an erorr with updatefile  "updatefile dont declared"
+        
         void updateFile(int idx, string val)
         {
-            string path = "CustomerID_" + productname + ".txt";
+            string path = "productID_" + id + ".txt";
             List<string> productdata = Global.readFromFile(path);
             productdata[idx] = val;
             Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
@@ -61,9 +57,7 @@ namespace supermarketSystem
                 Global.writeOnFile(path, item);
         }
 
-        /// (mohab) => (mas) : add the body of the setters
-        /// (mas) => (mohab) : ما قولنا خلصانه هو حوار 
-        /// راجع بس كده على شغل الفايلز بتاعي 
+         
         public string Name {
             get { return productname; }
             set
@@ -80,11 +74,18 @@ namespace supermarketSystem
                 quantity = value;
             }
         }
+        public string Id {
+        get { return id; }
+            set
+            {
+                updateFile(2, value);
+            }
+           }
         public double Price {
             get { return price; }
             set
             {
-                updateFile(2, value.ToString());
+                updateFile(3, value.ToString());
                 price = value;
             }
         }
@@ -93,7 +94,7 @@ namespace supermarketSystem
             get { return discount; }
             set
             {
-                updateFile(3, value.ToString());
+                updateFile(4, value.ToString());
                 discount = value;
             }
         }
@@ -101,7 +102,7 @@ namespace supermarketSystem
             get { return expirydate; }
             set
             {
-                updateFile(4, value.ToString());
+                updateFile(5, value.ToString());
                 expirydate = value;
             }
         }
@@ -109,10 +110,12 @@ namespace supermarketSystem
         /// (mas) => (mohab) : 
         public string Image
         {
+            /// search about this 
+
             get { return imgUrl; }
             set
             {
-                updateFile(5, value.ToString());
+                updateFile(6, value);
                 imgUrl = value;
             }
         }

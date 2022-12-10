@@ -13,23 +13,24 @@ namespace supermarketSystem
     public class invoice
     {
         private DateTime date;
-        List<product> productlist ;  
-        // List<int,product> productlist
+        List<Tuple<int,string>> productlist ;  /// int=> quantity  string id
         private int tax;
         private string id;
         private int discountPer;
         private double totalprice;
+        /// method : format invoice 
+        /// method : download file
 
         public invoice(DateTime date , int tax , string id , int discountPer , double totalprice)
         {
             this.date = date;
-            this.productlist = new List<product>() ;
+            this.productlist = new List<Tuple<int,string>>() ;
             this.tax = tax;
             this.id= id;
-            this.discountPer = discountPer ;
+            this.discountPer = discountPer; 
             this.totalprice = totalprice;
 
-            string path = "invoiceid_" + id + ".txt";
+            string path = "InvoiceID_" + id + ".txt";
             Global.writeOnFile(path, String.Empty);
             Global.writeOnFile(path, date.ToString());
             Global.writeOnFile(path, tax.ToString());
@@ -37,23 +38,22 @@ namespace supermarketSystem
             Global.writeOnFile(path, discountPer.ToString());
             Global.writeOnFile(path, totalprice.ToString());
 
-            foreach (product p in productlist)
-            { Global.writeOnFile(path, p.ToString() ); }
-
+            foreach ( Tuple<int,string> p in productlist)
+            { }
+            /// write on file the quantity and id with loop
         }
-        /// (mohab) => (mas) : Add the constructor and format the text file in the same constructor
-        /// (mohab) => (mas) : Add the products list
-        /// (mohab) => (mas) : Add the method that download the invoice as pdf file
+        
+
+
+
 
         public void DownloadFile(Uri address, string fileName)
         {
 
         }
+       
         
 
-        ///(mas) => (team) : 
-        ///1- how can i init. list with two Parameter..note:C# doesn't have built-in Map 
-
-        /// 2- download file  : with my search i found this way but i dont understand it totaly
+       
     }
 }
