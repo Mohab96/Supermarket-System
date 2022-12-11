@@ -32,13 +32,13 @@ namespace supermarketSystem
                 MessageBox.Show("Please Fill All The Information");
                 return;
             }
-            if (Global.usersCredentials.ContainsKey(EmailTextbox.Text))
-            {
+            if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text]==PasswordTextbox.Text)
+            {   // checking that the Email and password are right
                 // show the user main menu 
                 return;
             }
-            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text))
-            {
+            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.adminsCredentials[EmailTextbox.Text]==PasswordTextbox.Text)
+            {   // checking that the Email and password are right
                 // show the admin main menu 
                 return;
             }

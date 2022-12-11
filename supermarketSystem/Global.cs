@@ -55,6 +55,7 @@ namespace supermarketSystem
         public static string fixedPathForAllAdminsIDs = "AllAdminsIDs.txt";
         public static string fixedPathForAllProductsIDs = "AllProductsIDs.txt";
         public static string fixedPathForGeneralID = "GeneralID.txt";
+        public static admin currAdmin;  // holds the admin object that currently signed in
 
         public static List<string> customersIDs = new List<string>(); // The IDs of the files that store the data of the customers
         public static List<string> adminsIDs = new List<string>(); // The IDs of the files that store the data of the admins
@@ -63,6 +64,7 @@ namespace supermarketSystem
         public static Hashtable allProducts = new Hashtable(); // id, product
         public static Hashtable allCustomers = new Hashtable(); // id, customer
         public static Hashtable allAdmins = new Hashtable(); // id, admin
+
 
         public static Hashtable usersCredentials = new Hashtable(); // email, password
         public static Hashtable adminsCredentials = new Hashtable(); // email, password
