@@ -15,15 +15,14 @@ namespace supermarketSystem
             // Write the string target in the file fileName
             try
             {
-                using (StreamWriter sw = new StreamWriter(fileName))
+                using (StreamWriter sw = File.AppendText(fileName))
                 {
                     sw.WriteLine(target);
-                    sw.Close();
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("The file could not be read:");
+                Console.WriteLine("The file could not be read");
                 Console.WriteLine(e.Message);
             }
         }
@@ -49,6 +48,10 @@ namespace supermarketSystem
             }
 
             return file;
+        }
+        public static void clearFile(string path)
+        {
+            File.WriteAllText(path, string.Empty);
         }
 
         public static string fixedPathForAllCustomersIDs = "AllCusomersIDs.txt";

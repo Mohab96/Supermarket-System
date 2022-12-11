@@ -25,7 +25,7 @@ namespace supermarketSystem
             this.cashBalance = cashBalance;
 
             string path = "CustomerID_" + id + ".txt";
-            Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
+            Global.clearFile(path); // Clear the file before writing on it
             Global.writeOnFile(path, fullName);
             Global.writeOnFile(path, password);
             Global.writeOnFile(path, email);
@@ -43,7 +43,7 @@ namespace supermarketSystem
             string path = "CustomerID_" + id + ".txt";
             List<string> data = Global.readFromFile(path);
             data[idx] = val;
-            Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
+            Global.clearFile(path); // Clear the file before writing on it
             foreach (var item in data)
                 Global.writeOnFile(path, item);
         }

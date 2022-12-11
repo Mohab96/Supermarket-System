@@ -54,7 +54,7 @@ namespace supermarketSystem
                 int generalID = int.Parse(generalIdFile[0]);
                 generalID += 213;
 
-                Global.writeOnFile(Global.fixedPathForGeneralID, String.Empty);
+                Global.clearFile(Global.fixedPathForGeneralID);
                 Global.writeOnFile(Global.fixedPathForGeneralID, generalID.ToString());
 
                 customer newCustomer = new customer(fullName.Text, password.Text, email.Text, phoneNumber.Text

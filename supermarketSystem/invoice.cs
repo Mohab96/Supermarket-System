@@ -32,7 +32,7 @@ namespace supermarketSystem
             this.totalprice = totalprice;
 
             string path = "InvoiceID_" + id + ".txt";
-            Global.writeOnFile(path, String.Empty);
+            Global.clearFile(path);
             Global.writeOnFile(path, date.ToString());
             Global.writeOnFile(path, tax.ToString());
             Global.writeOnFile(path, id.ToString());
@@ -43,6 +43,8 @@ namespace supermarketSystem
             {
                 Global.writeOnFile(path, p.Item1.ToString());
                 Global.writeOnFile(path, p.Item2);
+                /// (mohab)=>(mas) : There is a problem here .. these two line write different data 
+                /// on the same file .. Create a path for the quantity and another one for hte ID 
             }
             /// write on file the quantity and id with loop >> done
         }
@@ -52,7 +54,7 @@ namespace supermarketSystem
             string path = "InvoiceID_" + id + ".txt";
             List<string> invoicedata = Global.readFromFile(path);
             invoicedata[idx] = val;
-            Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
+            Global.clearFile(path); // Clear the file before writing on it
             foreach (var item in invoicedata)
                 Global.writeOnFile(path, item);
         }

@@ -22,7 +22,6 @@ namespace supermarketSystem
         string imgUrl; 
 
        
-
         public product(string productname, int quantity,string id , double price, int  discount, DateTime expirydate, string imgUrl)
         {
            
@@ -35,7 +34,7 @@ namespace supermarketSystem
 
             string path = "ProductID_" + id + ".txt";
 
-            Global.writeOnFile(path, String.Empty);
+            Global.clearFile(path);
             Global.writeOnFile(path, productname);
             Global.writeOnFile(path, quantity.ToString());
             Global.writeOnFile(path, price.ToString());
@@ -52,7 +51,7 @@ namespace supermarketSystem
             string path = "ProductID_" + id + ".txt";
             List<string> productdata = Global.readFromFile(path);
             productdata[idx] = val;
-            Global.writeOnFile(path, String.Empty); // Clear the file before writing on it
+            Global.clearFile(path); // Clear the file before writing on it
             foreach (var item in productdata)
                 Global.writeOnFile(path, item);
         }
