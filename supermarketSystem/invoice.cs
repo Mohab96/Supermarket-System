@@ -15,7 +15,7 @@ namespace supermarketSystem
     public class invoice
     {
         private DateTime date;
-        List<Tuple<int,string>> productlist ;  /// int quantity  string id
+        List<Tuple<int, string>> productlist;  /// int quantity  string id
         private int tax;
         private string id;
         private int discountPer;
@@ -23,13 +23,13 @@ namespace supermarketSystem
         /// method : invoice format 
         /// method : download file >> done 
 
-        public invoice(DateTime date , int tax , string id , int discountPer , double totalprice)
+        public invoice(DateTime date, int tax, string id, int discountPer, double totalprice)
         {
             this.date = date;
-            this.productlist = new List<Tuple<int,string>>() ;
+            this.productlist = new List<Tuple<int, string>>();
             this.tax = tax;
-            this.id= id;
-            this.discountPer = discountPer; 
+            this.id = id;
+            this.discountPer = discountPer;
             this.totalprice = totalprice;
 
             string path = "InvoiceID_" + id + ".txt";
@@ -41,13 +41,12 @@ namespace supermarketSystem
             Global.writeOnFile(path, totalprice.ToString());
 
             string Quan_path = "QuantityID_" + id + ".txt";
-            foreach (Tuple<int,string> p in productlist)
+            foreach (Tuple<int, string> p in productlist)
             {
                 Global.writeOnFile(Quan_path, p.Item1.ToString());
                 Global.writeOnFile(path, p.Item2);
-                /// (mohab)=>(mas) : There is a problem here .. these two line write different data 
+                /// (mohab)=>(mas) : There is a problem here .. these two lines write different data 
                 /// on the same file .. Create a path for the quantity and another one for the ID 
-
             }
             /// write on file the quantity and id with loop >> done
         }
@@ -108,12 +107,9 @@ namespace supermarketSystem
             }
         }
 
-
-
-
-        private void create_pdf_file(customer c , invoice i )
+        private void create_pdf_file(customer c, invoice i)
         {
-            string filepath = "InvoiceID_" + c.Id + i.Id + ".txt" ;
+            string filepath = "InvoiceID_" + c.Id + i.Id + ".txt";
 
             filepath = filepath.Replace(".txt", ".pdf");
 
@@ -131,9 +127,5 @@ namespace supermarketSystem
 
             System.Diagnostics.Process.Start(filepath);
         }
-
-
-
-
     }
 }
