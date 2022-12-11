@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -19,8 +20,8 @@ namespace supermarketSystem
         private string id;
         private int discountPer;
         private double totalprice;
-        /// method : format invoice 
-        /// method : download file
+        /// method : invoice format 
+        /// method : download file >> done 
 
         public invoice(DateTime date , int tax , string id , int discountPer , double totalprice)
         {
@@ -39,12 +40,14 @@ namespace supermarketSystem
             Global.writeOnFile(path, discountPer.ToString());
             Global.writeOnFile(path, totalprice.ToString());
 
+            string Quan_path = "QuantityID_" + id + ".txt";
             foreach (Tuple<int,string> p in productlist)
             {
-                Global.writeOnFile(path, p.Item1.ToString());
+                Global.writeOnFile(Quan_path, p.Item1.ToString());
                 Global.writeOnFile(path, p.Item2);
                 /// (mohab)=>(mas) : There is a problem here .. these two line write different data 
-                /// on the same file .. Create a path for the quantity and another one for hte ID 
+                /// on the same file .. Create a path for the quantity and another one for the ID 
+
             }
             /// write on file the quantity and id with loop >> done
         }
@@ -108,18 +111,25 @@ namespace supermarketSystem
 
 
 
-        public void downloadfile()
+        private void create_pdf_file(customer c , invoice i )
         {
-            using (OpenFileDialog file = new OpenFileDialog())
-            {
-                
-                file.ShowDialog();
-                
-                ///txtInput.Text = file.FileName;
-            }
+            string filepath = "InvoiceID_" + c.Id + i.Id + ".txt" ;
 
-            ///txtOutput.Text = (txtInput.Text).Replace(".txt", ".pdf");
+            filepath = filepath.Replace(".txt", ".pdf");
 
+            StreamReader rdr = new StreamReader(filepath);
+            Document d = new Document();
+
+            PdfWriter.GetInstance(d, new FileStream(filepath, FileMode.Create));
+
+            d.Open();
+
+            d.Add(new Paragraph(rdr.ReadToEnd()));
+            d.Close();
+
+            MessageBox.Show("creating your pdf....");
+
+            System.Diagnostics.Process.Start(filepath);
         }
 
 
