@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace supermarketSystem
 {
-    class customer
+    public class customer
     {
         string fullName, password, email, phoneNumber, address, id;
         double cashBalance;
