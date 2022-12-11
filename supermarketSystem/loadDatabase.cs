@@ -34,26 +34,33 @@ namespace supermarketSystem
             }
         }
 
-        //void loadProducts()
-        //{
-        //    Global.productsIDs = Global.readFromFile(Global.fixedPathForAllProductsIDs);
-        //    foreach (string ID in Global.productsIDs)
-        //    {
-        //        string path = "ProductID_" + ID + ".txt";
-        //        List<string> data = Global.readFromFile(path);
-        //        product newProduct = new product(data[0], int.Parse(data[1]), double.Parse(data[2]), double.Parse(data[3]), DateTime.Parse(data[4]), data[5]);
-        //        Global.allProducts[ID] = newProduct;
-        //    }
-        //}
+        void loadProducts()
+        {
+            Global.productsIDs = Global.readFromFile(Global.fixedPathForAllProductsIDs);
+            foreach (string ID in Global.productsIDs)
+            {
+                string path = "ProductID_" + ID + ".txt";
+                List<string> data = Global.readFromFile(path);
+                product newProduct = new product(data[0], int.Parse(data[1]), data[2], double.Parse(data[3]), int.Parse(data[4]), DateTime.Parse(data[4]), data[5]);
+                Global.allProducts[ID] = newProduct;
+            }
+        }
 
-        /// void loadInvoices() { } (will be finalised when the invoice class is done)
+        void loadInvoices()
+        {
+            /// This method is for admins .. the customers have their invoices loaded in their constructors
+            List<string> allInvoices = Global.readFromFile(Global.fixedPathForAllInvoicesIDs);
+
+            foreach (var item in allInvoices)
+                Global.invoiceIDs.Add(item);
+        }
 
         public loadDatabase()
         {
             loadCustomers();
             loadAdmins();
-            /// loadProducts();
-            /// loadInvoices(); (class invoice isn't complete .. so this method will be delayed)
+            loadProducts();
+            loadInvoices();
         }
     }
 }

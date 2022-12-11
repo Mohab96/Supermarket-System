@@ -21,7 +21,6 @@ namespace supermarketSystem
         private PictureBox image;
         string imgUrl; 
 
-       
         public product(string productname, int quantity,string id , double price, int  discount, DateTime expirydate, string imgUrl)
         {
            
@@ -37,12 +36,11 @@ namespace supermarketSystem
             Global.clearFile(path);
             Global.writeOnFile(path, productname);
             Global.writeOnFile(path, quantity.ToString());
+            // (mohab) => (mas) : You forgot to write the id to the file
             Global.writeOnFile(path, price.ToString());
             Global.writeOnFile(path, discount.ToString());
             Global.writeOnFile(path, expirydate.ToString());
             Global.writeOnFile(path, imgUrl.ToString());
-            
-
         }
 
         
@@ -65,6 +63,7 @@ namespace supermarketSystem
                 productname = value;
             }
         }
+
         public int Quantity {
             get { return quantity; }
             set
@@ -73,13 +72,21 @@ namespace supermarketSystem
                 quantity = value;
             }
         }
+
         public string Id {
         get { return id; }
             set
             {
                 updateFile(2, value);
+                /// (mohab) => (mas) : You updated the file but you forgot to 
+                /// update the variable in teh class .. look at the other classes
+                /*
+                 * You should write this
+                 * id = value;
+                 */
             }
            }
+
         public double Price {
             get { return price; }
             set
@@ -88,6 +95,7 @@ namespace supermarketSystem
                 price = value;
             }
         }
+
         public int Discount
         {
             get { return discount; }
@@ -97,6 +105,7 @@ namespace supermarketSystem
                 discount = value;
             }
         }
+
         public DateTime Expirydate {
             get { return expirydate; }
             set
@@ -105,9 +114,7 @@ namespace supermarketSystem
                 expirydate = value;
             }
         }
-        
-
-
+       
         public string Image
         {
             /// search about this 
@@ -116,6 +123,8 @@ namespace supermarketSystem
             {
                 updateFile(6, value);
                 imgUrl = value;
+                // (mohab) => (mas) : You should here call the method that puts the picture with url (imgUrl)
+                // and update the picture box in the product
             }
         }
 
