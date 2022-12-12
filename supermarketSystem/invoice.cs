@@ -15,7 +15,7 @@ namespace supermarketSystem
     public class invoice
     {
         private DateTime date;
-        List<Tuple<int, string>> productlist;  /// int quantity  string id
+        Dictionary<string, int> productlist;  /// string>>id   int>>quantity  
         private int tax;
         private string id;
         private int discountPer;
@@ -26,7 +26,7 @@ namespace supermarketSystem
         public invoice(DateTime date, int tax, string id, int discountPer, double totalprice)
         {
             this.date = date;
-            this.productlist = new List<Tuple<int, string>>();
+            this.productlist = new Dictionary<string,int>();
             this.tax = tax;
             this.id = id;
             this.discountPer = discountPer;
@@ -41,14 +41,13 @@ namespace supermarketSystem
             Global.writeOnFile(path, totalprice.ToString());
 
             string Quan_path = "QuantityID_" + id + ".txt";
-            foreach (Tuple<int, string> p in productlist)
+            foreach (KeyValuePair<string, int> p in productlist)
             {
-                Global.writeOnFile(Quan_path, p.Item1.ToString());
-                Global.writeOnFile(path, p.Item2);
+                Global.writeOnFile(Quan_path, p.Value.ToString());
+                Global.writeOnFile(path, p.Key);
                 /// (mohab)=>(mas) : There is a problem here .. these two lines write different data 
-                /// on the same file .. Create a path for the quantity and another one for the ID 
+                /// on the same file .. Create a path for the quantity and another one for the ID  >> done plz check it 
             }
-            /// write on file the quantity and id with loop >> done
         }
 
         void updateFile(int idx, string val)
@@ -56,7 +55,7 @@ namespace supermarketSystem
             string path = "InvoiceID_" + id + ".txt";
             List<string> invoicedata = Global.readFromFile(path);
             invoicedata[idx] = val;
-            Global.clearFile(path); // Clear the file before writing on it
+            Global.clearFile(path); 
             foreach (var item in invoicedata)
                 Global.writeOnFile(path, item);
         }
@@ -107,7 +106,13 @@ namespace supermarketSystem
             }
         }
 
-        private void create_pdf_file(customer c, invoice i)
+        /// problem here how can i creat getter and setter to the Dictionary
+        public Dictionary<string, int> Productlist
+        {
+            get; set;
+        }
+
+        public void create_pdf_file(customer c, invoice i)
         {
             string filepath = "InvoiceID_" + c.Id + i.Id + ".txt";
 

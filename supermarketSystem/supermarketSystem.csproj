@@ -87,6 +87,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="updateproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateproduct.Designer.cs">
+      <DependentUpon>updateproduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="invoice.cs" />
     <Compile Include="loadDatabase.cs" />
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateproduct.resx">
+      <DependentUpon>updateproduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userMainMenu.resx">
       <DependentUpon>userMainMenu.cs</DependentUpon>

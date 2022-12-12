@@ -43,6 +43,7 @@ namespace supermarketSystem
             MyItem obj = (MyItem)sender;
             ///send this obj to the update form and and open it
         }
+
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
