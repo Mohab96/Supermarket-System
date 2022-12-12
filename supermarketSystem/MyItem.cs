@@ -46,5 +46,15 @@ namespace supermarketSystem
         {
 
         }
+
+        private void MyItem_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(185, 209, 234);
+        }
+
+        private void MyItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(153, 180, 209);
+        }
     }
 }

@@ -45,7 +45,7 @@
             // lbltitle
             // 
             this.lbltitle.AutoSize = true;
-            this.lbltitle.Location = new System.Drawing.Point(61, 134);
+            this.lbltitle.Location = new System.Drawing.Point(61, 132);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(27, 13);
             this.lbltitle.TabIndex = 1;
@@ -55,6 +55,8 @@
             // lblprice
             // 
             this.lblprice.AutoSize = true;
+            this.lblprice.BackColor = System.Drawing.Color.IndianRed;
+            this.lblprice.ForeColor = System.Drawing.Color.White;
             this.lblprice.Location = new System.Drawing.Point(0, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(28, 13);
@@ -65,11 +67,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.lblprice);
             this.Controls.Add(this.lbltitle);
             this.Controls.Add(this.pbicon);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "MyItem";
             this.Load += new System.EventHandler(this.MyItem_Load);
+            this.MouseEnter += new System.EventHandler(this.MyItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.MyItem_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pbicon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
