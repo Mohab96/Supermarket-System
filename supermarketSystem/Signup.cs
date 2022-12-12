@@ -67,5 +67,10 @@ namespace supermarketSystem
 
             }
         }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

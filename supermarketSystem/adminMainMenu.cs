@@ -18,7 +18,7 @@ namespace supermarketSystem
             InitializeComponent();
             generatecontrols();
         }
-        private void generatecontrols()
+        public void generatecontrols()
         {
 
             flowLayoutPanel1.Controls.Clear();
@@ -46,6 +46,16 @@ namespace supermarketSystem
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void adminMainMenu_Load(object sender, EventArgs e)
+        {
+            lblname.Text = Global.currAdmin.FullName;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ///show add form
         }
     }
 }
