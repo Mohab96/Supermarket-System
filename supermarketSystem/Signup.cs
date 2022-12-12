@@ -61,7 +61,7 @@ namespace supermarketSystem
                     , address.Text, generalID.ToString(), 500);
                 Global.usersCredentials[email.Text] = password.Text;
                 Global.customersIDs.Add(generalID.ToString());
-                Global.allCustomers[generalID] = newCustomer;
+                Global.allCustomers[generalID.ToString()] = newCustomer;
 
                 MessageBox.Show("You have complete the sing sign up successfully\nGo login now ..", "Congrats !!");
 
