@@ -68,9 +68,12 @@ namespace supermarketSystem
         public static List<string> productsIDs = new List<string>(); // The IDs of the files that store the data of the products
         public static List<string> invoiceIDs = new List<string>(); // The IDs of the files that store the invoices
 
-        public static Hashtable allProducts = new Hashtable(); // id, product
-        public static Hashtable allCustomers = new Hashtable(); // id, customer
-        public static Hashtable allAdmins = new Hashtable(); // id, admin
+        public static Dictionary<string,product> allProducts = new Dictionary<string, product>(); // id, product
+        //public static Hashtable allProducts = new Hashtable(); // id, product
+        public static Dictionary<string, customer> allCustomers = new Dictionary<string, customer>(); // id, customer
+        //public static Hashtable allCustomers = new Hashtable(); // id, customer
+        public static Dictionary<string, admin> allAdmins = new Dictionary<string, admin>(); // id, admin
+        //public static Hashtable allAdmins = new Hashtable(); // id, admin
 
 
         public static Hashtable usersCredentials = new Hashtable(); // email, password
