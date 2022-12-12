@@ -16,5 +16,10 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
+
+        private void accessLog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -172,6 +172,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Cart";
             this.Text = "Cart";
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

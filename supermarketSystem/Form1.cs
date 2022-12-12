@@ -89,5 +89,10 @@ namespace supermarketSystem
             MessageBox.Show("Sorry..invalid Email or password");
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
