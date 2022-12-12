@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -29,14 +30,15 @@ namespace supermarketSystem
             this.price = price;
             this.discount = discount;
             this.expirydate = expirydate;
-            this.imgUrl = imgUrl; ///method : take url and put the pic in pic box
+            this.imgUrl = imgUrl;
             image = System.Drawing.Image.FromFile(imgUrl);
+
             string path = "ProductID_" + id + ".txt";
 
             Global.clearFile(path);
             Global.writeOnFile(path, productname);
             Global.writeOnFile(path, quantity.ToString());
-            // (mohab) => (mas) : You forgot to write the id to the file
+            Global.writeOnFile(path, id);
             Global.writeOnFile(path, price.ToString());
             Global.writeOnFile(path, discount.ToString());
             Global.writeOnFile(path, expirydate.ToString());
@@ -78,12 +80,7 @@ namespace supermarketSystem
             set
             {
                 updateFile(2, value);
-                /// (mohab) => (mas) : You updated the file but you forgot to 
-                /// update the variable in teh class .. look at the other classes
-                /*
-                 * You should write this
-                 * id = value;
-                 */
+                id = value;
             }
            }
 
@@ -125,9 +122,12 @@ namespace supermarketSystem
                 imgUrl = value;
                 image = System.Drawing.Image.FromFile(imgUrl);
                 // (mohab) => (mas) : You should here call the method that puts the picture with url (imgUrl)
-                // and update the picture box in the product
+                // and update the picture box in the product  >> done 
             }
         }
+
+
+        
 
     }
 }
