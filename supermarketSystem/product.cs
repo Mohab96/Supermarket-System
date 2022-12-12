@@ -18,7 +18,7 @@ namespace supermarketSystem
         private double price;
         private int discount;
         private DateTime expirydate;
-        private PictureBox image;
+        public Image image;
         string imgUrl; 
 
         public product(string productname, int quantity,string id , double price, int  discount, DateTime expirydate, string imgUrl)
@@ -30,7 +30,7 @@ namespace supermarketSystem
             this.discount = discount;
             this.expirydate = expirydate;
             this.imgUrl = imgUrl; ///method : take url and put the pic in pic box
-
+            image = System.Drawing.Image.FromFile(imgUrl);
             string path = "ProductID_" + id + ".txt";
 
             Global.clearFile(path);
@@ -123,6 +123,7 @@ namespace supermarketSystem
             {
                 updateFile(6, value);
                 imgUrl = value;
+                image = System.Drawing.Image.FromFile(imgUrl);
                 // (mohab) => (mas) : You should here call the method that puts the picture with url (imgUrl)
                 // and update the picture box in the product
             }
