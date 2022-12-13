@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace supermarketSystem
 {
-    public partial class QuantityForm : Form
+    public partial class itemForUserMainMenu : Form
     {
-        public QuantityForm()
+        public itemForUserMainMenu()
         {
             InitializeComponent();
-        }
-
-        private void QuantityForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

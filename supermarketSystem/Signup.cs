@@ -35,6 +35,14 @@ namespace supermarketSystem
             return true;
         }
 
+        void showUserMainMenu()
+        {
+            this.Hide();
+            userMainMenu mainMenu = new userMainMenu();
+            mainMenu.ShowDialog();
+            this.Close();
+        }
+
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             if (!emptyFields())
@@ -64,7 +72,7 @@ namespace supermarketSystem
                 Global.allCustomers[generalID.ToString()] = newCustomer;
 
                 MessageBox.Show("You have complete the sing sign up successfully\nGo login now ..", "Congrats !!");
-
+                showUserMainMenu();
             }
         }
 

@@ -18,15 +18,16 @@ namespace supermarketSystem
             InitializeComponent();
             generatecontrols();
         }
+
         public void generatecontrols()
         {
-
             flowLayoutPanel1.Controls.Clear();
             int n = Global.allProducts.Count;
             MyItem[] item = new MyItem[n];
-            int i = 0;
+            int i = 0; // You could use List instead of this ( item.Add(...) ) .. List in C# is vector in C++ ^_^
             foreach (KeyValuePair<string, product> de in Global.allProducts)
             {
+                // You could use => var item in Global.allProduct
                 item[i] = new MyItem();
                 item[i].Icon = de.Value.image;
                 item[i].Name = de.Value.Name;

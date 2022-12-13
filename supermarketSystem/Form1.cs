@@ -25,7 +25,7 @@ namespace supermarketSystem
             this.Close();  // closing the current form to avoid memory issues 
         }
 
-      public string currUserId(string Email)
+        public string currUserId(string Email)
         {
             // method to get the id of the customer that currently signed in
             foreach (var item in Global.customersIDs)
@@ -40,13 +40,22 @@ namespace supermarketSystem
             }
             return null;
         }
+
+        void showUserMainMenu()
+        {
+            this.Hide();
+            userMainMenu mainMenu = new userMainMenu();
+            mainMenu.ShowDialog();
+            this.Close();
+        }
+
         public string currAdminId(string Email)
         {
             // method to get the id of the admin that currently signed in
             foreach (var item in Global.adminsIDs)
             {
                 List<string> temp;
-                string path = "AdminID_" +item + ".txt";
+                string path = "AdminID_" + item + ".txt";
                 temp = Global.readFromFile(path);
                 if (temp[2] == EmailTextbox.Text)
                 {
@@ -55,6 +64,7 @@ namespace supermarketSystem
             }
             return null;
         }
+
         private void EnterButton_Click(object sender, EventArgs e)
         {
             if (PasswordTextbox.Text == string.Empty || EmailTextbox.Text == string.Empty)
@@ -62,24 +72,25 @@ namespace supermarketSystem
                 MessageBox.Show("Please Fill All The Information");
                 return;
             }
-            if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text]==PasswordTextbox.Text)
+            if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text] == PasswordTextbox.Text)
             {   // checking that the Email and password are right
                 string curr_ID = currUserId(EmailTextbox.Text);  // holds the current signed in customer id
-                if (curr_ID != null) 
+                if (curr_ID != null)
                 {
-                    Global.currCustomer =(customer)Global.allCustomers[curr_ID];
+                    Global.currCustomer = (customer)Global.allCustomers[curr_ID];
                 }
                 // show the user main menu 
+                showUserMainMenu();
 
                 return;
             }
-            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.adminsCredentials[EmailTextbox.Text]==PasswordTextbox.Text)
+            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.adminsCredentials[EmailTextbox.Text] == PasswordTextbox.Text)
             {   // checking that the Email and password are right
 
                 string curr_ID = currAdminId(EmailTextbox.Text); // holds the current signed in admin id
-                if (curr_ID != null) 
-                { 
-                    Global.currAdmin=(admin)Global.allAdmins[curr_ID];
+                if (curr_ID != null)
+                {
+                    Global.currAdmin = (admin)Global.allAdmins[curr_ID];
                 }
                 // show the admin main menu 
 
