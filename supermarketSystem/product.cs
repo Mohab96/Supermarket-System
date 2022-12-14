@@ -51,7 +51,7 @@ namespace supermarketSystem
             string path = "ProductID_" + id + ".txt";
             List<string> productdata = Global.readFromFile(path);
             productdata[idx] = val;
-            Global.clearFile(path); // Clear the file before writing on it
+            Global.clearFile(path); 
             foreach (var item in productdata)
                 Global.writeOnFile(path, item);
         }
@@ -114,15 +114,14 @@ namespace supermarketSystem
        
         public string Image
         {
-            /// search about this 
+            
             get { return imgUrl; }
             set
             {
                 updateFile(6, value);
                 imgUrl = value;
                 image = System.Drawing.Image.FromFile(imgUrl);
-                // (mohab) => (mas) : You should here call the method that puts the picture with url (imgUrl)
-                // and update the picture box in the product  >> done 
+                 
             }
         }
 

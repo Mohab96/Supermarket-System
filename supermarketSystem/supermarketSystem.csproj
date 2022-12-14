@@ -72,7 +72,9 @@
       <HintPath>..\packages\RestSharpSigned.105.2.3\lib\net46\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -126,12 +128,6 @@
     <Compile Include="itemForUserMainMenu.Designer.cs">
       <DependentUpon>itemForUserMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="updateproduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="updateproduct.Designer.cs">
-      <DependentUpon>updateproduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="invoice.cs" />
     <Compile Include="loadDatabase.cs" />
@@ -140,12 +136,6 @@
     </Compile>
     <Compile Include="MyItem.Designer.cs">
       <DependentUpon>MyItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="payForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="payForm.Designer.cs">
-      <DependentUpon>payForm.cs</DependentUpon>
     </Compile>
     <Compile Include="product.cs" />
     <Compile Include="Program.cs" />
@@ -161,6 +151,12 @@
     </Compile>
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_product.Designer.cs">
+      <DependentUpon>update_product.cs</DependentUpon>
     </Compile>
     <Compile Include="userMainMenu.cs">
       <SubType>Form</SubType>
@@ -189,9 +185,6 @@
     <EmbeddedResource Include="MyItem.resx">
       <DependentUpon>MyItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="payForm.resx">
-      <DependentUpon>payForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -207,8 +200,8 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="updateproduct.resx">
-      <DependentUpon>updateproduct.cs</DependentUpon>
+    <EmbeddedResource Include="update_product.resx">
+      <DependentUpon>update_product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userMainMenu.resx">
       <DependentUpon>userMainMenu.cs</DependentUpon>

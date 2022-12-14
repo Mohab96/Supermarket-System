@@ -40,11 +40,12 @@ namespace supermarketSystem
             Global.writeOnFile(path, discountPer.ToString());
             Global.writeOnFile(path, totalprice.ToString());
 
-            string Quan_path = "QuantityID_" + id + ".txt";
+            string Quan_path = "InvoiceID_" + id + "QuantityID" + ".txt";
+            string prdctPath = "InvoiceID_" + id + "ProductID" + ".txt";
             foreach (KeyValuePair<string, int> p in productlist)
             {
                 Global.writeOnFile(Quan_path, p.Value.ToString());
-                Global.writeOnFile(path, p.Key);
+                Global.writeOnFile(prdctPath, p.Key);
                 /// (mohab)=>(mas) : There is a problem here .. these two lines write different data 
                 /// on the same file .. Create a path for the quantity and another one for the ID  >> done plz check it 
             }
@@ -106,11 +107,8 @@ namespace supermarketSystem
             }
         }
 
-        /// problem here how can i creat getter and setter to the Dictionary
-        public Dictionary<string, int> Productlist
-        {
-            get; set;
-        }
+        
+        
 
         public void create_pdf_file(customer c, invoice i)
         {
