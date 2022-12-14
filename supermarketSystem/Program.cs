@@ -19,7 +19,7 @@ namespace supermarketSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new update_product());
+            Application.Run(new Form1());
         }
     }
 }
