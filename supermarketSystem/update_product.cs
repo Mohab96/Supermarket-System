@@ -31,29 +31,42 @@ namespace supermarketSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
             p.Name = txtname.Text;
             p.Quantity = int.Parse(txtquan.Text);
             p.Price = double.Parse(txtprice.Text);
             p.image = pictureBox1.Image;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void lbl_name_Click(object sender, EventArgs e)
         {
-            lbl_name.Text = p.Name;
+            
         }
 
         private void update_product_Load(object sender, EventArgs e)
         {
             lbl_name.Text = p.Name;
             txtname.Text = p.Name;
-            txtquan.Text = p.Quantity.ToString();
+            txtquan.Text = p.Quantity.ToString();           
             txtprice.Text = p.Price.ToString();
             pictureBox1.Image = p.image;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog imagefile = new OpenFileDialog();
+            imagefile.Title = "select an image";
+            imagefile.Filter = "PNG Image |*png|BIK|*.bik";
+            imagefile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            if(imagefile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = imagefile.FileName ;
+            }
+
         }
     }
 }

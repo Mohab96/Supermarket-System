@@ -39,17 +39,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(201, 26);
+            this.lbl_name.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_name.Font = new System.Drawing.Font("Stencil", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_name.Location = new System.Drawing.Point(116, 19);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(246, 39);
+            this.lbl_name.Size = new System.Drawing.Size(421, 59);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "product name ";
             this.lbl_name.Click += new System.EventHandler(this.lbl_name_Click);
@@ -85,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 179);
+            this.label3.Location = new System.Drawing.Point(45, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 0;
@@ -93,7 +95,7 @@
             // 
             // txtquan
             // 
-            this.txtquan.Location = new System.Drawing.Point(49, 214);
+            this.txtquan.Location = new System.Drawing.Point(49, 239);
             this.txtquan.Name = "txtquan";
             this.txtquan.Size = new System.Drawing.Size(268, 22);
             this.txtquan.TabIndex = 2;
@@ -103,7 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 262);
+            this.label4.Location = new System.Drawing.Point(45, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 0;
@@ -112,7 +114,7 @@
             // 
             // txtprice
             // 
-            this.txtprice.Location = new System.Drawing.Point(49, 297);
+            this.txtprice.Location = new System.Drawing.Point(49, 344);
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(268, 22);
             this.txtprice.TabIndex = 2;
@@ -146,22 +148,22 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button3.Location = new System.Drawing.Point(386, 372);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(252, 46);
             this.button3.TabIndex = 3;
             this.button3.Text = "change image";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // update_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(670, 557);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -175,7 +177,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_name);
             this.Name = "update_product";
-            this.Text = "update_product";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "update product";
             this.Load += new System.EventHandler(this.update_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -196,6 +199,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

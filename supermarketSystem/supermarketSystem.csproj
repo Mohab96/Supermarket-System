@@ -109,6 +109,12 @@
     <Compile Include="adminMainMenu.Designer.cs">
       <DependentUpon>adminMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="buy_product_foradmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buy_product_foradmin.Designer.cs">
+      <DependentUpon>buy_product_foradmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminMainMenu.resx">
       <DependentUpon>adminMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buy_product_foradmin.resx">
+      <DependentUpon>buy_product_foradmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
