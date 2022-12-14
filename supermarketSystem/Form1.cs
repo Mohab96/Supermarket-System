@@ -48,6 +48,12 @@ namespace supermarketSystem
             mainMenu.ShowDialog();
             this.Close();
         }
+        void showAdminMainMenu() {
+            this.Hide();
+            adminMainMenu admn = new adminMainMenu();
+            admn.ShowDialog();
+            this.Close();
+        }
 
         public string currAdminId(string Email)
         {
@@ -92,9 +98,8 @@ namespace supermarketSystem
                 {
                     Global.currAdmin = (admin)Global.allAdmins[curr_ID];
                 }
-                // show the admin main menu 
-
-
+                // show the admin main menu
+                showAdminMainMenu();
                 return;
             }
             MessageBox.Show("Sorry..invalid Email or password");
