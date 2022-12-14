@@ -10,7 +10,7 @@ namespace supermarketSystem
     {
         string fullName, password, email, phoneNumber, address, id;
         double cashBalance;
-        public List<Tuple<string, int>> cart = new List<Tuple<string, int>>(); // product id and quantity
+        public Dictionary<product,int> cart=new Dictionary<product,int>();
         List<string> invoicesIDs = new List<string>(); // all invoices for this customer (it was purchaseLog)
 
         public customer(string fullName, string password, string email,
