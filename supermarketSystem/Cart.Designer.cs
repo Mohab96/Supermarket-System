@@ -32,6 +32,8 @@
             this.totalPriceLbl = new System.Windows.Forms.Label();
             this.checkoutBtn = new System.Windows.Forms.Button();
             this.checkout_ListBox = new System.Windows.Forms.ListBox();
+            this.currCashInAcc = new System.Windows.Forms.Label();
+            this.balance = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // displayPrice
@@ -39,7 +41,7 @@
             this.displayPrice.AutoSize = true;
             this.displayPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.displayPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayPrice.Location = new System.Drawing.Point(214, 377);
+            this.displayPrice.Location = new System.Drawing.Point(174, 394);
             this.displayPrice.Name = "displayPrice";
             this.displayPrice.Size = new System.Drawing.Size(37, 24);
             this.displayPrice.TabIndex = 7;
@@ -50,7 +52,7 @@
             this.totalPriceLbl.AutoSize = true;
             this.totalPriceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.totalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLbl.Location = new System.Drawing.Point(43, 377);
+            this.totalPriceLbl.Location = new System.Drawing.Point(26, 394);
             this.totalPriceLbl.Name = "totalPriceLbl";
             this.totalPriceLbl.Size = new System.Drawing.Size(109, 24);
             this.totalPriceLbl.TabIndex = 6;
@@ -67,6 +69,7 @@
             this.checkoutBtn.TabIndex = 5;
             this.checkoutBtn.Text = "Checkout";
             this.checkoutBtn.UseVisualStyleBackColor = true;
+            this.checkoutBtn.Click += new System.EventHandler(this.checkoutBtn_Click);
             // 
             // checkout_ListBox
             // 
@@ -75,17 +78,39 @@
             this.checkout_ListBox.ItemHeight = 16;
             this.checkout_ListBox.Items.AddRange(new object[] {
             "Border Style Will be Changed Later :D"});
-            this.checkout_ListBox.Location = new System.Drawing.Point(12, 15);
+            this.checkout_ListBox.Location = new System.Drawing.Point(12, 51);
             this.checkout_ListBox.Name = "checkout_ListBox";
             this.checkout_ListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.checkout_ListBox.Size = new System.Drawing.Size(277, 340);
+            this.checkout_ListBox.Size = new System.Drawing.Size(283, 340);
             this.checkout_ListBox.TabIndex = 0;
+            // 
+            // currCashInAcc
+            // 
+            this.currCashInAcc.AutoSize = true;
+            this.currCashInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currCashInAcc.Location = new System.Drawing.Point(13, 13);
+            this.currCashInAcc.Name = "currCashInAcc";
+            this.currCashInAcc.Size = new System.Drawing.Size(63, 24);
+            this.currCashInAcc.TabIndex = 8;
+            this.currCashInAcc.Text = "Cash :";
+            // 
+            // balance
+            // 
+            this.balance.AutoSize = true;
+            this.balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balance.Location = new System.Drawing.Point(82, 16);
+            this.balance.Name = "balance";
+            this.balance.Size = new System.Drawing.Size(35, 22);
+            this.balance.TabIndex = 9;
+            this.balance.Text = "NA";
             // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 493);
+            this.Controls.Add(this.balance);
+            this.Controls.Add(this.currCashInAcc);
             this.Controls.Add(this.displayPrice);
             this.Controls.Add(this.checkoutBtn);
             this.Controls.Add(this.totalPriceLbl);
@@ -103,5 +128,7 @@
         private System.Windows.Forms.ListBox checkout_ListBox;
         private System.Windows.Forms.Label displayPrice;
         private System.Windows.Forms.Label totalPriceLbl;
+        private System.Windows.Forms.Label currCashInAcc;
+        private System.Windows.Forms.Label balance;
     }
 }
