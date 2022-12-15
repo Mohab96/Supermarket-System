@@ -42,7 +42,17 @@ namespace supermarketSystem
         void MyItem_click(object sender, EventArgs e)
         {
             MyItem obj = (MyItem)sender;
-            ///send this obj to the update form and and open it
+            update_product UP=new update_product();
+            UP.p = obj.p;
+            UP.ShowDialog();
+        }
+        void showAddProduct()
+        { 
+            this.Hide();
+            createProduct create=new createProduct();
+            create.ShowDialog();
+            this.Close();
+        
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -58,6 +68,7 @@ namespace supermarketSystem
         private void button1_Click(object sender, EventArgs e)
         {
             ///show add form
+            showAddProduct();
         }
     }
 }
