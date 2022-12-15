@@ -121,6 +121,12 @@
     <Compile Include="Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
+    <Compile Include="createProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createProduct.Designer.cs">
+      <DependentUpon>createProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="customer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createProduct.resx">
+      <DependentUpon>createProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
