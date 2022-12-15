@@ -13,6 +13,11 @@ namespace supermarketSystem
 {
     public partial class buy_product_foradmin : Form
     {
+        product p;
+        double txt_pec;
+
+        
+
         public buy_product_foradmin()
         {
             InitializeComponent();
@@ -30,41 +35,38 @@ namespace supermarketSystem
 
         private void buy_product_foradmin_Load(object sender, EventArgs e)
         {
-            
+            quan_lbl.Text = p.Quantity.ToString() ;
+            price_lbl.Text = p.Price.ToString() ;
+            cash_lbl.Text = Global.currCustomer.CashBalance.ToString() ;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form f = new Form();
-            f.StartPosition = FormStartPosition.CenterScreen;
-            f.Font = this.Font;
-            f.Icon = this.Icon;
-            f.Size = this.Size;
-            f.Height += 300;
-            f.AutoScroll = true;
-            int top = 10;
-            try
-            {
-                StreamReader sr = new StreamReader("AllProductsIDs.txt");
-                string line = "";
-                do
-                {
-                    line = sr.ReadLine();
-                    TextBox txt = new TextBox();
-                    PictureBox pic = new PictureBox();
-                    txt.Width = 200;
-                    txt.Top = top ;
-                    
-                    pic.Left = 210;
-                    pic.Top = top;
-                    pic.Size = new Size(150, 150);
+            
+        }
 
-                    top += 155;
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-                } while (line != null);
+        }
 
-            }
-            catch { }
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            double txt_pec = Convert.ToDouble(textBox1);
+            double res = txt_pec * p.Price;
+
+            total_price.Text = res.ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txt_pec = Convert.ToUInt32(textBox1);
+            ///p.Quantity += txt_pec;
         }
     }
 }
