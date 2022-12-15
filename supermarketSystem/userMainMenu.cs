@@ -21,6 +21,8 @@ namespace supermarketSystem
         List<itemForUserMainMenu> mainMenuProducts = new List<itemForUserMainMenu>();
         private void userMainMenu_Load(object sender, EventArgs e)
         {
+            name.Text = Global.currCustomer.FullName;
+            money.Text = Global.currCustomer.CashBalance.ToString() + "LE.";
             foreach (var item in Global.mainMenuProducts)
             {
                 itemForUserMainMenu newItem = new itemForUserMainMenu();
