@@ -130,7 +130,6 @@ namespace supermarketSystem
             adminMainMenu admin = new adminMainMenu();
             admin.ShowDialog();
             this.Close();
-        
         }
 
         private void uploadbtn_Click(object sender, EventArgs e)

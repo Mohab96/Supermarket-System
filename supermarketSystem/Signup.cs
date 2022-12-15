@@ -32,6 +32,7 @@ namespace supermarketSystem
             if (email.Text == String.Empty) return false;
             if (address.Text == String.Empty) return false;
             if (phoneNumber.Text == String.Empty) return false;
+            if (cnfrmPassword.Text == String.Empty) return false;
             return true;
         }
 
@@ -55,6 +56,11 @@ namespace supermarketSystem
                 // If the email already exists
                 MessageBox.Show("This email already exists !!", "Warning");
             }
+            else if (password.Text != cnfrmPassword.Text)
+            {
+                // If the two passwords don't match
+                MessageBox.Show("The passwords don't match !!", "Warning");
+            }
             else
             {
                 // Create a new customer in the system
@@ -76,9 +82,28 @@ namespace supermarketSystem
             }
         }
 
-        private void Signup_Load(object sender, EventArgs e)
+        private void password_TextChanged(object sender, EventArgs e)
         {
+            password.UseSystemPasswordChar = true;
+        }
 
+        private void cnfrmPassword_TextChanged(object sender, EventArgs e)
+        {
+            cnfrmPassword.UseSystemPasswordChar = true;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                password.UseSystemPasswordChar = false;
+                cnfrmPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                password.UseSystemPasswordChar = true;
+                cnfrmPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
