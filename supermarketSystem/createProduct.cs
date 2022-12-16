@@ -157,6 +157,16 @@ namespace supermarketSystem
             admin.generatecontrols();
         }
 
+        string generateID()
+        {
+            List<string> generalIdFile = Global.readFromFile(Global.fixedPathForAllProductsIDs);
+            int ID = int.Parse(generalIdFile[0]);
+            ID += 74;
+            Global.clearFile(Global.fixedPathForAllProductsIDs);
+            Global.writeOnFile(Global.fixedPathForAllProductsIDs, ID.ToString());
+            return ID.ToString();
+        }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
             // not fully completed
@@ -181,11 +191,12 @@ namespace supermarketSystem
                     int y=int.Parse(year);
                     int m=int.Parse(month);
                     int d=int.Parse(day);
+                    string ID = generateID();
                     DateTime expire = new DateTime(y, m, d);
                     // creating a new product
-                    product newProduct = new product(Name, quan, "20", currprice, dis, expire, imagelocation);
+                    product newProduct = new product(Name, quan, ID, currprice, dis, expire, imagelocation);
                     // add it to data structure 
-                    Global.allProducts.Add("20", newProduct);
+                    Global.allProducts.Add(ID, newProduct);
                     // add it to the admin main menu
                     addToAdminMainMenu();
                     MessageBox.Show("Product added successfully", "Done");
