@@ -56,5 +56,20 @@ namespace supermarketSystem
         {
             this.BackColor = Color.FromArgb(153, 180, 209);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblprice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

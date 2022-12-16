@@ -51,7 +51,7 @@
             this.label1.ForeColor = System.Drawing.Color.Crimson;
             this.label1.Location = new System.Drawing.Point(189, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 40);
+            this.label1.Size = new System.Drawing.Size(206, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "product name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,9 +185,8 @@
             this.total_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_price.Location = new System.Drawing.Point(324, 587);
             this.total_price.Name = "total_price";
-            this.total_price.Size = new System.Drawing.Size(76, 25);
+            this.total_price.Size = new System.Drawing.Size(0, 25);
             this.total_price.TabIndex = 0;
-            this.total_price.Text = "money";
             this.total_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.total_price.Click += new System.EventHandler(this.label1_Click);
             // 
