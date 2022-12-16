@@ -217,5 +217,10 @@ namespace supermarketSystem
             //return back to the admin main menu
             showAdminMainMenu();
         }
+
+        private void createProduct_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

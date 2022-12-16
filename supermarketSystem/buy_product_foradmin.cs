@@ -15,6 +15,7 @@ namespace supermarketSystem
     {
         product p;
         double txt_pec;
+        double res;
 
 
 
@@ -41,20 +42,19 @@ namespace supermarketSystem
             cash_lbl.Text = Global.currCustomer.CashBalance.ToString();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -72,8 +72,14 @@ namespace supermarketSystem
             p.Quantity += Convert.ToInt32(txt_pec);
             /// (mohab) => (mas) : You forgot to update the Global.cashBalance
 
-            MessageBox.Show("done /n you buy {0}");
+
+            Global.currCustomer.CashBalance -= res ;
+
+            MessageBox.Show("Done your cash now = {0}", Global.currCustomer.CashBalance.ToString());
+
+            
             /// (mohab) => (mas) : You forgot to close the form after you have finished
+
         }
     }
 }
