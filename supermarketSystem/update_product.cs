@@ -12,7 +12,6 @@ namespace supermarketSystem
 {
     public partial class update_product : Form
     {
-        public product p ;
 
         public update_product()
         {
@@ -39,17 +38,21 @@ namespace supermarketSystem
             }
             else
             {
-                p.Name = txtname.Text;
-                p.Quantity = int.Parse(txtquan.Text);
-                p.Price = double.Parse(txtprice.Text);
-                p.image = pictureBox1.Image;
+               Global.currProduct.Name = txtname.Text;
+               Global.currProduct.Quantity = int.Parse(txtquan.Text);
+               Global.currProduct.Price = double.Parse(txtprice.Text);
+               Global.currProduct.image = pictureBox1.Image;
+               adminMainMenu menu = new adminMainMenu();
+               menu.ShowDialog();
 
-                MessageBox.Show("Done.. The data has been updated" , MessageBoxButtons.OK.ToString());
+               MessageBox.Show("Done.. The data has been updated" , MessageBoxButtons.OK.ToString());
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            adminMainMenu menu = new adminMainMenu();
+            menu.ShowDialog();
             this.Close();
         }
 
@@ -57,12 +60,11 @@ namespace supermarketSystem
 
         private void update_product_Load(object sender, EventArgs e)
         {
-            lbl_name.Text = p.Name;
-            txtname.Text = p.Name;
-            txtquan.Text = p.Quantity.ToString();           
-            txtprice.Text = p.Price.ToString();
-            pictureBox1.Image = p.image;
-            
+            lbl_name.Text = Global.currProduct.Name;
+            txtname.Text = Global.currProduct.Name;
+            txtquan.Text = Global.currProduct.Quantity.ToString();           
+            txtprice.Text = Global.currProduct.Price.ToString();
+            pictureBox1.Image = Global.currProduct.image;    
         }
 
         private void button3_Click(object sender, EventArgs e)

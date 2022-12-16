@@ -151,13 +151,6 @@ namespace supermarketSystem
             }
 
         }
-        public void addToAdminMainMenu()
-        {
-            adminMainMenu admin = new adminMainMenu();
-            admin.generatecontrols();
-            /// (mohab) => (mostafa fouad) : I think that you add it in Global.allProducts only and joe will do the rest
-        }
-
         string generateID()
         {
             List<string> generalIdFile = Global.readFromFile(Global.fixedPathForAllProductsIDs);
@@ -167,7 +160,6 @@ namespace supermarketSystem
             Global.writeOnFile(Global.fixedPathForAllProductsIDs, ID.ToString());
             return ID.ToString();
         }
-
         private void addBtn_Click(object sender, EventArgs e)
         {
             // not fully completed
@@ -200,8 +192,6 @@ namespace supermarketSystem
                     product newProduct = new product(Name, quan, ID, currprice, dis, expire, imagelocation);
                     // add it to data structure 
                     Global.allProducts.Add(ID, newProduct);
-                    // add it to the admin main menu
-                    addToAdminMainMenu();
                     MessageBox.Show("Product added successfully", "Done");
                     // show the admin main menu
                     showAdminMainMenu();
