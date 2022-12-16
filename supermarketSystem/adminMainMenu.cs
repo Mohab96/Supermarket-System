@@ -70,5 +70,10 @@ namespace supermarketSystem
             ///show add form
             showAddProduct();
         }
+
+        private void lblname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
