@@ -36,7 +36,7 @@
             this.txtquan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtprice = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_done = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,6 @@
             this.lbl_name.Size = new System.Drawing.Size(421, 59);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "product name ";
-            this.lbl_name.Click += new System.EventHandler(this.lbl_name_Click);
             // 
             // pictureBox1
             // 
@@ -71,7 +70,6 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(268, 22);
             this.txtname.TabIndex = 2;
-            this.txtname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -99,7 +97,6 @@
             this.txtquan.Name = "txtquan";
             this.txtquan.Size = new System.Drawing.Size(268, 22);
             this.txtquan.TabIndex = 2;
-            this.txtquan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -110,7 +107,6 @@
             this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "price :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtprice
             // 
@@ -118,20 +114,19 @@
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(268, 22);
             this.txtprice.TabIndex = 2;
-            this.txtprice.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // btn_done
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(386, 465);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(252, 67);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "done";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_done.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_done.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_done.ForeColor = System.Drawing.Color.White;
+            this.btn_done.Location = new System.Drawing.Point(386, 465);
+            this.btn_done.Name = "btn_done";
+            this.btn_done.Size = new System.Drawing.Size(252, 67);
+            this.btn_done.TabIndex = 3;
+            this.btn_done.Text = "done";
+            this.btn_done.UseVisualStyleBackColor = false;
+            this.btn_done.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -167,7 +162,7 @@
             this.ClientSize = new System.Drawing.Size(670, 557);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_done);
             this.Controls.Add(this.txtprice);
             this.Controls.Add(this.txtquan);
             this.Controls.Add(this.label4);
@@ -196,7 +191,7 @@
         private System.Windows.Forms.TextBox txtquan;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtprice;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_done;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }

@@ -19,22 +19,33 @@ namespace supermarketSystem
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        bool IsValid(string name, int quantity, double price)
         {
-
+            if (name == String.Empty || quantity.ToString() == String.Empty || price.ToString() == String.Empty)
+            {
+                return false;
+            }
+            else
+                return true;
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            p.Name = txtname.Text;
-            p.Quantity = int.Parse(txtquan.Text);
-            p.Price = double.Parse(txtprice.Text);
-            p.image = pictureBox1.Image;
+            if(!IsValid(txtname.Text , int.Parse(txtquan.Text) , double.Parse(txtprice.Text)))
+            {
+                MessageBox.Show("Please fill all the informatin correctly");
+            }
+            else
+            {
+                p.Name = txtname.Text;
+                p.Quantity = int.Parse(txtquan.Text);
+                p.Price = double.Parse(txtprice.Text);
+                p.image = pictureBox1.Image;
+
+                MessageBox.Show("Done.. The data has been updated" , MessageBoxButtons.OK.ToString());
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,10 +53,7 @@ namespace supermarketSystem
             this.Close();
         }
 
-        private void lbl_name_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void update_product_Load(object sender, EventArgs e)
         {
@@ -54,18 +62,27 @@ namespace supermarketSystem
             txtquan.Text = p.Quantity.ToString();           
             txtprice.Text = p.Price.ToString();
             pictureBox1.Image = p.image;
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog imagefile = new OpenFileDialog();
-            imagefile.Title = "select an image";
-            imagefile.Filter = "PNG Image |*png|BIK|*.bik";
-            imagefile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            if(imagefile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            try
             {
-                pictureBox1.ImageLocation = imagefile.FileName ;
+                OpenFileDialog imagefile = new OpenFileDialog();
+                imagefile.Title = "select an image";
+                imagefile.Filter = "PNG Image |*png|BIK|*.bik";
+                imagefile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                if (imagefile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    pictureBox1.ImageLocation = imagefile.FileName;
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Please choose a supported file"); 
+            }
+            
 
         }
     }

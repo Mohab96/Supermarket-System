@@ -55,7 +55,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "product name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -79,7 +78,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Current Quantity : ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -93,7 +91,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Price : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // quan_lbl
             // 
@@ -105,7 +102,6 @@
             this.quan_lbl.TabIndex = 0;
             this.quan_lbl.Text = "q";
             this.quan_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.quan_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // price_lbl
             // 
@@ -117,7 +113,6 @@
             this.price_lbl.TabIndex = 0;
             this.price_lbl.Text = "p";
             this.price_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.price_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // label6
             // 
@@ -130,7 +125,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Your Cash";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label1_Click);
             // 
             // cash_lbl
             // 
@@ -142,7 +136,6 @@
             this.cash_lbl.TabIndex = 0;
             this.cash_lbl.Text = "money";
             this.cash_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cash_lbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // label8
             // 
@@ -155,7 +148,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "How many pieces do you want to buy ?";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -163,7 +155,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(249, 36);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
@@ -177,7 +168,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Total Price : ";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label1_Click);
             // 
             // total_price
             // 
@@ -208,6 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(595, 736);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -226,7 +217,6 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "buy_product_foradmin";
             this.Text = "buy product";
-            this.Load += new System.EventHandler(this.buy_product_foradmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
