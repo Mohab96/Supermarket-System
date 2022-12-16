@@ -35,6 +35,7 @@
             this.passwod = new System.Windows.Forms.Label();
             this.PasswordTextbox = new System.Windows.Forms.TextBox();
             this.EnterButton = new System.Windows.Forms.Button();
+            this.isShow = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Loginbutton
@@ -92,6 +93,7 @@
             this.PasswordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextbox.Location = new System.Drawing.Point(124, 192);
             this.PasswordTextbox.Name = "PasswordTextbox";
+            this.PasswordTextbox.PasswordChar = '*';
             this.PasswordTextbox.Size = new System.Drawing.Size(197, 23);
             this.PasswordTextbox.TabIndex = 5;
             // 
@@ -106,11 +108,23 @@
             this.EnterButton.UseVisualStyleBackColor = true;
             this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
+            // isShow
+            // 
+            this.isShow.AutoSize = true;
+            this.isShow.Location = new System.Drawing.Point(174, 221);
+            this.isShow.Name = "isShow";
+            this.isShow.Size = new System.Drawing.Size(99, 17);
+            this.isShow.TabIndex = 7;
+            this.isShow.Text = "ShowPassword";
+            this.isShow.UseVisualStyleBackColor = true;
+            this.isShow.CheckedChanged += new System.EventHandler(this.isShow_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 361);
+            this.Controls.Add(this.isShow);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.PasswordTextbox);
             this.Controls.Add(this.passwod);
@@ -137,6 +151,7 @@
         private System.Windows.Forms.Label passwod;
         private System.Windows.Forms.TextBox PasswordTextbox;
         private System.Windows.Forms.Button EnterButton;
+        private System.Windows.Forms.CheckBox isShow;
     }
 }
 
