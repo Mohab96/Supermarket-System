@@ -151,11 +151,6 @@ namespace supermarketSystem
             }
 
         }
-        public void addToAdminMainMenu()
-        {
-            adminMainMenu admin = new adminMainMenu();
-            admin.generatecontrols();
-        }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
@@ -186,8 +181,7 @@ namespace supermarketSystem
                     product newProduct = new product(Name, quan, "20", currprice, dis, expire, imagelocation);
                     // add it to data structure 
                     Global.allProducts.Add("20", newProduct);
-                    // add it to the admin main menu
-                    addToAdminMainMenu();
+
                     MessageBox.Show("Product added successfully", "Done");
                     // show the admin main menu
                     showAdminMainMenu();

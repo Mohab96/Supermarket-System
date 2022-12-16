@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuantityForm));
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbloff = new System.Windows.Forms.Label();
+            this.lblprice = new System.Windows.Forms.Label();
+            this.lblfinalprice = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtqty = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtqty)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -51,47 +52,40 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Add to cart";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // lbloff
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(27, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 24);
-            this.textBox1.TabIndex = 1;
+            this.lbloff.AutoSize = true;
+            this.lbloff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbloff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(201)))), ((int)(((byte)(202)))));
+            this.lbloff.Location = new System.Drawing.Point(126, 29);
+            this.lbloff.Name = "lbloff";
+            this.lbloff.Size = new System.Drawing.Size(74, 18);
+            this.lbloff.TabIndex = 2;
+            this.lbloff.Text = "0 % OFF";
             // 
-            // label1
+            // lblprice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(201)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(126, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "0 % OFF";
+            this.lblprice.AutoSize = true;
+            this.lblprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprice.ForeColor = System.Drawing.Color.Silver;
+            this.lblprice.Location = new System.Drawing.Point(24, 29);
+            this.lblprice.Name = "lblprice";
+            this.lblprice.Size = new System.Drawing.Size(54, 18);
+            this.lblprice.TabIndex = 3;
+            this.lblprice.Text = "$ 0.00";
             // 
-            // label2
+            // lblfinalprice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(24, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "$ 0.00";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(242)))));
-            this.label3.Location = new System.Drawing.Point(24, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 22);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "$ 0.00";
+            this.lblfinalprice.AutoSize = true;
+            this.lblfinalprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfinalprice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(242)))));
+            this.lblfinalprice.Location = new System.Drawing.Point(24, 52);
+            this.lblfinalprice.Name = "lblfinalprice";
+            this.lblfinalprice.Size = new System.Drawing.Size(66, 22);
+            this.lblfinalprice.TabIndex = 4;
+            this.lblfinalprice.Text = "$ 0.00";
             // 
             // pictureBox1
             // 
@@ -105,6 +99,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // txtqty
+            // 
+            this.txtqty.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtqty.Location = new System.Drawing.Point(27, 84);
+            this.txtqty.Name = "txtqty";
+            this.txtqty.Size = new System.Drawing.Size(51, 24);
+            this.txtqty.TabIndex = 7;
+            this.txtqty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtqty.ValueChanged += new System.EventHandler(this.txtqty_ValueChanged);
+            // 
             // QuantityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,17 +122,18 @@
             this.ClientSize = new System.Drawing.Size(231, 138);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblfinalprice);
+            this.Controls.Add(this.lblprice);
+            this.Controls.Add(this.lbloff);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtqty);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuantityForm";
             this.Load += new System.EventHandler(this.QuantityForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtqty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,10 +142,10 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbloff;
+        private System.Windows.Forms.Label lblprice;
+        private System.Windows.Forms.Label lblfinalprice;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown txtqty;
     }
 }

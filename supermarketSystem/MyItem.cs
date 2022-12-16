@@ -20,7 +20,8 @@ namespace supermarketSystem
         private string _title;
         private string _price;
         public string id;
-        public product p;
+        public product Product;
+        public adminMainMenu Menu;
         public Image Icon
         {
             get { return _icon; }
@@ -49,12 +50,12 @@ namespace supermarketSystem
 
         private void MyItem_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(185, 209, 234);
+            
         }
 
         private void MyItem_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(153, 180, 209);
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -62,14 +63,74 @@ namespace supermarketSystem
 
         }
 
-        private void lblprice_Click(object sender, EventArgs e)
+        private void btnedit_Click(object sender, EventArgs e)
         {
-
+            Global.currProduct = this.Product;
+            update_product UP = new update_product();
+            UP.ShowDialog();
+            this.Menu.Hide();
+            this.Menu.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnbuy_Click(object sender, EventArgs e)
         {
+            Global.currProduct = this.Product;
+            buy_product_foradmin bp = new buy_product_foradmin();
+            bp.ShowDialog();
+        }
+        public void add_item()
+        {
+            this.btnbuy.Enabled = false;
+            this.btnbuy.Enabled = false;
+            this.btndel.Enabled = false;
+            this.Icon = Image.FromFile(@"Resources\more.png");
+            this.pbicon.Cursor = Cursors.Hand;
+        }
+        private void btndel_Click(object sender, EventArgs e)
+        {
+            ///From JOE to Mohab :: how can i delete a product
+            Global.allProducts.Remove(this.id);
+            this.Menu.generatecontrols();
+        }
+        private void pbicon_Click(object sender, EventArgs e)
+        {
+            if(this.Icon == Image.FromFile(@"Resources\more.png"))
+            {
+                createProduct CP = new createProduct();
+                CP.ShowDialog();
+                this.Menu.Close();
+            }
+        }
 
+        private void btnbuy_MouseEnter(object sender, EventArgs e)
+        {
+            btnbuy.BackColor = Color.SpringGreen;
+        }
+
+        private void btnbuy_MouseLeave(object sender, EventArgs e)
+        {
+            btnbuy.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btnedit_MouseEnter(object sender, EventArgs e)
+        {
+            btnedit.BackColor = Color.DarkCyan;
+        }
+
+        private void btnedit_MouseLeave(object sender, EventArgs e)
+        {
+            btnedit.BackColor = Color.Teal;
+        }
+
+        private void btndel_MouseLeave(object sender, EventArgs e)
+        {
+            btndel.BackColor = Color.FromArgb(192, 0, 0);
+        }
+
+        private void btndel_MouseEnter(object sender, EventArgs e)
+        {
+            
+            btndel.BackColor = Color.FromArgb(234, 0, 0);
         }
     }
 }

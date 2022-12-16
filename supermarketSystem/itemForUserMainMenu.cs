@@ -16,5 +16,6 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
+        public product Product;
     }
 }

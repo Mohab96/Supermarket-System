@@ -62,6 +62,7 @@ namespace supermarketSystem
 
         public static admin currAdmin;  // holds the admin object that currently signed in
         public static customer currCustomer;  // holds the customer object that currently signed in
+        public static product currProduct; // holds the product clicked
 
         public static List<string> customersIDs = new List<string>(); // The IDs of the files that store the data of the customers
         public static List<string> adminsIDs = new List<string>(); // The IDs of the files that store the data of the admins

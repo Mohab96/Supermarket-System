@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iTextSharp.text.pdf.qrcode;
+using supermarketSystem.Properties;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,35 +18,40 @@ namespace supermarketSystem
         public adminMainMenu()
         {
             InitializeComponent();
-            generatecontrols();
         }
 
         public void generatecontrols()
         {
             flowLayoutPanel1.Controls.Clear();
-            int n = Global.allProducts.Count;
-            MyItem[] item = new MyItem[n];
-            int i = 0; // You could use List instead of this ( item.Add(...) ) .. List in C# is vector in C++ ^_^
-            foreach (KeyValuePair<string, product> de in Global.allProducts)
+            if (Global.allProducts.Count > 0)
             {
-                // You could use => var item in Global.allProduct
-                item[i] = new MyItem();
-                item[i].Icon = de.Value.image;
-                item[i].Name = de.Value.Name;
-                item[i].Price = de.Value.Price.ToString();
-                item[i].p = de.Value;
-                item[i].id = (string)de.Key;
-                flowLayoutPanel1.Controls.Add(item[i]);
-                item[i].Click += new System.EventHandler(this.MyItem_click);
-                i++;
+                int n = Global.allProducts.Count;
+                MyItem[] item = new MyItem[n];
+                int i = 0;
+                foreach (KeyValuePair<string, product> de in Global.allProducts)
+                {
+                    item[i] = new MyItem();
+                    item[i].Icon = de.Value.image;
+                    item[i].Name = de.Value.Name;
+                    item[i].Price = de.Value.Price.ToString();
+                    item[i].Product = de.Value;
+                    item[i].id = (string)de.Key;
+                    item[i].Menu = this;
+                    flowLayoutPanel1.Controls.Add(item[i]);
+                    i++;
+                }
             }
+            MyItem add = new MyItem();
+            add.add_item();
+            add.Menu = this;
+            flowLayoutPanel1.Controls.Add(add);
+            add.Click += new System.EventHandler(this.MyItem_click);
         }
         void MyItem_click(object sender, EventArgs e)
-        {
-            MyItem obj = (MyItem)sender;
-            update_product UP=new update_product();
-            UP.p = obj.p;
-            UP.ShowDialog();
+        {           
+            createProduct CP = new createProduct();          
+            CP.ShowDialog();
+            this.Close();
         }
         void showAddProduct()
         { 
@@ -62,6 +69,8 @@ namespace supermarketSystem
 
         private void adminMainMenu_Load(object sender, EventArgs e)
         {
+            generatecontrols();
+            lblcash.Text = Global.cashBalance.ToString();
             lblname.Text = Global.currAdmin.FullName;
         }
 
@@ -74,6 +83,12 @@ namespace supermarketSystem
         private void lblname_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlogs_Click(object sender, EventArgs e)
+        {
+            accessLog al = new accessLog();
+            al.ShowDialog();
         }
     }
 }
