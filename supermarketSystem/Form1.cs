@@ -110,5 +110,17 @@ namespace supermarketSystem
         {
 
         }
+
+        private void isShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (isShow.Checked)
+            {
+                PasswordTextbox.PasswordChar = '\0';
+            }
+            else 
+            {
+                PasswordTextbox.PasswordChar = '*';
+            }
+        }
     }
 }
