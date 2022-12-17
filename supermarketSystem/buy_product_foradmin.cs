@@ -18,7 +18,6 @@ namespace supermarketSystem
         double res;
 
 
-
         public buy_product_foradmin()
         {
             InitializeComponent();
@@ -27,10 +26,7 @@ namespace supermarketSystem
 
         private void buy_product_foradmin_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = Global.currProduct.image;
-            quan_lbl.Text = Global.currProduct.Quantity.ToString() ;
-            price_lbl.Text = Global.currProduct.Price.ToString() ;
-            cash_lbl.Text = Global.currCustomer.CashBalance.ToString() ;
+
         }
 
 
@@ -104,6 +100,14 @@ namespace supermarketSystem
             adminMainMenu back = new adminMainMenu();
             back.ShowDialog();
             this.Close();
+        }
+
+        private void buy_product_foradmin_Load_1(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Global.currProduct.image;
+            quan_lbl.Text = Global.currProduct.Quantity.ToString();
+            price_lbl.Text = Global.currProduct.Price.ToString();
+            cash_lbl.Text = Global.cashBalance.ToString();
         }
     }
 }

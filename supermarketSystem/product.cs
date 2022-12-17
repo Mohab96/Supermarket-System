@@ -41,6 +41,7 @@ namespace supermarketSystem
             this.discount = discount;
             this.expirydate = expirydate;
             this.imgUrl = imgUrl;
+            this.id = id;
             image = System.Drawing.Image.FromFile(imgUrl);
 
             string path = "ProductID_" + id + ".txt";
@@ -94,7 +95,7 @@ namespace supermarketSystem
             set
             {
                 updateFile(2, value);
-                id = value;
+                this.id = value;
             }
         }
 

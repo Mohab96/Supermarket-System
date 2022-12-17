@@ -73,7 +73,7 @@ namespace supermarketSystem
             {
                 return false;
             }
-            if (month == "11" || month == "9" || month == "6" || month == "4" && currDay > 30)
+            if ((month == "11" || month == "9" || month == "6" || month == "4") && currDay > 30)
             {
                 return false;
             }
@@ -156,8 +156,9 @@ namespace supermarketSystem
             List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
             int ID = int.Parse(generalIdFile[0]);
             ID += 74;
-            Global.clearFile(Global.fixedPathForAllProductsIDs);
-            Global.writeOnFile(Global.fixedPathForAllProductsIDs, ID.ToString());
+            Global.clearFile(Global.fixedPathForGeneralID);
+            Global.writeOnFile(Global.fixedPathForGeneralID, ID.ToString());
+
             return ID.ToString();
         }
         private void addBtn_Click(object sender, EventArgs e)
@@ -193,6 +194,7 @@ namespace supermarketSystem
                     product newProduct = new product(Name, quan, ID, currprice, dis, expire, imagelocation);
                     // add it to data structure 
                     Global.allProducts.Add(ID, newProduct);
+                    Global.writeOnFile(Global.fixedPathForAllProductsIDs, ID);
                     MessageBox.Show("Product added successfully", "Done");
                     // show the admin main menu
                     showAdminMainMenu();
