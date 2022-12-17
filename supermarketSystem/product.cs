@@ -15,16 +15,26 @@ namespace supermarketSystem
     {
         private string productname;
         private int quantity;
-        private string id ;
+        private string id;
         private double price;
         private int discount;
         private DateTime expirydate;
         public Image image;
-        string imgUrl; 
+        string imgUrl;
 
-        public product(string productname, int quantity,string id , double price, int  discount, DateTime expirydate, string imgUrl)
+        string formatDate(string date)
         {
-           
+            string dt = "";
+            foreach (var c in date)
+            {
+                if (c != '/') dt += c;
+            }
+            return dt;
+        }
+
+        public product(string productname, int quantity, string id, double price, int discount, DateTime expirydate, string imgUrl)
+        {
+
             this.productname = productname;
             this.quantity = quantity;
             this.price = price;
@@ -34,6 +44,8 @@ namespace supermarketSystem
             image = System.Drawing.Image.FromFile(imgUrl);
 
             string path = "ProductID_" + id + ".txt";
+            string[] dateFormats = expirydate.GetDateTimeFormats();
+            string date = formatDate(dateFormats[0]);
 
             Global.clearFile(path);
             Global.writeOnFile(path, productname);
@@ -41,23 +53,23 @@ namespace supermarketSystem
             Global.writeOnFile(path, id);
             Global.writeOnFile(path, price.ToString());
             Global.writeOnFile(path, discount.ToString());
-            Global.writeOnFile(path, expirydate.ToString());
+            Global.writeOnFile(path, date);
             Global.writeOnFile(path, imgUrl.ToString());
         }
 
-        
         void updateFile(int idx, string val)
         {
             string path = "ProductID_" + id + ".txt";
             List<string> productdata = Global.readFromFile(path);
             productdata[idx] = val;
-            Global.clearFile(path); 
+            Global.clearFile(path);
             foreach (var item in productdata)
                 Global.writeOnFile(path, item);
         }
 
-         
-        public string Name {
+
+        public string Name
+        {
             get { return productname; }
             set
             {
@@ -66,7 +78,8 @@ namespace supermarketSystem
             }
         }
 
-        public int Quantity {
+        public int Quantity
+        {
             get { return quantity; }
             set
             {
@@ -75,16 +88,18 @@ namespace supermarketSystem
             }
         }
 
-        public string Id {
-        get { return id; }
+        public string Id
+        {
+            get { return id; }
             set
             {
                 updateFile(2, value);
                 id = value;
             }
-           }
+        }
 
-        public double Price {
+        public double Price
+        {
             get { return price; }
             set
             {
@@ -103,7 +118,8 @@ namespace supermarketSystem
             }
         }
 
-        public DateTime Expirydate {
+        public DateTime Expirydate
+        {
             get { return expirydate; }
             set
             {
@@ -111,22 +127,22 @@ namespace supermarketSystem
                 expirydate = value;
             }
         }
-       
+
         public string Image
         {
-            
+
             get { return imgUrl; }
             set
             {
                 updateFile(6, value);
                 imgUrl = value;
                 image = System.Drawing.Image.FromFile(imgUrl);
-                 
+
             }
         }
 
 
-        
+
 
     }
 }

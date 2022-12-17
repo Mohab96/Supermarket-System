@@ -153,7 +153,7 @@ namespace supermarketSystem
         }
         string generateID()
         {
-            List<string> generalIdFile = Global.readFromFile(Global.fixedPathForAllProductsIDs);
+            List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
             int ID = int.Parse(generalIdFile[0]);
             ID += 74;
             Global.clearFile(Global.fixedPathForAllProductsIDs);
