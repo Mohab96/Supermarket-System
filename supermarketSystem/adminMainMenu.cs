@@ -53,15 +53,6 @@ namespace supermarketSystem
             CP.ShowDialog();
             this.Close();
         }
-        void showAddProduct()
-        { 
-            this.Hide();
-            createProduct create=new createProduct();
-            create.ShowDialog();
-            this.Close();
-        
-        }
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -76,8 +67,6 @@ namespace supermarketSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ///show add form
-            showAddProduct();
         }
 
         private void lblname_Click(object sender, EventArgs e)
