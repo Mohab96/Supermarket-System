@@ -90,5 +90,19 @@ namespace supermarketSystem
             accessLog al = new accessLog();
             al.ShowDialog();
         }
+
+        private void btnsign_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            Global.currAdmin = null;
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+        }
+
+        private void btnabout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,14 +34,19 @@
             this.lblcash = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogs = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnabout = new System.Windows.Forms.Button();
+            this.btnsign = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 111);
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(279, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(805, 424);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(515, 523);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -49,7 +54,7 @@
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(62, 21);
+            this.lblname.Location = new System.Drawing.Point(53, 24);
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(59, 23);
             this.lblname.TabIndex = 3;
@@ -60,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 67);
+            this.label1.Location = new System.Drawing.Point(14, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 23);
             this.label1.TabIndex = 6;
@@ -70,7 +75,7 @@
             // 
             this.lblcash.AutoSize = true;
             this.lblcash.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcash.Location = new System.Drawing.Point(96, 67);
+            this.lblcash.Location = new System.Drawing.Point(87, 54);
             this.lblcash.Name = "lblcash";
             this.lblcash.Size = new System.Drawing.Size(65, 23);
             this.lblcash.TabIndex = 7;
@@ -79,7 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::supermarketSystem.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,25 +93,61 @@
             // 
             // btnlogs
             // 
+            this.btnlogs.BackColor = System.Drawing.Color.White;
             this.btnlogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogs.Location = new System.Drawing.Point(718, 21);
+            this.btnlogs.Location = new System.Drawing.Point(38, 101);
             this.btnlogs.Name = "btnlogs";
-            this.btnlogs.Size = new System.Drawing.Size(75, 69);
+            this.btnlogs.Size = new System.Drawing.Size(173, 44);
             this.btnlogs.TabIndex = 9;
             this.btnlogs.Text = "Check Logs";
-            this.btnlogs.UseVisualStyleBackColor = true;
+            this.btnlogs.UseVisualStyleBackColor = false;
             this.btnlogs.Click += new System.EventHandler(this.btnlogs_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnsign);
+            this.panel1.Controls.Add(this.btnabout);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnlogs);
+            this.panel1.Controls.Add(this.lblname);
+            this.panel1.Controls.Add(this.lblcash);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(261, 523);
+            this.panel1.TabIndex = 11;
+            // 
+            // btnabout
+            // 
+            this.btnabout.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnabout.Location = new System.Drawing.Point(38, 151);
+            this.btnabout.Name = "btnabout";
+            this.btnabout.Size = new System.Drawing.Size(173, 44);
+            this.btnabout.TabIndex = 10;
+            this.btnabout.Text = "About";
+            this.btnabout.UseVisualStyleBackColor = false;
+            this.btnabout.Click += new System.EventHandler(this.btnabout_Click);
+            // 
+            // btnsign
+            // 
+            this.btnsign.BackColor = System.Drawing.Color.Firebrick;
+            this.btnsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsign.Location = new System.Drawing.Point(38, 201);
+            this.btnsign.Name = "btnsign";
+            this.btnsign.Size = new System.Drawing.Size(173, 44);
+            this.btnsign.TabIndex = 11;
+            this.btnsign.Text = "Sign out";
+            this.btnsign.UseVisualStyleBackColor = false;
+            this.btnsign.Click += new System.EventHandler(this.btnsign_Click);
             // 
             // adminMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 485);
-            this.Controls.Add(this.btnlogs);
-            this.Controls.Add(this.lblcash);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblname);
+            this.ClientSize = new System.Drawing.Size(806, 540);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -114,8 +155,9 @@
             this.Text = "AdminMainMenu";
             this.Load += new System.EventHandler(this.adminMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -127,5 +169,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblcash;
         private System.Windows.Forms.Button btnlogs;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnsign;
+        private System.Windows.Forms.Button btnabout;
     }
 }
