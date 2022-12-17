@@ -26,24 +26,55 @@ namespace supermarketSystem
             this.Hide();
         }
 
+        void updateQuantity()
+        {
+            // updating the quantity of the current product 
+            foreach (var pro in Global.currCustomer.cart)
+            {
+                string currID = pro.Key.Id;
+                int quantity = pro.Value;
+                Global.allProducts[currID].Quantity -= quantity;
+            }
+        }
+
+        int checkCurrQuantity(string procutID,int quantity)
+        {
+            return Math.Min(Global.allProducts[procutID].Quantity, quantity);
+            // for example if the customer bought two Pieces of product X and the quantity of X is 1 
+            // then the customer will not be able to buy two Pieces but he can buy 1 instead 
+        }
+
         private void Cart_Load(object sender, EventArgs e)
         {
             balance.Text = Global.currCustomer.CashBalance.ToString();
             foreach (var pro in Global.currCustomer.cart)
             {
                 string Name = pro.Key.Name;
+
                 int quantity = pro.Value;
+
+                quantity = checkCurrQuantity(pro.Key.Id, quantity); 
+
                 double totalPrice = quantity * pro.Key.Price;
+
                 totalCashNeeded += totalPrice;
+
                 string viewPrice = totalPrice.ToString();
+
                 string viewName = Name.ToString();
+
                 viewName = viewName + "   ";
+
                 string viewQuantity = quantity.ToString();
+
                 viewQuantity = viewQuantity + "x   ";
+
                 viewPrice = viewPrice + "   ";
+
                 Object[] obj = new object[] { viewName, quantity, totalPrice };
+
                 checkout_ListBox.Items.AddRange(obj);
-                /// (mohab) => (mostafa fouad) : If we have time add some verfications to these values 
+
             }
             displayPrice.Text = totalCashNeeded.ToString(); // showing the total price 
         }
@@ -57,9 +88,8 @@ namespace supermarketSystem
             }
             MessageBox.Show("Products have bought successfully", "Done");
             Global.currCustomer.CashBalance -= totalCashNeeded;
-            /// (mohab) => (mostafa fouad) : You forgot to update the Global.cashBalance with the money the user paid
-            
-            /// (mohab) => (mostafa fouad) : You forgot to update the quantity of the products the user bought
+            Global.cashBalance = totalCashNeeded;
+            updateQuantity(); // updating the quantity of all bought items
             
             /// (mohab) => (mostafa fouad) : We will need to show the invoice form after this form so don't forget 
             /// to open that form after the transaction is done (all of this will be done after the form is already 

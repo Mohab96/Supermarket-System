@@ -80,7 +80,7 @@ namespace supermarketSystem
         public static Hashtable usersCredentials = new Hashtable(); // email, password
         public static Hashtable adminsCredentials = new Hashtable(); // email, password
 
-        public static long cashBalance;
+        public static double cashBalance;
         public static List<string> mainMenuProducts = new List<string>(); // ID of the product .. if you want to access it use allProducts
     }
 }
