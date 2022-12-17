@@ -162,7 +162,7 @@ namespace supermarketSystem
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
-            // not fully completed
+           
 
             // fetching the information
             string Name = nameTxtBx.Text;
@@ -178,7 +178,7 @@ namespace supermarketSystem
             {
                 if (isValidQuantity(quantity) && isValidPrice(price) && isVaildDate(year, month, day))
                 {
-                    /// (mohab) => (mostafa fouad) : You need to handle the ID as I told you
+                    
                     double currprice = double.Parse(price);
                     int dis = cutOff(discount, currprice);
 
@@ -186,6 +186,7 @@ namespace supermarketSystem
                     int y = int.Parse(year);
                     int m = int.Parse(month);
                     int d = int.Parse(day);
+                    string ID = generateID();
 
                     DateTime expire = new DateTime(y, m, d);
                     // creating a new product
