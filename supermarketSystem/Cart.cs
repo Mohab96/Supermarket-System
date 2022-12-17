@@ -46,6 +46,13 @@ namespace supermarketSystem
 
         private void Cart_Load(object sender, EventArgs e)
         {
+            if (Global.currCustomer.cart.Count == 0) 
+            {
+                // if the customer did not buy anyting
+                MessageBox.Show("Your cart is empty");
+                checkoutBtn.Enabled = false;
+                return;
+            }
             balance.Text = Global.currCustomer.CashBalance.ToString();
             foreach (var pro in Global.currCustomer.cart)
             {
