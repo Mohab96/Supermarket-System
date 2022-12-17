@@ -34,6 +34,19 @@ namespace supermarketSystem
             }
         }
 
+        DateTime formatDate(string date)
+        {
+            string dt = "";
+            dt += date[0];
+            dt += date[1];
+            dt += '/';
+            dt += date[2];
+            dt += date[3];
+            dt += '/';
+            dt += date[4] + date[5] + date[6] + date[7];
+            return DateTime.Parse(dt);
+        }
+
         void loadProducts()
         {
             Global.productsIDs = Global.readFromFile(Global.fixedPathForAllProductsIDs);
@@ -41,7 +54,8 @@ namespace supermarketSystem
             {
                 string path = "ProductID_" + ID + ".txt";
                 List<string> data = Global.readFromFile(path);
-                product newProduct = new product(data[0], int.Parse(data[1]), data[2], double.Parse(data[3]), int.Parse(data[4]), DateTime.Parse(data[4]), data[5]);
+                DateTime date = formatDate(data[5]);
+                product newProduct = new product(data[0], int.Parse(data[1]), data[2], double.Parse(data[3]), int.Parse(data[4]), date, data[6]);
                 Global.allProducts[ID] = newProduct;
             }
         }
