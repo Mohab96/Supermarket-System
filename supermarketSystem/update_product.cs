@@ -87,5 +87,13 @@ namespace supermarketSystem
             
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            adminMainMenu back = new adminMainMenu();
+            back.ShowDialog();
+            this.Close();
+        }
     }
 }
