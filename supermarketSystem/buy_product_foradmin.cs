@@ -24,15 +24,6 @@ namespace supermarketSystem
             InitializeComponent();
         }
 
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buy_product_foradmin_Load(object sender, EventArgs e)
         {
@@ -54,8 +45,6 @@ namespace supermarketSystem
 
         }
 
-      
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             double txt_pec = Convert.ToDouble(textBox1);
@@ -64,23 +53,57 @@ namespace supermarketSystem
             total_price.Text = res.ToString();
         }
 
+        bool ValidData(int pec , string s)
+        {
+            if(pec <= 0)
+            {
+                return false ; 
+            }
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] < 49 || s[i] > 57)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            /// (mohab) => (mas) : What if the quantity is less than or equal to zero .. verify this 
-            /// (mohab) => (mas) : What if the quantity entered is text .. verify this 
+            string s = txt_pec.ToString();
             txt_pec = Convert.ToUInt32(textBox1);
-            
+            /// (mohab) => (mas) : What if the quantity is less than or equal to zero .. verify this >> done 
+            /// (mohab) => (mas) : What if the quantity entered is text .. verify this >> done 
+
+            if (!ValidData(int.Parse(txt_pec.ToString()) , s))
+            {
+                MessageBox.Show("Please enter a valid data (numbers > 0)");
+                return ;
+            }
+
             Global.currProduct.Quantity += Convert.ToInt32(txt_pec);
-            /// (mohab) => (mas) : You forgot to update the Global.cashBalance
-
-
             Global.currCustomer.CashBalance -= res ;
+            /// (mohab) => (mas) : You forgot to update the Global.cashBalance >> done
+
 
             MessageBox.Show("Done your cash now = {0}", Global.currCustomer.CashBalance.ToString());
 
-            
-            /// (mohab) => (mas) : You forgot to close the form after you have finished
+            this.Hide();
+            adminMainMenu back = new adminMainMenu();
+            back.ShowDialog();
+            this.Close();
+            /// (mohab) => (mas) : You forgot to close the form after you have finished >> done
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            adminMainMenu back = new adminMainMenu();
+            back.ShowDialog();
+            this.Close();
         }
     }
 }
