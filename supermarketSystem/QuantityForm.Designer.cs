@@ -131,6 +131,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuantityForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.QuantityForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtqty)).EndInit();

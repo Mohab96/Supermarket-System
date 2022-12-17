@@ -85,6 +85,7 @@ namespace supermarketSystem
             this.btndel.Enabled = false;
             this.Icon = Image.FromFile(@"Resources\more.png");
             this.pbicon.Cursor = Cursors.Hand;
+            this.Cursor = Cursors.Hand;
         }
         private void btndel_Click(object sender, EventArgs e)
         {
