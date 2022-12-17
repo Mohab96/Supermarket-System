@@ -40,8 +40,6 @@ namespace supermarketSystem
             QuantityForm Qf = new QuantityForm();
             Global.currProduct = obj.Product;
             Qf.ShowDialog();
-            /// Send the object obj to the quantity form to decide the desired quantity 
-            /// Uncle JOE will decide how this part will be completed ^_^
         }
 
         private void goToPayForm_Click(object sender, EventArgs e)

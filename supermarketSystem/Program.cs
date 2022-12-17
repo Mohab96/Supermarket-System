@@ -14,11 +14,13 @@ namespace supermarketSystem
         /// The main entry point for the application.
         /// </summary>
 
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            loadDatabase system = new loadDatabase();
             Application.Run(new Form1());
         }
     }
