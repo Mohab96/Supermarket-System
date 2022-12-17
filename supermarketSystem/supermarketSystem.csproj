@@ -115,6 +115,9 @@
     <Compile Include="buy_product_foradmin.Designer.cs">
       <DependentUpon>buy_product_foradmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="calculator1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Cart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +151,9 @@
     </Compile>
     <Compile Include="MyItem.Designer.cs">
       <DependentUpon>MyItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pictuer.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="product.cs" />
     <Compile Include="Program.cs" />
@@ -244,6 +250,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <Content Include="Resources\Cart.jpeg" />
+    <Content Include="Resources\abouticon.jpeg" />
     <None Include="Resources\user.png" />
     <None Include="Resources\more.png" />
   </ItemGroup>
