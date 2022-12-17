@@ -112,5 +112,10 @@ namespace supermarketSystem
             UMM.ShowDialog();
             this.Close();
         }
+
+        private void checkout_ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
