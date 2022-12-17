@@ -68,7 +68,6 @@ namespace supermarketSystem
         private void btnedit_Click(object sender, EventArgs e)
         {
             Global.currProduct = this.Product;
-            Global.currProduct.Id=this.Product.Id;
             update_product UP = new update_product();
             UP.ShowDialog();
             this.Menu.Hide();
@@ -93,8 +92,13 @@ namespace supermarketSystem
         }
         private void btndel_Click(object sender, EventArgs e)
         {
-            ///From JOE to Mohab :: how can i delete a product
             Global.allProducts.Remove(this.id);
+            List<string> tmp = Global.readFromFile(Global.fixedPathForAllProductsIDs);
+            Global.clearFile(Global.fixedPathForAllProductsIDs);
+            foreach (var i in tmp)
+            {
+                if (i != this.id) Global.writeOnFile(Global.fixedPathForAllProductsIDs, i);
+            }
             this.Menu.generatecontrols();
         }
         private void pbicon_Click(object sender, EventArgs e)

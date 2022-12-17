@@ -77,6 +77,10 @@ namespace supermarketSystem
                 DateTime date = formatDate(data[5]);
                 product newProduct = new product(data[0], int.Parse(data[1]), data[2], double.Parse(data[3]), int.Parse(data[4]), date, data[6]);
                 Global.allProducts[ID] = newProduct;
+                if (newProduct.Quantity >= 1)
+                { 
+                    Global.mainMenuProducts.Add(ID); 
+                }
             }
         }
 

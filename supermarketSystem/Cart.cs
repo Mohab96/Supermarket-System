@@ -81,6 +81,7 @@ namespace supermarketSystem
                 Object[] obj = new object[] { viewName, quantity, totalPrice };
 
                 checkout_ListBox.Items.AddRange(obj);
+                checkout_ListBox.Items.Add("-----------------------");
 
             }
             displayPrice.Text = totalCashNeeded.ToString(); // showing the total price 
@@ -102,6 +103,14 @@ namespace supermarketSystem
             /// to open that form after the transaction is done (all of this will be done after the form is already 
             /// created ^_^)
             showUserMainMenu();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            userMainMenu UMM =new userMainMenu();
+            UMM.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -97,8 +97,8 @@ namespace supermarketSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            password.UseSystemPasswordChar = checkBox1.Checked;
-            cnfrmPassword.UseSystemPasswordChar = checkBox1.Checked;
+            password.UseSystemPasswordChar =!checkBox1.Checked;
+            cnfrmPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
     }
 }

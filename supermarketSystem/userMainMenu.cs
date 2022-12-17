@@ -30,6 +30,7 @@ namespace supermarketSystem
                 newItem.Product = curProduct;
                 newItem.Click += new EventHandler(this.Item_click);
                 newItem.TopLevel = false;
+                newItem.Show();
                 productsMenu.Controls.Add(newItem);
             }
         }
@@ -37,8 +38,8 @@ namespace supermarketSystem
         void Item_click(object sender, EventArgs e)
         {
             itemForUserMainMenu obj = (itemForUserMainMenu)sender;
-            QuantityForm Qf = new QuantityForm();
             Global.currProduct = obj.Product;
+            QuantityForm Qf = new QuantityForm();
             Qf.ShowDialog();
         }
 

@@ -32,7 +32,7 @@ namespace supermarketSystem
                 {
                     item[i] = new MyItem();
                     item[i].Icon = de.Value.image;
-                    item[i].Name = de.Value.Name;
+                    item[i].Tiltle = de.Value.Name;
                     item[i].Price = de.Value.Price.ToString();
                     item[i].Product = de.Value;
                     item[i].id = (string)de.Key;

@@ -35,14 +35,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnlogs = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnabout = new System.Windows.Forms.Button();
             this.btnsign = new System.Windows.Forms.Button();
+            this.btnabout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(279, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -118,18 +119,6 @@
             this.panel1.Size = new System.Drawing.Size(261, 523);
             this.panel1.TabIndex = 11;
             // 
-            // btnabout
-            // 
-            this.btnabout.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnabout.Location = new System.Drawing.Point(38, 151);
-            this.btnabout.Name = "btnabout";
-            this.btnabout.Size = new System.Drawing.Size(173, 44);
-            this.btnabout.TabIndex = 10;
-            this.btnabout.Text = "About";
-            this.btnabout.UseVisualStyleBackColor = false;
-            this.btnabout.Click += new System.EventHandler(this.btnabout_Click);
-            // 
             // btnsign
             // 
             this.btnsign.BackColor = System.Drawing.Color.Firebrick;
@@ -141,6 +130,18 @@
             this.btnsign.Text = "Sign out";
             this.btnsign.UseVisualStyleBackColor = false;
             this.btnsign.Click += new System.EventHandler(this.btnsign_Click);
+            // 
+            // btnabout
+            // 
+            this.btnabout.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnabout.Location = new System.Drawing.Point(38, 151);
+            this.btnabout.Name = "btnabout";
+            this.btnabout.Size = new System.Drawing.Size(173, 44);
+            this.btnabout.TabIndex = 10;
+            this.btnabout.Text = "About";
+            this.btnabout.UseVisualStyleBackColor = false;
+            this.btnabout.Click += new System.EventHandler(this.btnabout_Click);
             // 
             // adminMainMenu
             // 

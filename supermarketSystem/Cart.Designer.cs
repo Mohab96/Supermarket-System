@@ -34,6 +34,7 @@
             this.checkout_ListBox = new System.Windows.Forms.ListBox();
             this.currCashInAcc = new System.Windows.Forms.Label();
             this.balance = new System.Windows.Forms.Label();
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // displayPrice
@@ -102,17 +103,32 @@
             this.balance.TabIndex = 9;
             this.balance.Text = "NA";
             // 
+            // backBtn
+            // 
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(220, 7);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 31);
+            this.backBtn.TabIndex = 10;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 493);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.balance);
             this.Controls.Add(this.currCashInAcc);
             this.Controls.Add(this.displayPrice);
             this.Controls.Add(this.checkoutBtn);
             this.Controls.Add(this.totalPriceLbl);
             this.Controls.Add(this.checkout_ListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Cart";
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.Cart_Load);
@@ -128,5 +144,6 @@
         private System.Windows.Forms.Label totalPriceLbl;
         private System.Windows.Forms.Label currCashInAcc;
         private System.Windows.Forms.Label balance;
+        private System.Windows.Forms.Button backBtn;
     }
 }
