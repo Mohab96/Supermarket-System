@@ -30,7 +30,7 @@ namespace supermarketSystem
 
         private void linkmostafa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/JOE362");
+            Process.Start("https://github.com/mas305");
         }
 
         private void linkarwa_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
