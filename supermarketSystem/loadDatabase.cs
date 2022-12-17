@@ -30,7 +30,7 @@ namespace supermarketSystem
                 List<string> data = Global.readFromFile(path);
                 admin newAdmin = new admin(data[0], data[1], data[2], data[3], data[4]);
                 Global.allAdmins[ID] = newAdmin;
-                Global.usersCredentials[newAdmin.Email] = newAdmin.Password;
+                Global.adminsCredentials[newAdmin.Email] = newAdmin.Password;
             }
         }
 

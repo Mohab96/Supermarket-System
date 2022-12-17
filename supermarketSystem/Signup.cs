@@ -77,7 +77,10 @@ namespace supermarketSystem
                 Global.customersIDs.Add(generalID.ToString());
                 Global.allCustomers[generalID.ToString()] = newCustomer;
 
-                MessageBox.Show("You have complete the sing sign up successfully\nGo login now ..", "Congrats !!");
+                Global.currCustomer = newCustomer;
+                Global.writeOnFile(Global.fixedPathForAllCustomersIDs, newCustomer.Id);
+                MessageBox.Show("You have complete the sing sign up successfully..", "Congrats !!");
+
                 showUserMainMenu();
             }
         }
@@ -94,16 +97,8 @@ namespace supermarketSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                password.UseSystemPasswordChar = false;
-                cnfrmPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                password.UseSystemPasswordChar = true;
-                cnfrmPassword.UseSystemPasswordChar = true;
-            }
+            password.UseSystemPasswordChar = checkBox1.Checked;
+            cnfrmPassword.UseSystemPasswordChar = checkBox1.Checked;
         }
     }
 }

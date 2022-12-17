@@ -48,7 +48,8 @@ namespace supermarketSystem
             mainMenu.ShowDialog();
             this.Close();
         }
-        void showAdminMainMenu() {
+        void showAdminMainMenu()
+        {
             this.Hide();
             adminMainMenu admn = new adminMainMenu();
             admn.ShowDialog();
@@ -80,6 +81,7 @@ namespace supermarketSystem
             }
             if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text] == PasswordTextbox.Text)
             {   // checking that the Email and password are right
+                Global.writeOnFile("mohab.txt", "wrong path");
                 string curr_ID = currUserId(EmailTextbox.Text);  // holds the current signed in customer id
                 if (curr_ID != null)
                 {
@@ -117,7 +119,7 @@ namespace supermarketSystem
             {
                 PasswordTextbox.PasswordChar = '\0';
             }
-            else 
+            else
             {
                 PasswordTextbox.PasswordChar = '*';
             }

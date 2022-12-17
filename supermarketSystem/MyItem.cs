@@ -83,7 +83,8 @@ namespace supermarketSystem
             this.btnbuy.Enabled = false;
             this.btnbuy.Enabled = false;
             this.btndel.Enabled = false;
-            this.Icon = Image.FromFile(@"Resources\more.png");
+            //this.Icon = Image.FromFile(@"Resources\more.png");
+            this.Icon = supermarketSystem.Properties.Resources.more;
             this.pbicon.Cursor = Cursors.Hand;
             this.Cursor = Cursors.Hand;
         }
