@@ -69,7 +69,7 @@ namespace supermarketSystem
         private void button1_Click_1(object sender, EventArgs e)
         {
             string s = txt_pec.ToString();
-            txt_pec = Convert.ToUInt32(textBox1);
+            txt_pec = int.Parse(textBox1.Text);
             /// (mohab) => (mas) : What if the quantity is less than or equal to zero .. verify this >> done 
             /// (mohab) => (mas) : What if the quantity entered is text .. verify this >> done 
 

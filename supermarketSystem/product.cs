@@ -42,7 +42,15 @@ namespace supermarketSystem
             this.expirydate = expirydate;
             this.imgUrl = imgUrl;
             this.id = id;
-            image = System.Drawing.Image.FromFile(imgUrl);
+            try
+            {
+                image = System.Drawing.Image.FromFile(imgUrl);
+            }
+            catch(Exception e)
+            {
+                image = supermarketSystem.Properties.Resources.cross;
+            }
+            
 
             string path = "ProductID_" + id + ".txt";
             string[] dateFormats = expirydate.GetDateTimeFormats();
