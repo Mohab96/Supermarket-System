@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Utilities.Collections;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace supermarketSystem
         public string id;
         public product Product;
         public adminMainMenu Menu;
+        public bool empty = false;
         public Image Icon
         {
             get { return _icon; }
@@ -81,9 +83,9 @@ namespace supermarketSystem
         public void add_item()
         {
             this.btnbuy.Enabled = false;
-            this.btnbuy.Enabled = false;
+            this.btnedit.Enabled = false;
             this.btndel.Enabled = false;
-            //this.Icon = Image.FromFile(@"Resources\more.png");
+            empty = true;
             this.Icon = supermarketSystem.Properties.Resources.more;
             this.pbicon.Cursor = Cursors.Hand;
             this.Cursor = Cursors.Hand;
@@ -96,7 +98,7 @@ namespace supermarketSystem
         }
         private void pbicon_Click(object sender, EventArgs e)
         {
-            if(this.Icon == Image.FromFile(@"Resources\more.png"))
+            if(empty)
             {
                 createProduct CP = new createProduct();
                 CP.ShowDialog();
