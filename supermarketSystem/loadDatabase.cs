@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace supermarketSystem
 {
@@ -36,15 +40,31 @@ namespace supermarketSystem
 
         DateTime formatDate(string date)
         {
-            string dt = "";
-            dt += date[0];
-            dt += date[1];
-            dt += '/';
-            dt += date[2];
-            dt += date[3];
-            dt += '/';
-            dt += date[4] + date[5] + date[6] + date[7];
-            return DateTime.Parse(dt);
+            string m;
+            string d;
+            string y;
+            string tmp = "";
+            int c = 0;
+            while (date[c] != '/')
+            {
+                tmp += date[c];
+                c++;
+            }
+            m = tmp;
+            c++;
+            tmp = "";
+            while (date[c] != '/') {
+                tmp += date[c++];
+            }
+            d = tmp;
+            tmp = "";
+            c++;
+            while (c <date.Length) {
+                tmp += date[c++];
+            }
+            y = tmp;
+            DateTime ret=new DateTime(int.Parse(y),int.Parse(m),int.Parse(d));
+            return ret;
         }
 
         void loadProducts()

@@ -76,8 +76,6 @@
             this.checkout_ListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkout_ListBox.FormattingEnabled = true;
             this.checkout_ListBox.ItemHeight = 16;
-            this.checkout_ListBox.Items.AddRange(new object[] {
-            "Border Style Will be Changed Later :D"});
             this.checkout_ListBox.Location = new System.Drawing.Point(12, 51);
             this.checkout_ListBox.Name = "checkout_ListBox";
             this.checkout_ListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;

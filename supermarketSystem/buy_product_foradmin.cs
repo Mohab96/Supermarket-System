@@ -47,7 +47,7 @@ namespace supermarketSystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            double txt_pec = Convert.ToDouble(textBox1);
+            double txt_pec = double.Parse(textBox1.Text);
             double res = txt_pec * Global.currProduct.Price;
 
             total_price.Text = res.ToString();

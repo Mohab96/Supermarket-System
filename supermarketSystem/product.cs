@@ -45,7 +45,7 @@ namespace supermarketSystem
 
             string path = "ProductID_" + id + ".txt";
             string[] dateFormats = expirydate.GetDateTimeFormats();
-            string date = formatDate(dateFormats[0]);
+          //  string date = formatDate(dateFormats[0]);
 
             Global.clearFile(path);
             Global.writeOnFile(path, productname);
@@ -53,7 +53,7 @@ namespace supermarketSystem
             Global.writeOnFile(path, id);
             Global.writeOnFile(path, price.ToString());
             Global.writeOnFile(path, discount.ToString());
-            Global.writeOnFile(path, date);
+            Global.writeOnFile(path, dateFormats[0]);
             Global.writeOnFile(path, imgUrl.ToString());
         }
 

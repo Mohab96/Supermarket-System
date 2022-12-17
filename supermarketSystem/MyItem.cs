@@ -68,6 +68,7 @@ namespace supermarketSystem
         private void btnedit_Click(object sender, EventArgs e)
         {
             Global.currProduct = this.Product;
+            Global.currProduct.Id=this.Product.Id;
             update_product UP = new update_product();
             UP.ShowDialog();
             this.Menu.Hide();
