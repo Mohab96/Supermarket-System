@@ -92,7 +92,7 @@
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(357, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(447, 22);
+            this.label2.Size = new System.Drawing.Size(466, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "https://github.com/Mohab96/Supermarket-System";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;

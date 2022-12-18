@@ -57,5 +57,10 @@ namespace supermarketSystem
             lblprice.Text = "$ " + (price * qty).ToString();
             lblfinalprice.Text = "$ " + ((price * qty) * (100-discount) / 100.0).ToString();
         }
+
+        private void lblfinalprice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

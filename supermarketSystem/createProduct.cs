@@ -215,5 +215,10 @@ namespace supermarketSystem
         {
 
         }
+
+        private void productImage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

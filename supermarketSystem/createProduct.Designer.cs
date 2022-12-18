@@ -118,6 +118,7 @@
             this.productImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productImage.TabIndex = 6;
             this.productImage.TabStop = false;
+            this.productImage.Click += new System.EventHandler(this.productImage_Click);
             // 
             // uploadbtn
             // 
