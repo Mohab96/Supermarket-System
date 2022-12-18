@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace supermarketSystem
 {
-    public partial class Form3 : Form
+    public partial class invoice_form : Form
     {
-        public Form3()
+        public invoice_form()
         {
             InitializeComponent();
         }

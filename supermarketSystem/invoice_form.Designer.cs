@@ -1,6 +1,6 @@
 ﻿namespace supermarketSystem
 {
-    partial class Form3
+    partial class invoice_form
     {
         /// <summary>
         /// Required designer variable.
