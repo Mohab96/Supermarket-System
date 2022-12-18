@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(invoice_form));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictuer1 = new supermarketSystem.pictuer();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -51,8 +50,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).BeginInit();
+            this.pictuer1 = new supermarketSystem.pictuer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,24 +66,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "supermarket";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictuer1
-            // 
-            this.pictuer1.Bordcapstyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictuer1.Bordercolor = System.Drawing.Color.RoyalBlue;
-            this.pictuer1.Bordercolor2 = System.Drawing.Color.Crimson;
-            this.pictuer1.Borderlinestyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.pictuer1.Bordersize = 4;
-            this.pictuer1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictuer1.GradientAngle = 50F;
-            this.pictuer1.Image = global::supermarketSystem.Properties.Resources.Cart;
-            this.pictuer1.Location = new System.Drawing.Point(1166, 0);
-            this.pictuer1.MaximumSize = new System.Drawing.Size(219, 206);
-            this.pictuer1.Name = "pictuer1";
-            this.pictuer1.Size = new System.Drawing.Size(219, 206);
-            this.pictuer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictuer1.TabIndex = 1;
-            this.pictuer1.TabStop = false;
             // 
             // label2
             // 
@@ -115,6 +97,7 @@
             this.textBox2.Size = new System.Drawing.Size(211, 22);
             this.textBox2.TabIndex = 5;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label4
@@ -295,6 +278,24 @@
             this.printDocument1.DocumentName = "document1";
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // pictuer1
+            // 
+            this.pictuer1.Bordcapstyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictuer1.Bordercolor = System.Drawing.Color.RoyalBlue;
+            this.pictuer1.Bordercolor2 = System.Drawing.Color.Crimson;
+            this.pictuer1.Borderlinestyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.pictuer1.Bordersize = 4;
+            this.pictuer1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictuer1.GradientAngle = 50F;
+            this.pictuer1.Image = global::supermarketSystem.Properties.Resources.Cart;
+            this.pictuer1.Location = new System.Drawing.Point(1166, 0);
+            this.pictuer1.MaximumSize = new System.Drawing.Size(219, 206);
+            this.pictuer1.Name = "pictuer1";
+            this.pictuer1.Size = new System.Drawing.Size(219, 206);
+            this.pictuer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictuer1.TabIndex = 1;
+            this.pictuer1.TabStop = false;
+            // 
             // invoice_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,8 +323,8 @@
             this.Text = "Form3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
