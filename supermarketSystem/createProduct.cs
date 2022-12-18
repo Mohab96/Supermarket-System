@@ -151,19 +151,21 @@ namespace supermarketSystem
             }
 
         }
+
         string generateID()
         {
             List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
-            int ID = int.Parse(generalIdFile[0]);
+            int ID = generalIdFile.Count == 0 ? 22 : int.Parse(generalIdFile[0]);
             ID += 74;
             Global.clearFile(Global.fixedPathForGeneralID);
             Global.writeOnFile(Global.fixedPathForGeneralID, ID.ToString());
 
             return ID.ToString();
         }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
-           
+
 
             // fetching the information
             string Name = nameTxtBx.Text;
@@ -179,7 +181,7 @@ namespace supermarketSystem
             {
                 if (isValidQuantity(quantity) && isValidPrice(price) && isVaildDate(year, month, day))
                 {
-                    
+
                     double currprice = double.Parse(price);
                     int dis = cutOff(discount, currprice);
 
