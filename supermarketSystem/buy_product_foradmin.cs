@@ -15,7 +15,7 @@ namespace supermarketSystem
     {
         
         double txt_pec;
-        double res;
+        double tot_price;
 
 
         public buy_product_foradmin()
@@ -43,21 +43,22 @@ namespace supermarketSystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            double txt_pec = double.Parse(textBox1.Text);
-            double res = txt_pec * Global.currProduct.Price;
+            txt_pec = int.Parse(textBox1.Text);
+            double tot_price = txt_pec * Global.currProduct.Price;
 
-            total_price.Text = res.ToString();
+            total_price.Text = tot_price.ToString();
         }
 
-        bool ValidData(int pec , string s)
+        bool ValidPrice(string price)
         {
-            if(pec <= 0)
+            if(price[0]==0)
             {
-                return false ; 
+                return false;
             }
-            for (int i = 0; i < s.Length; i++)
+
+            for (int i = 0; i < price.Length; i++)
             {
-                if (s[i] < 49 || s[i] > 57)
+                if (!(price[i]>=48 && price[i]<=57))
                 {
                     return false;
                 }
@@ -68,30 +69,29 @@ namespace supermarketSystem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string s = txt_pec.ToString();
-            txt_pec = int.Parse(textBox1.Text);
-            /// (mohab) => (mas) : What if the quantity is less than or equal to zero .. verify this >> done 
-            /// (mohab) => (mas) : What if the quantity entered is text .. verify this >> done 
-
-            if (!ValidData(int.Parse(txt_pec.ToString()) , s))
+            string prc = txt_pec.ToString();
+            if (!ValidPrice(prc))
             {
                 MessageBox.Show("Please enter a valid data (numbers > 0)");
                 return ;
             }
+            tot_price = txt_pec * Global.currProduct.Price;
+
+            if (tot_price > Global.cashBalance)
+            {
+                MessageBox.Show("You don't have enough cash");
+                return;
+            }
 
             Global.currProduct.Quantity += Convert.ToInt32(txt_pec);
-            Global.currCustomer.CashBalance -= res ;
-            /// (mohab) => (mas) : You forgot to update the Global.cashBalance >> done
+            Global.cashBalance -= tot_price;
 
-
-            MessageBox.Show("Done your cash now = {0}", Global.currCustomer.CashBalance.ToString());
+            MessageBox.Show("Done.. your cash now" + Global.cashBalance.ToString());
 
             this.Hide();
             adminMainMenu back = new adminMainMenu();
             back.ShowDialog();
             this.Close();
-            /// (mohab) => (mas) : You forgot to close the form after you have finished >> done
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -104,6 +104,7 @@ namespace supermarketSystem
 
         private void buy_product_foradmin_Load_1(object sender, EventArgs e)
         {
+            lbl_name.Text = Global.currProduct.Name;
             pictureBox1.Image = Global.currProduct.image;
             quan_lbl.Text = Global.currProduct.Quantity.ToString();
             price_lbl.Text = Global.currProduct.Price.ToString();

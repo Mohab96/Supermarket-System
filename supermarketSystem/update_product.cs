@@ -42,20 +42,23 @@ namespace supermarketSystem
                Global.currProduct.Quantity = int.Parse(txtquan.Text);
                Global.currProduct.Price = double.Parse(txtprice.Text);
                Global.currProduct.image = pictureBox1.Image;
+                MessageBox.Show("Done.. The data has been updated");
+
                 adminMainMenu menu = new adminMainMenu();
                 this.Hide();
                 menu.ShowDialog();
                 this.Close();
 
-                MessageBox.Show("Done.. The data has been updated" , MessageBoxButtons.OK.ToString());
+                
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             adminMainMenu menu = new adminMainMenu();
-            menu.ShowDialog();
-            this.Close();
+            menu.Show();
+            
         }
 
 
