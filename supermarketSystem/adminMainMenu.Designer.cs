@@ -45,9 +45,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(279, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(227, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(515, 523);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(605, 523);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -96,7 +96,7 @@
             // 
             this.btnlogs.BackColor = System.Drawing.Color.White;
             this.btnlogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogs.Location = new System.Drawing.Point(38, 101);
+            this.btnlogs.Location = new System.Drawing.Point(18, 96);
             this.btnlogs.Name = "btnlogs";
             this.btnlogs.Size = new System.Drawing.Size(173, 44);
             this.btnlogs.TabIndex = 9;
@@ -116,14 +116,15 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 523);
+            this.panel1.Size = new System.Drawing.Size(209, 523);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnsign
             // 
             this.btnsign.BackColor = System.Drawing.Color.Firebrick;
             this.btnsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsign.Location = new System.Drawing.Point(38, 201);
+            this.btnsign.Location = new System.Drawing.Point(18, 196);
             this.btnsign.Name = "btnsign";
             this.btnsign.Size = new System.Drawing.Size(173, 44);
             this.btnsign.TabIndex = 11;
@@ -135,7 +136,7 @@
             // 
             this.btnabout.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnabout.Location = new System.Drawing.Point(38, 151);
+            this.btnabout.Location = new System.Drawing.Point(18, 146);
             this.btnabout.Name = "btnabout";
             this.btnabout.Size = new System.Drawing.Size(173, 44);
             this.btnabout.TabIndex = 10;
@@ -147,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 540);
+            this.ClientSize = new System.Drawing.Size(844, 540);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -155,6 +156,7 @@
             this.Name = "adminMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainMenu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.adminMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.adminMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

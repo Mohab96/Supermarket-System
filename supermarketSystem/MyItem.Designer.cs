@@ -43,7 +43,7 @@
             this.lblprice.BackColor = System.Drawing.Color.Transparent;
             this.lblprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblprice.ForeColor = System.Drawing.Color.Green;
-            this.lblprice.Location = new System.Drawing.Point(99, 146);
+            this.lblprice.Location = new System.Drawing.Point(12, 179);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(72, 25);
             this.lblprice.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.btnedit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnedit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnedit.Location = new System.Drawing.Point(15, 184);
+            this.btnedit.Location = new System.Drawing.Point(15, 224);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(75, 44);
             this.btnedit.TabIndex = 4;
@@ -83,7 +83,7 @@
             this.btnbuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnbuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuy.ForeColor = System.Drawing.Color.Ivory;
-            this.btnbuy.Location = new System.Drawing.Point(96, 184);
+            this.btnbuy.Location = new System.Drawing.Point(96, 224);
             this.btnbuy.Name = "btnbuy";
             this.btnbuy.Size = new System.Drawing.Size(75, 44);
             this.btnbuy.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.btndel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndel.ForeColor = System.Drawing.Color.Ivory;
-            this.btndel.Location = new System.Drawing.Point(15, 234);
+            this.btndel.Location = new System.Drawing.Point(15, 274);
             this.btndel.Name = "btndel";
             this.btndel.Size = new System.Drawing.Size(156, 44);
             this.btndel.TabIndex = 4;
@@ -133,7 +133,7 @@
             this.Controls.Add(this.pbicon);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "MyItem";
-            this.Size = new System.Drawing.Size(183, 290);
+            this.Size = new System.Drawing.Size(183, 329);
             this.Load += new System.EventHandler(this.MyItem_Load);
             this.MouseEnter += new System.EventHandler(this.MyItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.MyItem_MouseLeave);

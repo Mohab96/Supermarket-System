@@ -37,7 +37,7 @@ namespace supermarketSystem
         public string Price
         {
             get { return _price; }
-            set { _price = value; lblprice.Text = value; }
+            set { _price = value; lblprice.Text = value + " $"; }
         }
 
         private void MyItem_Load(object sender, EventArgs e)
@@ -70,8 +70,7 @@ namespace supermarketSystem
             Global.currProduct = this.Product;
             update_product UP = new update_product();
             UP.ShowDialog();
-            this.Menu.Hide();
-            this.Menu.Close();
+            this.Menu.generatecontrols();
         }
 
         private void btnbuy_Click(object sender, EventArgs e)
@@ -79,6 +78,7 @@ namespace supermarketSystem
             Global.currProduct = this.Product;
             buy_product_foradmin bp = new buy_product_foradmin();
             bp.ShowDialog();
+            this.Menu.generatecontrols();
         }
         public void add_item()
         {
@@ -107,7 +107,7 @@ namespace supermarketSystem
             {
                 createProduct CP = new createProduct();
                 CP.ShowDialog();
-                this.Menu.Close();
+                this.Menu.generatecontrols();
             }
         }
 
