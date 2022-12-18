@@ -12,11 +12,11 @@ namespace supermarketSystem
 {
     public partial class invoice_form : Form
     {
-        public invoice_form()
+        public invoice_form() 
         {
             InitializeComponent();
         }
-        public double totalcashneeded;
+        public double totalcashneeded ;
         
         private void label2_Click(object sender, EventArgs e)
         {

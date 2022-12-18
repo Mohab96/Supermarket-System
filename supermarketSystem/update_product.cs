@@ -13,7 +13,6 @@ namespace supermarketSystem
     public partial class update_product : Form
     {
         
-
         public update_product()
         {
             InitializeComponent();
@@ -37,6 +36,8 @@ namespace supermarketSystem
             {
                 MessageBox.Show("Please fill all the informatin correctly");
             }
+            else if (int.Parse(txtquan.Text) == 0 || int.Parse(txtprice.Text) == 0)
+                MessageBox.Show("Please fill all the informatin correctly");
             else
             {
                Global.currProduct.Name = txtname.Text;
@@ -73,7 +74,7 @@ namespace supermarketSystem
             {
                 OpenFileDialog imagefile = new OpenFileDialog();
                 imagefile.Title = "select an image";
-                imagefile.Filter = "PNG Image |*png|BIK|*.bik";
+                imagefile.Filter = "image|*.jpg;*.png;*.bmp";
                 imagefile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
                 if (imagefile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {

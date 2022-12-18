@@ -14,7 +14,7 @@ namespace supermarketSystem
     public partial class buy_product_foradmin : Form
     {
         
-        double txt_pec;
+        double txt_pec = 0 ;
         double tot_price;
 
 
@@ -43,10 +43,7 @@ namespace supermarketSystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            txt_pec = int.Parse(textBox1.Text);
-            double tot_price = txt_pec * Global.currProduct.Price;
-
-            total_price.Text = tot_price.ToString();
+           
         }
 
         bool ValidPrice(string price)
@@ -70,11 +67,7 @@ namespace supermarketSystem
         private void button1_Click_1(object sender, EventArgs e)
         {
             string prc = txt_pec.ToString();
-            if (!ValidPrice(prc))
-            {
-                MessageBox.Show("Please enter a valid data (numbers > 0)");
-                return ;
-            }
+            
             tot_price = txt_pec * Global.currProduct.Price;
 
             if (tot_price > Global.cashBalance)
@@ -103,6 +96,14 @@ namespace supermarketSystem
             quan_lbl.Text = Global.currProduct.Quantity.ToString();
             price_lbl.Text = Global.currProduct.Price.ToString();
             cash_lbl.Text = Global.cashBalance.ToString();
+        }
+
+        private void textBox1_ValueChanged(object sender, EventArgs e)
+        {
+            txt_pec = int.Parse(textBox1.Text);
+            double tot_price = txt_pec * Global.currProduct.Price;
+
+            total_price.Text = tot_price.ToString();
         }
     }
 }
