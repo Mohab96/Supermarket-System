@@ -59,19 +59,21 @@ namespace supermarketSystem
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-            if (Global.currCustomer ==null)
+            this.Close();
+        }
+
+        private void About_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Global.currCustomer == null)
             {
                 adminMainMenu admin = new adminMainMenu();
                 admin.Show();
             }
-            else if(Global.currCustomer!= null)
+            else if (Global.currCustomer != null)
             {
                 userMainMenu user = new userMainMenu();
-                 user .Show(); 
+                user.Show();
             }
-          
-       
-            this.Close();
         }
     }
 }

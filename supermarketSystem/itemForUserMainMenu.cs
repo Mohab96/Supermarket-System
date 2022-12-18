@@ -17,5 +17,12 @@ namespace supermarketSystem
             InitializeComponent();
         }
         public product Product;
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            Global.currProduct = this.Product;
+            QuantityForm Qf = new QuantityForm();
+            Qf.ShowDialog();
+        }
     }
 }

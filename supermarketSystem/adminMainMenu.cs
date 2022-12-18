@@ -92,7 +92,9 @@ namespace supermarketSystem
         private void btnabout_Click(object sender, EventArgs e)
         {
             About about = new About();
-            about.ShowDialog();
+            about.Show();
+            close = false;
+            this.Close();
         }
 
         private void adminMainMenu_FormClosing(object sender, FormClosingEventArgs e)

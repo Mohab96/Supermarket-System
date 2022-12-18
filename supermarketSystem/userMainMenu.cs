@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace supermarketSystem
 {
@@ -16,6 +17,7 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
+        public bool close = true;
         private void userMainMenu_Load(object sender, EventArgs e)
         {
             name.Text = Global.currCustomer.FullName;
@@ -28,27 +30,51 @@ namespace supermarketSystem
                 newItem.prdctName.Text = curProduct.Name;
                 newItem.prdctPrice.Text = curProduct.Price.ToString();
                 newItem.Product = curProduct;
-                newItem.Click += new EventHandler(this.Item_click);
+                //newItem.Click += new EventHandler(this.Item_click);
                 newItem.TopLevel = false;
                 newItem.Show();
                 productsMenu.Controls.Add(newItem);
             }
         }
 
-        void Item_click(object sender, EventArgs e)
-        {
-            itemForUserMainMenu obj = (itemForUserMainMenu)sender;
-            Global.currProduct = obj.Product;
-            QuantityForm Qf = new QuantityForm();
-            Qf.ShowDialog();
-        }
+        //void Item_click(object sender, EventArgs e)
+        //{
+        //    itemForUserMainMenu obj = (itemForUserMainMenu)sender;
+        //    Global.currProduct = obj.Product;
+        //    QuantityForm Qf = new QuantityForm();
+        //    Qf.ShowDialog();
+        //}
 
         private void goToPayForm_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Cart checkout = new Cart();
+            checkout.menu = this;
             checkout.ShowDialog();
+            //this.Close();
+        }
+
+        private void btnsign_Click(object sender, EventArgs e)
+        {
+            Global.currCustomer = null;
+            Application.OpenForms[0].Show();
+            close = false;
             this.Close();
+        }
+
+        private void userMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (close == true)
+                Application.Exit();
+        }
+
+        private void btnabout_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+            close = false;
+            this.Close();
+
         }
     }
 }

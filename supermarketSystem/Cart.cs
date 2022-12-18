@@ -25,7 +25,7 @@ namespace supermarketSystem
             UMM.ShowDialog();
             this.Hide();
         }
-
+        public userMainMenu menu;
         void updateQuantity()
         {
             // updating the quantity of the current product 
@@ -98,18 +98,23 @@ namespace supermarketSystem
             Global.currCustomer.CashBalance -= totalCashNeeded;
             Global.cashBalance = totalCashNeeded;
             updateQuantity(); // updating the quantity of all bought items
-            
+
             /// (mohab) => (mostafa fouad) : We will need to show the invoice form after this form so don't forget 
             /// to open that form after the transaction is done (all of this will be done after the form is already 
             /// created ^_^)
-            showUserMainMenu();
+            //showUserMainMenu();
+            this.Hide();
+            invoice_form i_f = new invoice_form();
+            i_f.Show();
+            this.menu.close = false;
+            this.menu.Close();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            userMainMenu UMM =new userMainMenu();
-            UMM.ShowDialog();
+            //this.Hide();
+            //userMainMenu UMM =new userMainMenu();
+            //UMM.ShowDialog();
             this.Close();
         }
 
