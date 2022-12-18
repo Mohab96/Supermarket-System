@@ -88,17 +88,11 @@ namespace supermarketSystem
 
             MessageBox.Show("Done.. your cash now" + Global.cashBalance.ToString());
 
-            this.Hide();
-            adminMainMenu back = new adminMainMenu();
-            back.ShowDialog();
             this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            adminMainMenu back = new adminMainMenu();
-            back.ShowDialog();
             this.Close();
         }
 

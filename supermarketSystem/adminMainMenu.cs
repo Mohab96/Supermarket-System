@@ -19,9 +19,11 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
-
+        bool close = true;
         public void generatecontrols()
         {
+            lblcash.Text = Global.cashBalance.ToString();
+            lblname.Text = Global.currAdmin.FullName;
             flowLayoutPanel1.Controls.Clear();
             if (Global.allProducts.Count > 0)
             {
@@ -51,7 +53,7 @@ namespace supermarketSystem
         {           
             createProduct CP = new createProduct();          
             CP.ShowDialog();
-            this.Close();
+            generatecontrols();
         }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -61,8 +63,7 @@ namespace supermarketSystem
         private void adminMainMenu_Load(object sender, EventArgs e)
         {
             generatecontrols();
-            lblcash.Text = Global.cashBalance.ToString();
-            lblname.Text = Global.currAdmin.FullName;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,14 +83,25 @@ namespace supermarketSystem
 
         private void btnsign_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
             Global.currAdmin = null;
-            this.Hide();
-            login.ShowDialog();
+            Application.OpenForms[0].Show();
+            close = false;
             this.Close();
         }
 
         private void btnabout_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
+
+        private void adminMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(close == true)
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

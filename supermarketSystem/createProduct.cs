@@ -126,9 +126,9 @@ namespace supermarketSystem
 
         void showAdminMainMenu()
         {
-            this.Hide();
-            adminMainMenu admin = new adminMainMenu();
-            admin.ShowDialog();
+            //this.Hide();
+            //adminMainMenu admin = new adminMainMenu();
+            //admin.Show();
             this.Close();
         }
 

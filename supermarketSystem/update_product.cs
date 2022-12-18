@@ -45,9 +45,6 @@ namespace supermarketSystem
                Global.currProduct.Image = pictureBox1.ImageLocation;
                 MessageBox.Show("Done.. The data has been updated");
 
-                adminMainMenu menu = new adminMainMenu();
-                this.Hide();
-                menu.ShowDialog();
                 this.Close();
 
                 
@@ -56,10 +53,7 @@ namespace supermarketSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            adminMainMenu menu = new adminMainMenu();
-            menu.Show();
-            
+            this.Close();
         }
 
 
@@ -96,9 +90,6 @@ namespace supermarketSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            adminMainMenu back = new adminMainMenu();
-            back.ShowDialog();
             this.Close();
         }
 

@@ -52,8 +52,8 @@ namespace supermarketSystem
         {
             this.Hide();
             adminMainMenu admn = new adminMainMenu();
-            admn.ShowDialog();
-            this.Close();
+            admn.Show();
+            //this.Close();
         }
 
         public string currAdminId(string Email)
