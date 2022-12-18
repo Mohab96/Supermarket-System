@@ -20,7 +20,7 @@ namespace supermarketSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            loadDatabase system = new loadDatabase();
+            loadDatabase.load();
             Application.Run(new Form1());
         }
     }

@@ -21,8 +21,8 @@ namespace supermarketSystem
         {
             this.Hide(); // hiding the current form 
             Signup signup = new Signup(); //taking object of the signup form 
-            signup.ShowDialog();  //showing the contents of the signup form
-            this.Close();  // closing the current form to avoid memory issues 
+            signup.Show();  //showing the contents of the signup form
+            //this.Close();  // closing the current form to avoid memory issues 
         }
 
         public string currUserId(string Email)
@@ -45,8 +45,8 @@ namespace supermarketSystem
         {
             this.Hide();
             userMainMenu mainMenu = new userMainMenu();
-            mainMenu.ShowDialog();
-            this.Close();
+            mainMenu.Show();
+            //this.Close();
         }
         void showAdminMainMenu()
         {
@@ -81,7 +81,6 @@ namespace supermarketSystem
             }
             if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text] == PasswordTextbox.Text)
             {   // checking that the Email and password are right
-                Global.writeOnFile("mohab.txt", "wrong path");
                 string curr_ID = currUserId(EmailTextbox.Text);  // holds the current signed in customer id
                 if (curr_ID != null)
                 {

@@ -29,18 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnsign = new System.Windows.Forms.Button();
             this.goToPayForm = new System.Windows.Forms.Button();
             this.money = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.cash = new System.Windows.Forms.Label();
             this.welcome = new System.Windows.Forms.Label();
             this.productsMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnabout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnabout);
+            this.panel1.Controls.Add(this.btnsign);
             this.panel1.Controls.Add(this.goToPayForm);
             this.panel1.Controls.Add(this.money);
             this.panel1.Controls.Add(this.name);
@@ -50,6 +54,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(652, 91);
             this.panel1.TabIndex = 0;
+            // 
+            // btnsign
+            // 
+            this.btnsign.Location = new System.Drawing.Point(321, 34);
+            this.btnsign.Name = "btnsign";
+            this.btnsign.Size = new System.Drawing.Size(75, 23);
+            this.btnsign.TabIndex = 3;
+            this.btnsign.Text = "Sign out";
+            this.btnsign.UseVisualStyleBackColor = true;
+            this.btnsign.Click += new System.EventHandler(this.btnsign_Click);
             // 
             // goToPayForm
             // 
@@ -111,6 +125,16 @@
             this.productsMenu.Size = new System.Drawing.Size(652, 334);
             this.productsMenu.TabIndex = 1;
             // 
+            // btnabout
+            // 
+            this.btnabout.Location = new System.Drawing.Point(222, 34);
+            this.btnabout.Name = "btnabout";
+            this.btnabout.Size = new System.Drawing.Size(75, 40);
+            this.btnabout.TabIndex = 4;
+            this.btnabout.Text = "About";
+            this.btnabout.UseVisualStyleBackColor = true;
+            this.btnabout.Click += new System.EventHandler(this.btnabout_Click);
+            // 
             // userMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +144,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "userMainMenu";
             this.Text = "Main menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.userMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.userMainMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -136,5 +161,7 @@
         private System.Windows.Forms.Label welcome;
         private System.Windows.Forms.Button goToPayForm;
         private System.Windows.Forms.FlowLayoutPanel productsMenu;
+        private System.Windows.Forms.Button btnsign;
+        private System.Windows.Forms.Button btnabout;
     }
 }

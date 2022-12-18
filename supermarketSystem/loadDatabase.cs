@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace supermarketSystem
 {
-    class loadDatabase
+    public static class loadDatabase
     {
-        void loadCustomers()
+        public static void loadCustomers()
         {
             Global.customersIDs = Global.readFromFile(Global.fixedPathForAllCustomersIDs);
             foreach (string ID in Global.customersIDs)
@@ -25,7 +25,7 @@ namespace supermarketSystem
             }
         }
 
-        void loadAdmins()
+        public static void loadAdmins()
         {
             Global.adminsIDs = Global.readFromFile(Global.fixedPathForAllAdminsIDs);
             foreach (string ID in Global.adminsIDs)
@@ -38,7 +38,7 @@ namespace supermarketSystem
             }
         }
 
-        DateTime formatDate(string date)
+        public static DateTime formatDate(string date)
         {
             string m;
             string d;
@@ -67,7 +67,7 @@ namespace supermarketSystem
             return ret;
         }
 
-        void loadProducts()
+        public static void loadProducts()
         {
             Global.productsIDs = Global.readFromFile(Global.fixedPathForAllProductsIDs);
             foreach (string ID in Global.productsIDs)
@@ -84,7 +84,7 @@ namespace supermarketSystem
             }
         }
 
-        void loadInvoices()
+        public static void loadInvoices()
         {
             /// This method is for admins .. the customers have their invoices loaded in their constructors
             List<string> allInvoices = Global.readFromFile(Global.fixedPathForAllInvoicesIDs);
@@ -92,8 +92,7 @@ namespace supermarketSystem
             foreach (var item in allInvoices)
                 Global.invoiceIDs.Add(item);
         }
-
-        public loadDatabase()
+        public static void load()
         {
             loadCustomers();
             loadAdmins();

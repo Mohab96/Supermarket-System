@@ -31,17 +31,19 @@
             this.prdctPic = new System.Windows.Forms.PictureBox();
             this.prdctName = new System.Windows.Forms.Label();
             this.prdctPrice = new System.Windows.Forms.Label();
+            this.btnadd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.prdctPic)).BeginInit();
             this.SuspendLayout();
             // 
             // prdctPic
             // 
-            this.prdctPic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.prdctPic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.prdctPic.BackColor = System.Drawing.Color.SteelBlue;
             this.prdctPic.Location = new System.Drawing.Point(127, 11);
             this.prdctPic.Name = "prdctPic";
             this.prdctPic.Size = new System.Drawing.Size(68, 72);
+            this.prdctPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.prdctPic.TabIndex = 0;
             this.prdctPic.TabStop = false;
             // 
@@ -51,7 +53,7 @@
             this.prdctName.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prdctName.Location = new System.Drawing.Point(16, 20);
             this.prdctName.Name = "prdctName";
-            this.prdctName.Size = new System.Drawing.Size(38, 16);
+            this.prdctName.Size = new System.Drawing.Size(37, 16);
             this.prdctName.TabIndex = 1;
             this.prdctName.Text = "name";
             // 
@@ -61,9 +63,19 @@
             this.prdctPrice.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prdctPrice.Location = new System.Drawing.Point(19, 68);
             this.prdctPrice.Name = "prdctPrice";
-            this.prdctPrice.Size = new System.Drawing.Size(36, 16);
+            this.prdctPrice.Size = new System.Drawing.Size(35, 16);
             this.prdctPrice.TabIndex = 2;
             this.prdctPrice.Text = "price";
+            // 
+            // btnadd
+            // 
+            this.btnadd.Location = new System.Drawing.Point(127, 68);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(68, 23);
+            this.btnadd.TabIndex = 4;
+            this.btnadd.Text = "Add to cart";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // itemForUserMainMenu
             // 
@@ -71,6 +83,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(205, 100);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.prdctPrice);
             this.Controls.Add(this.prdctName);
             this.Controls.Add(this.prdctPic);
@@ -87,5 +100,6 @@
         public System.Windows.Forms.PictureBox prdctPic;
         public System.Windows.Forms.Label prdctName;
         public System.Windows.Forms.Label prdctPrice;
+        private System.Windows.Forms.Button btnadd;
     }
 }

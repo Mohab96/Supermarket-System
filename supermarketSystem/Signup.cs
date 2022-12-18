@@ -19,10 +19,8 @@ namespace supermarketSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide(); // hiding the current form 
-            Form1 login = new Form1(); //taking object of the login form 
-            login.ShowDialog();  //showing the contents of the signup form
-            this.Close(); // closing the current from to avoid memory issues 
+            Application.OpenForms[0].Show();
+            this.Close();
         }
 
         bool emptyFields()
@@ -40,7 +38,7 @@ namespace supermarketSystem
         {
             this.Hide();
             userMainMenu mainMenu = new userMainMenu();
-            mainMenu.ShowDialog();
+            mainMenu.Show();
             this.Close();
         }
 
@@ -87,7 +85,7 @@ namespace supermarketSystem
 
                 Global.currCustomer = newCustomer;
                 Global.writeOnFile(Global.fixedPathForAllCustomersIDs, newCustomer.Id);
-                MessageBox.Show("You have complete the sing sign up successfully..", "Congrats !!");
+                MessageBox.Show("You have complete the sign up successfully..", "Congrats !!");
 
                 showUserMainMenu();
             }
