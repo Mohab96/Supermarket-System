@@ -44,6 +44,16 @@ namespace supermarketSystem
             this.Close();
         }
 
+        int currID()
+        {
+            List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
+            int generalID = generalIdFile.Count == 0 ? 22 : int.Parse(generalIdFile[0]);
+            generalID += 213;
+            Global.clearFile(Global.fixedPathForGeneralID);
+            Global.writeOnFile(Global.fixedPathForGeneralID, generalID.ToString());
+            return generalID;
+        }
+
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             if (!emptyFields())
@@ -64,9 +74,7 @@ namespace supermarketSystem
             else
             {
                 // Create a new customer in the system
-                List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
-                int generalID = int.Parse(generalIdFile[0]);
-                generalID += 213;
+                int generalID = currID();
 
                 Global.clearFile(Global.fixedPathForGeneralID);
                 Global.writeOnFile(Global.fixedPathForGeneralID, generalID.ToString());
@@ -97,7 +105,7 @@ namespace supermarketSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            password.UseSystemPasswordChar =!checkBox1.Checked;
+            password.UseSystemPasswordChar = !checkBox1.Checked;
             cnfrmPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
     }
