@@ -34,15 +34,17 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtquan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtprice = new System.Windows.Forms.TextBox();
             this.btn_done = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtquan = new System.Windows.Forms.NumericUpDown();
+            this.txtprice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtquan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtprice)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_name
@@ -95,13 +97,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "quantity : ";
             // 
-            // txtquan
-            // 
-            this.txtquan.Location = new System.Drawing.Point(49, 239);
-            this.txtquan.Name = "txtquan";
-            this.txtquan.Size = new System.Drawing.Size(268, 22);
-            this.txtquan.TabIndex = 2;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -111,13 +106,6 @@
             this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "price :";
-            // 
-            // txtprice
-            // 
-            this.txtprice.Location = new System.Drawing.Point(49, 344);
-            this.txtprice.Name = "txtprice";
-            this.txtprice.Size = new System.Drawing.Size(268, 22);
-            this.txtprice.TabIndex = 2;
             // 
             // btn_done
             // 
@@ -169,18 +157,44 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // txtquan
+            // 
+            this.txtquan.Location = new System.Drawing.Point(49, 240);
+            this.txtquan.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.txtquan.Name = "txtquan";
+            this.txtquan.Size = new System.Drawing.Size(268, 22);
+            this.txtquan.TabIndex = 6;
+            this.txtquan.ValueChanged += new System.EventHandler(this.txtquan_ValueChanged);
+            // 
+            // txtprice
+            // 
+            this.txtprice.Location = new System.Drawing.Point(49, 344);
+            this.txtprice.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(268, 22);
+            this.txtprice.TabIndex = 6;
+            this.txtprice.ValueChanged += new System.EventHandler(this.txtquan_ValueChanged);
+            // 
             // update_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(670, 557);
+            this.Controls.Add(this.txtprice);
+            this.Controls.Add(this.txtquan);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_done);
-            this.Controls.Add(this.txtprice);
-            this.Controls.Add(this.txtquan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.label3);
@@ -193,6 +207,8 @@
             this.Load += new System.EventHandler(this.update_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtquan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtprice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,12 +221,12 @@
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtquan;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtprice;
         private System.Windows.Forms.Button btn_done;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.NumericUpDown txtquan;
+        private System.Windows.Forms.NumericUpDown txtprice;
     }
 }
