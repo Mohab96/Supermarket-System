@@ -79,7 +79,7 @@ namespace supermarketSystem
             Global.currProduct.Quantity += Convert.ToInt32(txt_pec);
             Global.cashBalance -= tot_price;
 
-            MessageBox.Show("Done.. your cash now" + Global.cashBalance.ToString());
+            MessageBox.Show("Done.. your cash now " + Global.cashBalance.ToString());
 
             this.Close();
         }
@@ -100,7 +100,7 @@ namespace supermarketSystem
 
         private void textBox1_ValueChanged(object sender, EventArgs e)
         {
-            txt_pec = int.Parse(textBox1.Text);
+            txt_pec = int.Parse(textBox1.Value.ToString());
             double tot_price = txt_pec * Global.currProduct.Price;
 
             total_price.Text = tot_price.ToString();
