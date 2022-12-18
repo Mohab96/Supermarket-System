@@ -12,6 +12,7 @@ namespace supermarketSystem
 {
     public partial class update_product : Form
     {
+        
 
         public update_product()
         {
@@ -41,7 +42,7 @@ namespace supermarketSystem
                Global.currProduct.Name = txtname.Text;
                Global.currProduct.Quantity = int.Parse(txtquan.Text);
                Global.currProduct.Price = double.Parse(txtprice.Text);
-               Global.currProduct.image = pictureBox1.Image;
+               Global.currProduct.Image = pictureBox1.ImageLocation;
                 MessageBox.Show("Done.. The data has been updated");
 
                 adminMainMenu menu = new adminMainMenu();
@@ -69,7 +70,7 @@ namespace supermarketSystem
             txtname.Text = Global.currProduct.Name;
             txtquan.Text = Global.currProduct.Quantity.ToString();           
             txtprice.Text = Global.currProduct.Price.ToString();
-            pictureBox1.Image = Global.currProduct.image;    
+            pictureBox1.ImageLocation = Global.currProduct.Image;    
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -99,6 +100,11 @@ namespace supermarketSystem
             adminMainMenu back = new adminMainMenu();
             back.ShowDialog();
             this.Close();
+        }
+
+        private void txtquan_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
