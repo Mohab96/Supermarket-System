@@ -21,7 +21,7 @@ namespace supermarketSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             loadDatabase system = new loadDatabase();
-            Application.Run(new Form1());
+            Application.Run(new invoice_form());
         }
     }
 }
