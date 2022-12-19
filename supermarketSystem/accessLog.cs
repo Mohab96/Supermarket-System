@@ -19,7 +19,7 @@ namespace supermarketSystem
 
         private void accessLog_Load(object sender, EventArgs e)
         {
-
+            // (mohab) => (joe) : You should iterate over Global.allInvoices to get the invoices (objects not strings)
         }
     }
 }

@@ -91,20 +91,19 @@ namespace supermarketSystem
             }
         }
 
-        private void password_TextChanged(object sender, EventArgs e)
-        {
-            password.UseSystemPasswordChar = true;
-        }
-
-        private void cnfrmPassword_TextChanged(object sender, EventArgs e)
-        {
-            cnfrmPassword.UseSystemPasswordChar = true;
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            password.UseSystemPasswordChar = !checkBox1.Checked;
-            cnfrmPassword.UseSystemPasswordChar = !checkBox1.Checked;
+            if (checkBox1.Checked)
+            {
+                password.PasswordChar = '*';
+                cnfrmPassword.PasswordChar = '*';
+            }
+            else
+            {
+                password.PasswordChar = '\0';
+                cnfrmPassword.PasswordChar = '\0';
+            }
+
         }
     }
 }

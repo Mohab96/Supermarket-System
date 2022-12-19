@@ -37,7 +37,7 @@ namespace supermarketSystem
             }
         }
 
-        int checkCurrQuantity(string procutID,int quantity)
+        int checkCurrQuantity(string procutID, int quantity)
         {
             return Math.Min(Global.allProducts[procutID].Quantity, quantity);
             // for example if the customer bought two Pieces of product X and the quantity of X is 1 
@@ -46,7 +46,7 @@ namespace supermarketSystem
 
         private void Cart_Load(object sender, EventArgs e)
         {
-            if (Global.currCustomer.cart.Count == 0) 
+            if (Global.currCustomer.cart.Count == 0)
             {
                 // if the customer did not buy anyting
                 MessageBox.Show("Your cart is empty");
@@ -60,9 +60,9 @@ namespace supermarketSystem
 
                 int quantity = pro.Value;
 
-                quantity = checkCurrQuantity(pro.Key.Id, quantity); 
+                quantity = checkCurrQuantity(pro.Key.Id, quantity);
 
-                double totalPrice = (quantity * pro.Key.Price) * ((100 - pro.Key.Discount) / 100.0) ;
+                double totalPrice = (quantity * pro.Key.Price) * ((100 - pro.Key.Discount) / 100.0);
 
                 totalCashNeeded += totalPrice;
 
@@ -87,6 +87,16 @@ namespace supermarketSystem
             displayPrice.Text = totalCashNeeded.ToString(); // showing the total price 
         }
 
+        int currID()
+        {
+            List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
+            int generalID = generalIdFile.Count == 0 ? 22 : int.Parse(generalIdFile[0]);
+            generalID += 213;
+            Global.clearFile(Global.fixedPathForGeneralID);
+            Global.writeOnFile(Global.fixedPathForGeneralID, generalID.ToString());
+            return generalID;
+        }
+
         private void checkoutBtn_Click(object sender, EventArgs e)
         {
             if (totalCashNeeded > Global.currCustomer.CashBalance)
@@ -98,10 +108,12 @@ namespace supermarketSystem
             Global.currCustomer.CashBalance -= totalCashNeeded;
             Global.cashBalance = totalCashNeeded;
             updateQuantity(); // updating the quantity of all bought items
+            int ID = currID();
 
-            /// (mohab) => (mostafa fouad) : We will need to show the invoice form after this form so don't forget 
-            /// to open that form after the transaction is done (all of this will be done after the form is already 
-            /// created ^_^)
+            invoice inv = new invoice(DateTime.Now, 0, ID.ToString(), 0, totalCashNeeded);
+            Global.invoiceIDs.Add(ID.ToString());
+            Global.currInvoice = inv;
+
             //showUserMainMenu();
             this.Hide();
             invoice_form i_f = new invoice_form();

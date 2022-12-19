@@ -15,7 +15,7 @@ namespace supermarketSystem
     public class invoice
     {
         private DateTime date;
-        Dictionary<string, int> productlist;  /// string>>id   int>>quantity  
+        public Dictionary<string, int> productlist;  /// string>>id   int>>quantity  
         private int tax;
         private string id;
         private int discountPer;
@@ -26,7 +26,7 @@ namespace supermarketSystem
         public invoice(DateTime date, int tax, string id, int discountPer, double totalprice)
         {
             this.date = date;
-            this.productlist = new Dictionary<string,int>();
+            this.productlist = new Dictionary<string, int>();
             this.tax = tax;
             this.id = id;
             this.discountPer = discountPer;
@@ -34,20 +34,18 @@ namespace supermarketSystem
 
             string path = "InvoiceID_" + id + ".txt";
             Global.clearFile(path);
-            Global.writeOnFile(path, date.ToString());
+            Global.writeOnFile(path, date.ToString("dd/mm/yyyy"));
             Global.writeOnFile(path, tax.ToString());
             Global.writeOnFile(path, id.ToString());
             Global.writeOnFile(path, discountPer.ToString());
             Global.writeOnFile(path, totalprice.ToString());
 
-            string Quan_path = "InvoiceID_" + id + "QuantityID" + ".txt";
-            string prdctPath = "InvoiceID_" + id + "ProductID" + ".txt";
+            string Quan_path = "InvoiceID_" + id + "Quantity" + ".txt";
+            string prdctPath = "InvoiceID_" + id + "Product" + ".txt";
             foreach (KeyValuePair<string, int> p in productlist)
             {
                 Global.writeOnFile(Quan_path, p.Value.ToString());
                 Global.writeOnFile(prdctPath, p.Key);
-                /// (mohab)=>(mas) : There is a problem here .. these two lines write different data 
-                /// on the same file .. Create a path for the quantity and another one for the ID  >> done plz check it 
             }
         }
 
@@ -56,7 +54,7 @@ namespace supermarketSystem
             string path = "InvoiceID_" + id + ".txt";
             List<string> invoicedata = Global.readFromFile(path);
             invoicedata[idx] = val;
-            Global.clearFile(path); 
+            Global.clearFile(path);
             foreach (var item in invoicedata)
                 Global.writeOnFile(path, item);
         }
@@ -107,8 +105,8 @@ namespace supermarketSystem
             }
         }
 
-        
-        
+
+
 
         public void create_pdf_file(customer c, invoice i)
         {

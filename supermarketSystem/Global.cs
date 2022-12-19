@@ -63,19 +63,20 @@ namespace supermarketSystem
         public static admin currAdmin;  // holds the admin object that currently signed in
         public static customer currCustomer;  // holds the customer object that currently signed in
         public static product currProduct; // holds the product clicked
+        public static invoice currInvoice;
 
         public static List<string> customersIDs = new List<string>(); // The IDs of the files that store the data of the customers
         public static List<string> adminsIDs = new List<string>(); // The IDs of the files that store the data of the admins
         public static List<string> productsIDs = new List<string>(); // The IDs of the files that store the data of the products
         public static List<string> invoiceIDs = new List<string>(); // The IDs of the files that store the invoices
 
-        public static Dictionary<string,product> allProducts = new Dictionary<string, product>(); // id, product
+        public static Dictionary<string, product> allProducts = new Dictionary<string, product>(); // id, product
         //public static Hashtable allProducts = new Hashtable(); // id, product
         public static Dictionary<string, customer> allCustomers = new Dictionary<string, customer>(); // id, customer
         //public static Hashtable allCustomers = new Hashtable(); // id, customer
         public static Dictionary<string, admin> allAdmins = new Dictionary<string, admin>(); // id, admin
         //public static Hashtable allAdmins = new Hashtable(); // id, admin
-
+        public static Dictionary<string, invoice> allInvoices = new Dictionary<string, invoice>(); // id, invoice
 
         public static Hashtable usersCredentials = new Hashtable(); // email, password
         public static Hashtable adminsCredentials = new Hashtable(); // email, password

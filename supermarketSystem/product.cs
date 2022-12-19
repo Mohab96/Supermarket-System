@@ -22,16 +22,6 @@ namespace supermarketSystem
         public Image image;
         string imgUrl;
 
-        string formatDate(string date)
-        {
-            string dt = "";
-            foreach (var c in date)
-            {
-                if (c != '/') dt += c;
-            }
-            return dt;
-        }
-
         public product(string productname, int quantity, string id, double price, int discount, DateTime expirydate, string imgUrl)
         {
 
@@ -54,7 +44,6 @@ namespace supermarketSystem
 
             string path = "ProductID_" + id + ".txt";
             string[] dateFormats = expirydate.GetDateTimeFormats();
-          //  string date = formatDate(dateFormats[0]);
 
             Global.clearFile(path);
             Global.writeOnFile(path, productname);

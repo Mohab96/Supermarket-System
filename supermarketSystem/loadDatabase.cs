@@ -53,17 +53,19 @@ namespace supermarketSystem
             m = tmp;
             c++;
             tmp = "";
-            while (date[c] != '/') {
+            while (date[c] != '/')
+            {
                 tmp += date[c++];
             }
             d = tmp;
             tmp = "";
             c++;
-            while (c <date.Length) {
+            while (c < date.Length)
+            {
                 tmp += date[c++];
             }
             y = tmp;
-            DateTime ret=new DateTime(int.Parse(y),int.Parse(m),int.Parse(d));
+            DateTime ret = new DateTime(int.Parse(y), int.Parse(m), int.Parse(d));
             return ret;
         }
 
@@ -78,8 +80,8 @@ namespace supermarketSystem
                 product newProduct = new product(data[0], int.Parse(data[1]), data[2], double.Parse(data[3]), int.Parse(data[4]), date, data[6]);
                 Global.allProducts[ID] = newProduct;
                 if (newProduct.Quantity >= 1)
-                { 
-                    Global.mainMenuProducts.Add(ID); 
+                {
+                    Global.mainMenuProducts.Add(ID);
                 }
             }
         }
@@ -90,7 +92,13 @@ namespace supermarketSystem
             List<string> allInvoices = Global.readFromFile(Global.fixedPathForAllInvoicesIDs);
 
             foreach (var item in allInvoices)
+            {
+                string path = "InvoiceID_" + item + ".txt";
+                List<string> data = Global.readFromFile(path);
+                invoice newInvoice = new invoice(DateTime.Parse(data[0]), int.Parse(data[1]), data[2], int.Parse(data[3]), double.Parse(data[4]));
+                Global.allInvoices[item] = newInvoice;
                 Global.invoiceIDs.Add(item);
+            }
         }
         public static void load()
         {
