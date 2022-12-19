@@ -93,17 +93,27 @@ namespace supermarketSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked==false)
+            if (checkBox1.Checked)
+            {
+                password.PasswordChar = '\0';
+                cnfrmPassword.PasswordChar = '\0'; 
+            }
+            else
             {
                 password.PasswordChar = '*';
                 cnfrmPassword.PasswordChar = '*';
             }
-            else
-            {
-                password.PasswordChar = '\0';
-                cnfrmPassword.PasswordChar = '\0';
-            }
 
+        }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+            fullName.Text = String.Empty;
+            email.Text = String.Empty;
+            address.Text = String.Empty;
+            phoneNumber.Text = String.Empty;
+            password.Text = String.Empty;
+            cnfrmPassword.Text = String.Empty;
         }
     }
 }

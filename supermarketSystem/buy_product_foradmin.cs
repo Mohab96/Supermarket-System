@@ -13,8 +13,8 @@ namespace supermarketSystem
 {
     public partial class buy_product_foradmin : Form
     {
-        
-        double txt_pec = 0 ;
+
+        double txt_pec = 0;
         double tot_price;
 
 
@@ -43,19 +43,19 @@ namespace supermarketSystem
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         bool ValidPrice(string price)
         {
-            if(price[0]==0)
+            if (price[0] == 0)
             {
                 return false;
             }
 
             for (int i = 0; i < price.Length; i++)
             {
-                if (!(price[i]>=48 && price[i]<=57))
+                if (!(price[i] >= 48 && price[i] <= 57))
                 {
                     return false;
                 }
@@ -67,7 +67,7 @@ namespace supermarketSystem
         private void button1_Click_1(object sender, EventArgs e)
         {
             string prc = txt_pec.ToString();
-            
+
             tot_price = txt_pec * Global.currProduct.Price;
 
             if (tot_price > Global.CashBalance)
@@ -78,6 +78,9 @@ namespace supermarketSystem
 
             Global.currProduct.Quantity += Convert.ToInt32(txt_pec);
             Global.CashBalance -= tot_price;
+
+            if (!Global.mainMenuProducts.Contains(Global.currProduct.Id))
+                Global.mainMenuProducts.Add(Global.currProduct.Id);
 
             MessageBox.Show("Done.. your cash now " + Global.CashBalance.ToString());
 
