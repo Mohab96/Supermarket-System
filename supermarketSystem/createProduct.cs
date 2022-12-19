@@ -196,6 +196,7 @@ namespace supermarketSystem
                     product newProduct = new product(Name, quan, ID, currprice, dis, expire, imagelocation);
                     // add it to data structure 
                     Global.allProducts.Add(ID, newProduct);
+                    if (quan >= 1) Global.mainMenuProducts.Add(ID);
                     Global.writeOnFile(Global.fixedPathForAllProductsIDs, ID);
                     MessageBox.Show("Product added successfully", "Done");
                     // show the admin main menu

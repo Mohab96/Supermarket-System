@@ -101,6 +101,7 @@ namespace supermarketSystem
         private void btndel_Click(object sender, EventArgs e)
         {
             Global.allProducts.Remove(this.id);
+            Global.mainMenuProducts.Remove(this.id);
             List<string> tmp = Global.readFromFile(Global.fixedPathForAllProductsIDs);
             Global.clearFile(Global.fixedPathForAllProductsIDs);
             foreach (var i in tmp)
