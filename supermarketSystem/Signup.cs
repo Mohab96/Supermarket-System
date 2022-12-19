@@ -41,6 +41,7 @@ namespace supermarketSystem
             this.Hide();
             userMainMenu mainMenu = new userMainMenu();
             mainMenu.Show();
+            close = false;
             this.Close();
         }
 
