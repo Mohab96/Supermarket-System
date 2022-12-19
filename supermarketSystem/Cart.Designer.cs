@@ -42,7 +42,8 @@
             this.displayPrice.AutoSize = true;
             this.displayPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.displayPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayPrice.Location = new System.Drawing.Point(174, 394);
+            this.displayPrice.ForeColor = System.Drawing.Color.Green;
+            this.displayPrice.Location = new System.Drawing.Point(141, 394);
             this.displayPrice.Name = "displayPrice";
             this.displayPrice.Size = new System.Drawing.Size(37, 24);
             this.displayPrice.TabIndex = 7;
@@ -61,6 +62,7 @@
             // 
             // checkoutBtn
             // 
+            this.checkoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(243)))), ((int)(((byte)(240)))));
             this.checkoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,24 +71,27 @@
             this.checkoutBtn.Size = new System.Drawing.Size(129, 40);
             this.checkoutBtn.TabIndex = 5;
             this.checkoutBtn.Text = "Checkout";
-            this.checkoutBtn.UseVisualStyleBackColor = true;
+            this.checkoutBtn.UseVisualStyleBackColor = false;
             this.checkoutBtn.Click += new System.EventHandler(this.checkoutBtn_Click);
             // 
             // checkout_ListBox
             // 
+            this.checkout_ListBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.checkout_ListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkout_ListBox.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkout_ListBox.FormattingEnabled = true;
             this.checkout_ListBox.ItemHeight = 23;
             this.checkout_ListBox.Location = new System.Drawing.Point(12, 51);
             this.checkout_ListBox.Name = "checkout_ListBox";
             this.checkout_ListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.checkout_ListBox.Size = new System.Drawing.Size(283, 326);
+            this.checkout_ListBox.Size = new System.Drawing.Size(283, 322);
             this.checkout_ListBox.TabIndex = 0;
             this.checkout_ListBox.SelectedIndexChanged += new System.EventHandler(this.checkout_ListBox_SelectedIndexChanged);
             // 
             // currCashInAcc
             // 
             this.currCashInAcc.AutoSize = true;
+            this.currCashInAcc.BackColor = System.Drawing.Color.Transparent;
             this.currCashInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currCashInAcc.Location = new System.Drawing.Point(13, 13);
             this.currCashInAcc.Name = "currCashInAcc";
@@ -97,7 +102,9 @@
             // balance
             // 
             this.balance.AutoSize = true;
+            this.balance.BackColor = System.Drawing.Color.Transparent;
             this.balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balance.ForeColor = System.Drawing.Color.Green;
             this.balance.Location = new System.Drawing.Point(82, 16);
             this.balance.Name = "balance";
             this.balance.Size = new System.Drawing.Size(35, 22);
@@ -106,6 +113,7 @@
             // 
             // backBtn
             // 
+            this.backBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(243)))), ((int)(((byte)(240)))));
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.Location = new System.Drawing.Point(220, 7);
@@ -113,13 +121,14 @@
             this.backBtn.Size = new System.Drawing.Size(75, 31);
             this.backBtn.TabIndex = 10;
             this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(307, 493);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.balance);

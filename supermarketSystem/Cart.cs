@@ -54,6 +54,7 @@ namespace supermarketSystem
                 return;
             }
             balance.Text = Global.currCustomer.CashBalance.ToString();
+            balance.Text += '$';
             foreach (var pro in Global.currCustomer.cart)
             {
                 string Name = pro.Key.Name;
@@ -84,7 +85,8 @@ namespace supermarketSystem
                 checkout_ListBox.Items.Add("-----------------------");
 
             }
-            displayPrice.Text = totalCashNeeded.ToString(); // showing the total price 
+            displayPrice.Text = totalCashNeeded.ToString(); // showing the total price
+            displayPrice.Text += '$';
         }
 
         int currID()
