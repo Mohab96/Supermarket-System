@@ -15,7 +15,6 @@ namespace supermarketSystem
         public QuantityForm()
         {
             InitializeComponent();
-            MessageBox.Show(Global.currProduct.Price.ToString());
         }
         double price = Global.currProduct.Price;
         double discount = Global.currProduct.Discount;
@@ -43,6 +42,7 @@ namespace supermarketSystem
             {
                 Global.currCustomer.cart.Add(Global.currProduct, int.Parse(txtqty.Text));
             }
+
             this.Close();
         }
 
