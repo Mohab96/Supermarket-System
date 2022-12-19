@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,19 +19,14 @@ namespace supermarketSystem
         }
         public double totalcashneeded =0;
         
-        private void label2_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Mohab96/Supermarket-System");
-        }
-
+       
         private void Form3_Load(object sender, EventArgs e)
         {
            
             textBox2.Text = DateTime.Now.ToString("dd/mm/yyy");
             label7.Text = Global.currCustomer.FullName;
+           // label12.Text = Global.currCustomer.cart.Count.ToString();
             label5.Text = Global.currInvoice.Id.ToString();
-
-            label12.Text = Global.currCustomer.cart.Count.ToString();
             foreach (var pro in Global.currCustomer.cart)
             {
                 string Name = pro.Key.Name;
@@ -53,6 +49,7 @@ namespace supermarketSystem
 
                 object[] obj = new object[] { name, qun, price, tot };
                 dataGridView1.Rows.Add(obj);
+               
             }
 
 
@@ -85,21 +82,19 @@ namespace supermarketSystem
             
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void label13_Click(object sender, EventArgs e)
         {
             
             
         }
-
+        
+        /// /////////////invoice
+        
         private void button2_Click(object sender, EventArgs e)
         {
             ((Form)printPreviewDialog1).WindowState = FormWindowState.Maximized;
-
 
             if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -126,8 +121,8 @@ namespace supermarketSystem
             e.Graphics.DrawString(strname, f, Brushes.Black, e.PageBounds.Width - FontSizeDate.Width - margin, margin+FontSizeDate.Height);
             float preHeight = margin + FontSizeDate.Height + FontSizeName.Height+150;
             e.Graphics.DrawRectangle(Pens.Black, margin, preHeight, e.PageBounds.Width - margin*2 , e.PageBounds.Height-margin -preHeight);
-            float colHight = 60;
 
+            float colHight = 60;
             float col1Width = 300;
             float col2Width = 125 + col1Width;
             float col3Width = 125 + col2Width;
@@ -141,38 +136,47 @@ namespace supermarketSystem
 
             e.Graphics.DrawString("Total price", f, Brushes.Black, e.PageBounds.Width - margin*5, preHeight);
             e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 5, preHeight, e.PageBounds.Width - margin * 5, e.PageBounds.Height - margin);
-            e.Graphics.DrawString(" price", f, Brushes.Black, e.PageBounds.Width - margin * 10, preHeight);
-            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 10, preHeight, e.PageBounds.Width - margin * 10, e.PageBounds.Height - margin);
-            e.Graphics.DrawString("Quantity", f, Brushes.Black, e.PageBounds.Width - margin *15 , preHeight);
+
+            e.Graphics.DrawString(" price", f, Brushes.Black, e.PageBounds.Width - margin * 8, preHeight);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 10, preHeight, e.PageBounds.Width - margin *10, e.PageBounds.Height - margin);
+
+            e.Graphics.DrawString("Quantity", f, Brushes.Black, e.PageBounds.Width - margin *13, preHeight);
             e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin *15 , preHeight, e.PageBounds.Width - margin * 15, e.PageBounds.Height - margin);
+
             e.Graphics.DrawString("Product", f, Brushes.Black, e.PageBounds.Width - margin * 19, preHeight);
+
+
+            
+
+
 
             //////////////////////////////invoice content//////////////////////
             ///
             float rowsHight = 60;
-            for (int x=0; x<dataGridView1.Rows.Count;x+=1)
+            
+            for (int x=1; x<dataGridView1.Rows.Count;x+=1)
             {
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[0].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 2-col1Width,preHeight+rowsHight);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[1].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 2 - col1Width, preHeight + rowsHight);
 
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[1].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeight + rowsHight);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeight + rowsHight);
 
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
 
                 e.Graphics.DrawString(dataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col4Width, preHeight + rowsHight);
 
-                e.Graphics.DrawLine(Pens.Black, margin, preHeight + rowsHight + col1Width, e.PageBounds.Width - margin, preHeight + rowsHight+col1Width);
 
 
 
-                   
+
+
                 rowsHight += 60;
             }
 
             e.Graphics.DrawString("Total", f, Brushes.Red, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
 
-            e.Graphics.DrawString(label12.Text, f, Brushes.Blue, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
+            
 
-            e.Graphics.DrawLine(Pens.Black, margin, preHeight + rowsHight + col1Width, e.PageBounds.Width - margin, preHeight + rowsHight + col1Width);
+           
 
 
         }
@@ -185,6 +189,11 @@ namespace supermarketSystem
         private void invoice_form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.OpenForms[0].Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

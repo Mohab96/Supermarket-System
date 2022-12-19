@@ -22,7 +22,10 @@ namespace supermarketSystem
         {
 
         }
-
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/Mohab96/Supermarket-System ");
+        }
         private void linkmostafafouab_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://github.com/MostafaFouad0");
@@ -75,5 +78,7 @@ namespace supermarketSystem
                 user.Show();
             }
         }
+
+       
     }
 }

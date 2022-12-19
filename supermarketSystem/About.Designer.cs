@@ -43,6 +43,7 @@
             this.roundButton2 = new supermarketSystem.RoundButton();
             this.roundButton1 = new supermarketSystem.RoundButton();
             this.pictuer2 = new supermarketSystem.pictuer();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).BeginInit();
@@ -98,7 +99,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 459);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(357, 120);
+            this.label4.Size = new System.Drawing.Size(339, 110);
             this.label4.TabIndex = 1;
             this.label4.Text = "Internet marketing program, \r\nand you will enjoy with us buying \r\neverything you " +
     "need with ease,\r\n without the need to move from home\r\n  ";
@@ -110,7 +111,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 24);
+            this.label1.Size = new System.Drawing.Size(140, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Developed By:";
             // 
@@ -121,7 +122,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(8, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 216);
+            this.label2.Size = new System.Drawing.Size(142, 198);
             this.label2.TabIndex = 7;
             this.label2.Text = "#Mostafa fouad\r\n\r\n#Mostafa ameen\r\n\r\n#Arwa Ibrahim \r\n\r\n#Mohab yaser\r\n\r\n#Youssif ah" +
     "med\r\n";
@@ -247,12 +248,25 @@
             this.pictuer2.TabIndex = 14;
             this.pictuer2.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Matura MT Script Capitals", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(162, 58);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(421, 23);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/Mohab96/Supermarket-System";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1028, 750);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.roundButton2);
             this.Controls.Add(this.roundButton1);
             this.Controls.Add(this.pictuer2);
@@ -266,7 +280,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -299,5 +313,6 @@
         private RoundButton roundButton3;
         private RoundButton roundButton1;
         private RoundButton roundButton2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
