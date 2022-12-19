@@ -89,7 +89,11 @@ namespace supermarketSystem
             get
             {
                 List<string> cash = readFromFile(fixedPathForCashBalance);
-                if (cash.Count == 0) return 10000;
+                if (cash.Count == 0)
+                {
+                    cash.Add("10000");
+                    return 10000;
+                }
                 return double.Parse(cash[0]);
             }
             set
