@@ -176,7 +176,7 @@
             // dayTxtBx
             // 
             this.dayTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dayTxtBx.Location = new System.Drawing.Point(82, 106);
+            this.dayTxtBx.Location = new System.Drawing.Point(136, 104);
             this.dayTxtBx.Name = "dayTxtBx";
             this.dayTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.dayTxtBx.Size = new System.Drawing.Size(156, 27);
@@ -185,7 +185,7 @@
             // monthTxtBx
             // 
             this.monthTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthTxtBx.Location = new System.Drawing.Point(82, 70);
+            this.monthTxtBx.Location = new System.Drawing.Point(136, 69);
             this.monthTxtBx.Name = "monthTxtBx";
             this.monthTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.monthTxtBx.Size = new System.Drawing.Size(156, 27);
@@ -194,7 +194,7 @@
             // yearTxtBx
             // 
             this.yearTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearTxtBx.Location = new System.Drawing.Point(82, 32);
+            this.yearTxtBx.Location = new System.Drawing.Point(136, 32);
             this.yearTxtBx.Name = "yearTxtBx";
             this.yearTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.yearTxtBx.Size = new System.Drawing.Size(156, 27);
@@ -280,7 +280,9 @@
             this.Controls.Add(this.uploadbtn);
             this.Controls.Add(this.productImage);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "createProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "createProduct";

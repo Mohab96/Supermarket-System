@@ -39,6 +39,7 @@ namespace supermarketSystem
                     item[i].Product = de.Value;
                     item[i].id = (string)de.Key;
                     item[i].Menu = this;
+                    item[i].quantity = de.Value.Quantity.ToString(); 
                     flowLayoutPanel1.Controls.Add(item[i]);
                     i++;
                 }

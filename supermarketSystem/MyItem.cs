@@ -24,6 +24,7 @@ namespace supermarketSystem
         public product Product;
         public adminMainMenu Menu;
         public bool empty = false;
+        private string _quantity;
         public Image Icon
         {
             get { return _icon; }
@@ -39,10 +40,15 @@ namespace supermarketSystem
             get { return _price; }
             set { _price = value; lblprice.Text = value + " $"; }
         }
+        public string quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; lblqty.Text = value; }
+        }
 
         private void MyItem_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

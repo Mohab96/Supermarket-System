@@ -62,7 +62,7 @@ namespace supermarketSystem
 
                 quantity = checkCurrQuantity(pro.Key.Id, quantity); 
 
-                double totalPrice = quantity * pro.Key.Price;
+                double totalPrice = (quantity * pro.Key.Price) * ((100 - pro.Key.Discount) / 100.0) ;
 
                 totalCashNeeded += totalPrice;
 

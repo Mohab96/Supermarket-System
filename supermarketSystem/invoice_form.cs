@@ -16,7 +16,7 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
-        public double totalcashneeded ;
+        public double totalcashneeded =0;
         
         private void label2_Click(object sender, EventArgs e)
         {
@@ -32,14 +32,27 @@ namespace supermarketSystem
             label12.Text = Global.currCustomer.cart.Count.ToString();
             foreach (var pro in Global.currCustomer.cart)
             {
-                string name = pro.Key.Name;
+                string Name = pro.Key.Name;
                 int quantity = pro.Value;
-                double totalprice = quantity * pro.Key.Price;
-                totalcashneeded += totalprice;
-
+                double totalPrice = (quantity * pro.Key.Price) * ((100 - pro.Key.Discount) / 100.0);
+                totalcashneeded += totalPrice;
             }
             label13.Text = totalcashneeded.ToString();
 
+
+            foreach (var item in Global.currCustomer.cart)
+            {
+                string name = item.Key.Name;
+                string qun = item.Value.ToString();
+                string price = item.Key.Price.ToString();
+
+                double totalprice = int.Parse(qun) * double.Parse(price) * ((100 - item.Key.Discount) / 100.0);
+
+                string tot = totalprice.ToString();
+
+                object[] obj = new object[] { name, qun, price, tot };
+                dataGridView1.Rows.Add(obj);
+            }
 
 
         }

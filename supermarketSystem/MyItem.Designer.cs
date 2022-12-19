@@ -34,6 +34,8 @@
             this.btnbuy = new System.Windows.Forms.Button();
             this.btndel = new System.Windows.Forms.Button();
             this.pbicon = new System.Windows.Forms.PictureBox();
+            this.lblqty = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbicon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,9 +45,10 @@
             this.lblprice.BackColor = System.Drawing.Color.Transparent;
             this.lblprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblprice.ForeColor = System.Drawing.Color.Green;
-            this.lblprice.Location = new System.Drawing.Point(12, 179);
+            this.lblprice.Location = new System.Drawing.Point(16, 266);
+            this.lblprice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprice.Name = "lblprice";
-            this.lblprice.Size = new System.Drawing.Size(72, 25);
+            this.lblprice.Size = new System.Drawing.Size(89, 29);
             this.lblprice.TabIndex = 2;
             this.lblprice.Text = "0.00 $";
             // 
@@ -53,9 +56,10 @@
             // 
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(10, 146);
+            this.lbltitle.Location = new System.Drawing.Point(13, 180);
+            this.lbltitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(68, 26);
+            this.lbltitle.Size = new System.Drawing.Size(85, 33);
             this.lbltitle.TabIndex = 1;
             this.lbltitle.Text = "Name";
             this.lbltitle.Click += new System.EventHandler(this.label1_Click);
@@ -66,9 +70,10 @@
             this.btnedit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnedit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnedit.Location = new System.Drawing.Point(15, 224);
+            this.btnedit.Location = new System.Drawing.Point(20, 306);
+            this.btnedit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(75, 44);
+            this.btnedit.Size = new System.Drawing.Size(100, 54);
             this.btnedit.TabIndex = 4;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = false;
@@ -83,9 +88,10 @@
             this.btnbuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnbuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuy.ForeColor = System.Drawing.Color.Ivory;
-            this.btnbuy.Location = new System.Drawing.Point(96, 224);
+            this.btnbuy.Location = new System.Drawing.Point(128, 306);
+            this.btnbuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnbuy.Name = "btnbuy";
-            this.btnbuy.Size = new System.Drawing.Size(75, 44);
+            this.btnbuy.Size = new System.Drawing.Size(100, 54);
             this.btnbuy.TabIndex = 4;
             this.btnbuy.Text = "Buy";
             this.btnbuy.UseVisualStyleBackColor = false;
@@ -100,9 +106,10 @@
             this.btndel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndel.ForeColor = System.Drawing.Color.Ivory;
-            this.btndel.Location = new System.Drawing.Point(15, 274);
+            this.btndel.Location = new System.Drawing.Point(20, 367);
+            this.btndel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btndel.Name = "btndel";
-            this.btndel.Size = new System.Drawing.Size(156, 44);
+            this.btndel.Size = new System.Drawing.Size(208, 54);
             this.btndel.TabIndex = 4;
             this.btndel.Text = "Delete";
             this.btndel.UseVisualStyleBackColor = false;
@@ -112,28 +119,59 @@
             // 
             // pbicon
             // 
-            this.pbicon.Location = new System.Drawing.Point(13, 9);
+            this.pbicon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbicon.Location = new System.Drawing.Point(17, 11);
+            this.pbicon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbicon.Name = "pbicon";
-            this.pbicon.Size = new System.Drawing.Size(158, 127);
+            this.pbicon.Size = new System.Drawing.Size(211, 156);
             this.pbicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbicon.TabIndex = 0;
             this.pbicon.TabStop = false;
             this.pbicon.Click += new System.EventHandler(this.pbicon_Click);
             // 
+            // lblqty
+            // 
+            this.lblqty.AutoSize = true;
+            this.lblqty.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblqty.ForeColor = System.Drawing.Color.Coral;
+            this.lblqty.Location = new System.Drawing.Point(136, 224);
+            this.lblqty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblqty.Name = "lblqty";
+            this.lblqty.Size = new System.Drawing.Size(58, 33);
+            this.lblqty.TabIndex = 1;
+            this.lblqty.Text = "qua";
+            this.lblqty.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(15, 224);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "quantity";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MyItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btndel);
             this.Controls.Add(this.btnbuy);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.lblprice);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblqty);
             this.Controls.Add(this.lbltitle);
             this.Controls.Add(this.pbicon);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MyItem";
-            this.Size = new System.Drawing.Size(183, 329);
+            this.Size = new System.Drawing.Size(244, 431);
             this.Load += new System.EventHandler(this.MyItem_Load);
             this.MouseEnter += new System.EventHandler(this.MyItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.MyItem_MouseLeave);
@@ -151,5 +189,7 @@
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btnbuy;
         private System.Windows.Forms.Button btndel;
+        private System.Windows.Forms.Label lblqty;
+        private System.Windows.Forms.Label label1;
     }
 }
