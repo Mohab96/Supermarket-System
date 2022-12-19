@@ -91,8 +91,10 @@ namespace supermarketSystem
             this.btnbuy.Enabled = false;
             this.btnedit.Enabled = false;
             this.btndel.Enabled = false;
+            pbicon.SizeMode = PictureBoxSizeMode.Zoom;
+            this.Size = new Size(183,149);
             empty = true;
-            this.Icon = supermarketSystem.Properties.Resources.more;
+            this.Icon = supermarketSystem.Properties.Resources.add_2_0;
             this.pbicon.Cursor = Cursors.Hand;
             this.Cursor = Cursors.Hand;
         }

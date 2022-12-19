@@ -180,5 +180,10 @@ namespace supermarketSystem
         {
 
         }
+
+        private void invoice_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.OpenForms[0].Show();
+        }
     }
 }
