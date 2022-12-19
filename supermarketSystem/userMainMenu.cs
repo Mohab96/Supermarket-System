@@ -74,7 +74,17 @@ namespace supermarketSystem
         private void userMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (close == true)
-                Application.Exit();
+            {
+                DialogResult result = MessageBox.Show("Are you sure you wish to Quit?", "Exit Application", MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void btnabout_Click(object sender, EventArgs e)

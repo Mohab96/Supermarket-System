@@ -168,7 +168,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(8, 250);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 16);
+            this.label6.Size = new System.Drawing.Size(116, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "Confirm Password: ";
             // 
@@ -190,6 +190,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(174, 26);
             this.password.TabIndex = 16;
+            this.password.UseSystemPasswordChar = true;
             // 
             // cnfrmPassword
             // 
@@ -198,6 +199,7 @@
             this.cnfrmPassword.Name = "cnfrmPassword";
             this.cnfrmPassword.Size = new System.Drawing.Size(174, 26);
             this.cnfrmPassword.TabIndex = 17;
+            this.cnfrmPassword.UseSystemPasswordChar = true;
             // 
             // Signup
             // 
@@ -225,6 +227,7 @@
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Signup_FormClosing);
             this.Load += new System.EventHandler(this.Signup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
