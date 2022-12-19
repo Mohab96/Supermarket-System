@@ -54,7 +54,7 @@
             this.button1.Location = new System.Drawing.Point(191, 133);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 70);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Add to cart";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -120,7 +120,7 @@
             0});
             this.txtqty.Name = "txtqty";
             this.txtqty.Size = new System.Drawing.Size(51, 24);
-            this.txtqty.TabIndex = 7;
+            this.txtqty.TabIndex = 0;
             this.txtqty.Value = new decimal(new int[] {
             1,
             0,

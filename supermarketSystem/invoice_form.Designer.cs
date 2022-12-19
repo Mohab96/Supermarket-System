@@ -80,7 +80,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(356, 79);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 20);
             this.textBox2.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Location = new System.Drawing.Point(5, 168);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 8);
             this.panel1.TabIndex = 11;
@@ -171,7 +171,7 @@
             this.Coltotalprice});
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(-8, 297);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -240,7 +240,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.button2.Location = new System.Drawing.Point(463, 220);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(52, 50);
             this.button2.TabIndex = 22;
@@ -303,7 +303,7 @@
             this.Controls.Add(this.pictuer1);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "invoice_form";
             this.Text = "Form3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
