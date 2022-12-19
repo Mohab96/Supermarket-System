@@ -90,11 +90,11 @@
             // 
             // PasswordTextbox
             // 
-            this.PasswordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextbox.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextbox.Location = new System.Drawing.Point(124, 192);
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.PasswordChar = '*';
-            this.PasswordTextbox.Size = new System.Drawing.Size(197, 23);
+            this.PasswordTextbox.Size = new System.Drawing.Size(197, 24);
             this.PasswordTextbox.TabIndex = 5;
             // 
             // EnterButton

@@ -74,13 +74,13 @@ namespace supermarketSystem
 
                 string viewQuantity = quantity.ToString();
 
-                viewQuantity = viewQuantity + "x   ";
+                viewQuantity = viewQuantity + "X   ";
 
                 viewPrice = viewPrice + "   ";
+                string tot = viewName + viewQuantity + totalPrice+'$';
 
-                Object[] obj = new object[] { viewName, quantity, totalPrice };
 
-                checkout_ListBox.Items.AddRange(obj);
+                checkout_ListBox.Items.Add(tot);
                 checkout_ListBox.Items.Add("-----------------------");
 
             }

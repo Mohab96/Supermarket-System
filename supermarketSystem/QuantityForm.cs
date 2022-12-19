@@ -15,7 +15,6 @@ namespace supermarketSystem
         public QuantityForm()
         {
             InitializeComponent();
-            MessageBox.Show(Global.currProduct.Price.ToString());
         }
         double price = Global.currProduct.Price;
         double discount = Global.currProduct.Discount;
