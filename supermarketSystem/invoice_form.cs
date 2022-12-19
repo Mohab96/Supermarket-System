@@ -13,19 +13,19 @@ namespace supermarketSystem
 {
     public partial class invoice_form : Form
     {
-        public invoice_form() 
+        public invoice_form()
         {
             InitializeComponent();
         }
-        public double totalcashneeded =0;
-        
-       
+        public double totalcashneeded = 0;
+
+
         private void Form3_Load(object sender, EventArgs e)
         {
-           
+
             textBox2.Text = DateTime.Now.ToString("dd/mm/yyy");
             label7.Text = Global.currCustomer.FullName;
-           // label12.Text = Global.currCustomer.cart.Count.ToString();
+            // label12.Text = Global.currCustomer.cart.Count.ToString();
             label5.Text = Global.currInvoice.Id.ToString();
             foreach (var pro in Global.currCustomer.cart)
             {
@@ -49,7 +49,7 @@ namespace supermarketSystem
 
                 object[] obj = new object[] { name, qun, price, tot };
                 dataGridView1.Rows.Add(obj);
-               
+
             }
 
 
@@ -67,36 +67,36 @@ namespace supermarketSystem
 
         private void label7_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void label7_MouseDown(object sender, MouseEventArgs e)
         {
-            
+
         }
 
 
         private void label15_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-       
+
 
         private void label13_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
-        
+
         /// /////////////invoice
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             ((Form)printPreviewDialog1).WindowState = FormWindowState.Maximized;
 
-            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
             }
@@ -109,8 +109,8 @@ namespace supermarketSystem
         {
             float margin = 40;
             Font f = new Font("Arial", 18, FontStyle.Bold);
-            
-            e.Graphics.DrawImage(Properties.Resources.Cart,margin, margin, 200, 200);
+
+            e.Graphics.DrawImage(Properties.Resources.Cart, margin, margin, 200, 200);
 
             string strdata = "Date : " + textBox2.Text;
             string strname = "name : " + label7.Text;
@@ -118,9 +118,9 @@ namespace supermarketSystem
             SizeF FontSizeName = e.Graphics.MeasureString(strname, f);
 
             e.Graphics.DrawString(strdata, f, Brushes.Black, e.PageBounds.Width - FontSizeDate.Width - margin, margin);
-            e.Graphics.DrawString(strname, f, Brushes.Black, e.PageBounds.Width - FontSizeDate.Width - margin, margin+FontSizeDate.Height);
-            float preHeight = margin + FontSizeDate.Height + FontSizeName.Height+150;
-            e.Graphics.DrawRectangle(Pens.Black, margin, preHeight, e.PageBounds.Width - margin*2 , e.PageBounds.Height-margin -preHeight);
+            e.Graphics.DrawString(strname, f, Brushes.Black, e.PageBounds.Width - FontSizeDate.Width - margin, margin + FontSizeDate.Height);
+            float preHeight = margin + FontSizeDate.Height + FontSizeName.Height + 150;
+            e.Graphics.DrawRectangle(Pens.Black, margin, preHeight, e.PageBounds.Width - margin * 2, e.PageBounds.Height - margin - preHeight);
 
             float colHight = 60;
             float col1Width = 300;
@@ -130,37 +130,37 @@ namespace supermarketSystem
 
 
 
-            e.Graphics.DrawLine(Pens.Black, margin, preHeight + colHight, e.PageBounds.Width-margin,preHeight+colHight);
+            e.Graphics.DrawLine(Pens.Black, margin, preHeight + colHight, e.PageBounds.Width - margin, preHeight + colHight);
 
 
 
-            e.Graphics.DrawString("Total price", f, Brushes.Black, e.PageBounds.Width - margin*5, preHeight);
+            e.Graphics.DrawString("Total price", f, Brushes.Black, e.PageBounds.Width - margin * 5, preHeight);
             e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 5, preHeight, e.PageBounds.Width - margin * 5, e.PageBounds.Height - margin);
 
             e.Graphics.DrawString(" price", f, Brushes.Black, e.PageBounds.Width - margin * 8, preHeight);
-            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 10, preHeight, e.PageBounds.Width - margin *10, e.PageBounds.Height - margin);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 10, preHeight, e.PageBounds.Width - margin * 10, e.PageBounds.Height - margin);
 
-            e.Graphics.DrawString("Quantity", f, Brushes.Black, e.PageBounds.Width - margin *13, preHeight);
-            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin *15 , preHeight, e.PageBounds.Width - margin * 15, e.PageBounds.Height - margin);
+            e.Graphics.DrawString("Quantity", f, Brushes.Black, e.PageBounds.Width - margin * 13, preHeight);
+            e.Graphics.DrawLine(Pens.Black, e.PageBounds.Width - margin * 15, preHeight, e.PageBounds.Width - margin * 15, e.PageBounds.Height - margin);
 
             e.Graphics.DrawString("Product", f, Brushes.Black, e.PageBounds.Width - margin * 19, preHeight);
 
 
-            
+
 
 
 
             //////////////////////////////invoice content//////////////////////
             ///
             float rowsHight = 60;
-            
-            for (int x=1; x<dataGridView1.Rows.Count;x+=1)
+
+            for (int x = 0; x < dataGridView1.Rows.Count; x += 1)
             {
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[1].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 2 - col1Width, preHeight + rowsHight);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[0].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 2 - col1Width, preHeight + rowsHight);
 
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeight + rowsHight);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[1].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col2Width, preHeight + rowsHight);
 
-                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
+                e.Graphics.DrawString(dataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
 
                 e.Graphics.DrawString(dataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Black, e.PageBounds.Width - margin * 2 - col4Width, preHeight + rowsHight);
 
@@ -174,9 +174,9 @@ namespace supermarketSystem
 
             e.Graphics.DrawString("Total", f, Brushes.Red, e.PageBounds.Width - margin * 2 - col3Width, preHeight + rowsHight);
 
-            
 
-           
+
+
 
 
         }
@@ -188,6 +188,8 @@ namespace supermarketSystem
 
         private void invoice_form_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Global.currCustomer.cart = null;
+            Global.currCustomer = null;
             Application.OpenForms[0].Show();
         }
 
