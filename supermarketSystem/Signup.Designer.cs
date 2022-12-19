@@ -59,7 +59,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(111)))), ((int)(((byte)(81)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(175, 2);
             this.button2.Name = "button2";
@@ -152,6 +152,7 @@
             // 
             // signUpBtn
             // 
+            this.signUpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
             this.signUpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signUpBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.Location = new System.Drawing.Point(127, 318);
@@ -159,7 +160,7 @@
             this.signUpBtn.Size = new System.Drawing.Size(84, 31);
             this.signUpBtn.TabIndex = 12;
             this.signUpBtn.Text = "Sign up";
-            this.signUpBtn.UseVisualStyleBackColor = true;
+            this.signUpBtn.UseVisualStyleBackColor = false;
             this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
             // 
             // label6
@@ -203,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(199)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(334, 361);
             this.Controls.Add(this.cnfrmPassword);
             this.Controls.Add(this.password);
