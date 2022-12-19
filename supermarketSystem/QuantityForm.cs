@@ -25,6 +25,7 @@ namespace supermarketSystem
             lblprice.Text = "$ " + price.ToString();
             lbloff.Text = discount.ToString() + "% OFF";
             lblfinalprice.Text = "$ " + (price * (100 - discount) / 100.0).ToString();
+            if (txtqty.Maximum == qty) lblwarning.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

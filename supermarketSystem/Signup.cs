@@ -154,5 +154,10 @@ namespace supermarketSystem
             password.Text = String.Empty;
             cnfrmPassword.Text = String.Empty;
         }
+
+        private void Signup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
