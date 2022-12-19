@@ -86,6 +86,7 @@
             // lblfinalprice
             // 
             this.lblfinalprice.AutoSize = true;
+            this.lblfinalprice.BackColor = System.Drawing.Color.Transparent;
             this.lblfinalprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfinalprice.ForeColor = System.Drawing.Color.Green;
             this.lblfinalprice.Location = new System.Drawing.Point(125, 143);
