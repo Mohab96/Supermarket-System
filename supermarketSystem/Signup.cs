@@ -93,7 +93,7 @@ namespace supermarketSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (checkBox1.Checked==false)
             {
                 password.PasswordChar = '*';
                 cnfrmPassword.PasswordChar = '*';
