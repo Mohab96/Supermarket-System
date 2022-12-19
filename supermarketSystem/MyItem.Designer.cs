@@ -116,7 +116,7 @@
             // 
             this.lblqty.AutoSize = true;
             this.lblqty.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblqty.ForeColor = System.Drawing.Color.Coral;
+            this.lblqty.ForeColor = System.Drawing.Color.Black;
             this.lblqty.Location = new System.Drawing.Point(102, 182);
             this.lblqty.Name = "lblqty";
             this.lblqty.Size = new System.Drawing.Size(47, 26);
@@ -128,7 +128,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(11, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 26);
