@@ -82,8 +82,6 @@ namespace supermarketSystem
         public static Hashtable usersCredentials = new Hashtable(); // email, password
         public static Hashtable adminsCredentials = new Hashtable(); // email, password
 
-        public static double cashBalance = CashBalance;
-
         public static double CashBalance
         {
             get
@@ -92,6 +90,7 @@ namespace supermarketSystem
                 if (cash.Count == 0)
                 {
                     cash.Add("10000");
+                    writeOnFile(fixedPathForCashBalance, "10000");
                     return 10000;
                 }
                 return double.Parse(cash[0]);
@@ -99,9 +98,12 @@ namespace supermarketSystem
             set
             {
                 List<string> cash = readFromFile(fixedPathForCashBalance);
-                cashBalance = value;
-                if (cash.Count == 0) cash.Add(value.ToString());
-                else cash[0] = value.ToString();
+
+                if (cash.Count == 0) cash.Add((value).ToString());
+                else cash[0] = (value).ToString();
+
+                clearFile(fixedPathForCashBalance);
+                writeOnFile(fixedPathForCashBalance, cash[0]);
             }
         }
 
