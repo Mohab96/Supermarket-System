@@ -124,5 +124,10 @@ namespace supermarketSystem
                 PasswordTextbox.PasswordChar = '*';
             }
         }
+
+        private void Loginbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,10 +17,11 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
-
+        bool close = true;
         private void button1_Click(object sender, EventArgs e)
         {
             Application.OpenForms[0].Show();
+            close = false;
             this.Close();
         }
 
@@ -157,6 +158,7 @@ namespace supermarketSystem
 
         private void Signup_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(close == true)
             Environment.Exit(0);
         }
     }
