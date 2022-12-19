@@ -16,9 +16,10 @@ namespace supermarketSystem
         public userMainMenu()
         {
             InitializeComponent();
+            generateControls();
         }
-        public bool close = true;
-        private void userMainMenu_Load(object sender, EventArgs e)
+
+        void generateControls()
         {
             name.Text = Global.currCustomer.FullName;
             money.Text = Global.currCustomer.CashBalance.ToString() + " $";
@@ -28,7 +29,7 @@ namespace supermarketSystem
                 product curProduct = Global.allProducts[item]; // The current product
                 newItem.prdctPic.Image = curProduct.image;
                 newItem.prdctName.Text = curProduct.Name;
-                newItem.prdctPrice.Text = curProduct.Price.ToString() + " $" ;
+                newItem.prdctPrice.Text = curProduct.Price.ToString() + " $";
                 newItem.Product = curProduct;
                 newItem.dis = curProduct.Discount.ToString();
                 //newItem.Click += new EventHandler(this.Item_click);
@@ -36,6 +37,12 @@ namespace supermarketSystem
                 newItem.Show();
                 productsMenu.Controls.Add(newItem);
             }
+        }
+
+        public bool close = true;
+        private void userMainMenu_Load(object sender, EventArgs e)
+        {
+            generateControls();
         }
 
         //void Item_click(object sender, EventArgs e)

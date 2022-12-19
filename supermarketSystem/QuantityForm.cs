@@ -42,6 +42,7 @@ namespace supermarketSystem
             {
                 Global.currCustomer.cart.Add(Global.currProduct, int.Parse(txtqty.Text));
             }
+
             this.Close();
         }
 

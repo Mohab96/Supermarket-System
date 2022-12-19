@@ -28,6 +28,7 @@ namespace supermarketSystem
            
             textBox2.Text = DateTime.Now.ToString("dd/mm/yyy");
             label7.Text = Global.currCustomer.FullName;
+            label5.Text = Global.currInvoice.Id.ToString();
 
             label12.Text = Global.currCustomer.cart.Count.ToString();
             foreach (var pro in Global.currCustomer.cart)
