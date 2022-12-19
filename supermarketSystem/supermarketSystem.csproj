@@ -261,6 +261,10 @@
     <Content Include="FodyWeavers.xml" />
     <Content Include="Resources\Cart.jpeg" />
     <Content Include="Resources\abouticon.jpeg" />
+    <None Include="Resources\offer3.png" />
+    <None Include="Resources\offerpng.png" />
+    <None Include="Resources\offer2.png" />
+    <None Include="Resources\offer.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\more.png" />

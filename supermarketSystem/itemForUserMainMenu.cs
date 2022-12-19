@@ -12,6 +12,24 @@ namespace supermarketSystem
 {
     public partial class itemForUserMainMenu : Form
     {
+        public string dis
+        {
+            get { return lbldis.Text ; }
+            set
+            {
+                if (int.Parse(value)> 0 )
+                {
+                    lbldis.Text = value; 
+                }
+                else
+                {
+                    lbldis.Visible = false ;
+                    pictureBox1.Visible = false;
+                }
+            }
+        }
+             
+        
         public itemForUserMainMenu()
         {
             InitializeComponent();
@@ -23,6 +41,16 @@ namespace supermarketSystem
             Global.currProduct = this.Product;
             QuantityForm Qf = new QuantityForm();
             Qf.ShowDialog();
+        }
+
+        private void prdctPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prdctName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

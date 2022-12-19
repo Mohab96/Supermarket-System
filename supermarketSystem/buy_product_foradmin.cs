@@ -105,5 +105,10 @@ namespace supermarketSystem
 
             total_price.Text = tot_price.ToString();
         }
+
+        private void price_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

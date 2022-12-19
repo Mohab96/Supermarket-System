@@ -67,7 +67,7 @@
             this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutBtn.Location = new System.Drawing.Point(109, 543);
-            this.checkoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkoutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.checkoutBtn.Name = "checkoutBtn";
             this.checkoutBtn.Size = new System.Drawing.Size(172, 49);
             this.checkoutBtn.TabIndex = 5;
@@ -81,7 +81,7 @@
             this.checkout_ListBox.FormattingEnabled = true;
             this.checkout_ListBox.ItemHeight = 20;
             this.checkout_ListBox.Location = new System.Drawing.Point(16, 63);
-            this.checkout_ListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkout_ListBox.Margin = new System.Windows.Forms.Padding(4);
             this.checkout_ListBox.Name = "checkout_ListBox";
             this.checkout_ListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.checkout_ListBox.Size = new System.Drawing.Size(376, 404);
@@ -115,7 +115,7 @@
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.Location = new System.Drawing.Point(293, 9);
-            this.backBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(100, 38);
             this.backBtn.TabIndex = 10;
@@ -136,9 +136,10 @@
             this.Controls.Add(this.totalPriceLbl);
             this.Controls.Add(this.checkout_ListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Cart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.Cart_Load);
             this.ResumeLayout(false);

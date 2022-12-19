@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnabout = new System.Windows.Forms.Button();
             this.btnsign = new System.Windows.Forms.Button();
             this.goToPayForm = new System.Windows.Forms.Button();
             this.money = new System.Windows.Forms.Label();
@@ -36,13 +37,13 @@
             this.cash = new System.Windows.Forms.Label();
             this.welcome = new System.Windows.Forms.Label();
             this.productsMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnabout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnabout);
             this.panel1.Controls.Add(this.btnsign);
             this.panel1.Controls.Add(this.goToPayForm);
@@ -50,99 +51,126 @@
             this.panel1.Controls.Add(this.name);
             this.panel1.Controls.Add(this.cash);
             this.panel1.Controls.Add(this.welcome);
-            this.panel1.Location = new System.Drawing.Point(9, 7);
+            this.panel1.Location = new System.Drawing.Point(12, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(652, 91);
+            this.panel1.Size = new System.Drawing.Size(1297, 112);
             this.panel1.TabIndex = 0;
+            // 
+            // btnabout
+            // 
+            this.btnabout.BackColor = System.Drawing.Color.Teal;
+            this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnabout.ForeColor = System.Drawing.Color.White;
+            this.btnabout.Location = new System.Drawing.Point(914, 54);
+            this.btnabout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnabout.Name = "btnabout";
+            this.btnabout.Size = new System.Drawing.Size(124, 48);
+            this.btnabout.TabIndex = 4;
+            this.btnabout.Text = "About";
+            this.btnabout.UseVisualStyleBackColor = false;
+            this.btnabout.Click += new System.EventHandler(this.btnabout_Click);
             // 
             // btnsign
             // 
-            this.btnsign.Location = new System.Drawing.Point(321, 34);
+            this.btnsign.BackColor = System.Drawing.Color.Crimson;
+            this.btnsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsign.ForeColor = System.Drawing.Color.White;
+            this.btnsign.Location = new System.Drawing.Point(914, 4);
+            this.btnsign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsign.Name = "btnsign";
-            this.btnsign.Size = new System.Drawing.Size(75, 23);
+            this.btnsign.Size = new System.Drawing.Size(124, 48);
             this.btnsign.TabIndex = 3;
             this.btnsign.Text = "Sign out";
-            this.btnsign.UseVisualStyleBackColor = true;
+            this.btnsign.UseVisualStyleBackColor = false;
             this.btnsign.Click += new System.EventHandler(this.btnsign_Click);
             // 
             // goToPayForm
             // 
-            this.goToPayForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goToPayForm.Location = new System.Drawing.Point(465, 17);
+            this.goToPayForm.BackColor = System.Drawing.Color.SeaGreen;
+            this.goToPayForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToPayForm.ForeColor = System.Drawing.Color.White;
+            this.goToPayForm.Location = new System.Drawing.Point(1046, 4);
+            this.goToPayForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.goToPayForm.Name = "goToPayForm";
-            this.goToPayForm.Size = new System.Drawing.Size(168, 57);
+            this.goToPayForm.Size = new System.Drawing.Size(243, 100);
             this.goToPayForm.TabIndex = 4;
             this.goToPayForm.Text = "Proceed to checkout";
-            this.goToPayForm.UseVisualStyleBackColor = true;
+            this.goToPayForm.UseVisualStyleBackColor = false;
             this.goToPayForm.Click += new System.EventHandler(this.goToPayForm_Click);
             // 
             // money
             // 
             this.money.AutoSize = true;
-            this.money.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.money.Location = new System.Drawing.Point(60, 55);
+            this.money.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.money.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.money.Location = new System.Drawing.Point(143, 56);
+            this.money.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.money.Name = "money";
-            this.money.Size = new System.Drawing.Size(49, 19);
+            this.money.Size = new System.Drawing.Size(89, 37);
             this.money.TabIndex = 3;
             this.money.Text = "money";
+            this.money.Click += new System.EventHandler(this.money_Click);
             // 
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.name.Location = new System.Drawing.Point(97, 18);
+            this.name.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.name.Location = new System.Drawing.Point(167, 14);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(41, 19);
+            this.name.Size = new System.Drawing.Size(77, 37);
             this.name.TabIndex = 2;
             this.name.Text = "name";
             // 
             // cash
             // 
             this.cash.AutoSize = true;
-            this.cash.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.cash.Location = new System.Drawing.Point(21, 55);
+            this.cash.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cash.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cash.Location = new System.Drawing.Point(45, 56);
+            this.cash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cash.Name = "cash";
-            this.cash.Size = new System.Drawing.Size(47, 19);
+            this.cash.Size = new System.Drawing.Size(90, 37);
             this.cash.TabIndex = 1;
             this.cash.Text = "Cash: ";
             // 
             // welcome
             // 
             this.welcome.AutoSize = true;
-            this.welcome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcome.Location = new System.Drawing.Point(12, 18);
+            this.welcome.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcome.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.welcome.Location = new System.Drawing.Point(33, 14);
+            this.welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcome.Name = "welcome";
-            this.welcome.Size = new System.Drawing.Size(84, 21);
+            this.welcome.Size = new System.Drawing.Size(126, 37);
             this.welcome.TabIndex = 0;
             this.welcome.Text = "Welcome,";
             // 
             // productsMenu
             // 
             this.productsMenu.AutoScroll = true;
-            this.productsMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.productsMenu.Location = new System.Drawing.Point(9, 104);
+            this.productsMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.productsMenu.Location = new System.Drawing.Point(12, 128);
+            this.productsMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productsMenu.Name = "productsMenu";
-            this.productsMenu.Size = new System.Drawing.Size(652, 334);
+            this.productsMenu.Size = new System.Drawing.Size(1297, 556);
             this.productsMenu.TabIndex = 1;
-            // 
-            // btnabout
-            // 
-            this.btnabout.Location = new System.Drawing.Point(222, 34);
-            this.btnabout.Name = "btnabout";
-            this.btnabout.Size = new System.Drawing.Size(75, 40);
-            this.btnabout.TabIndex = 4;
-            this.btnabout.Text = "About";
-            this.btnabout.UseVisualStyleBackColor = true;
-            this.btnabout.Click += new System.EventHandler(this.btnabout_Click);
+            this.productsMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.productsMenu_Paint);
             // 
             // userMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 450);
+            this.ClientSize = new System.Drawing.Size(1321, 692);
             this.Controls.Add(this.productsMenu);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "userMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.userMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.userMainMenu_Load);

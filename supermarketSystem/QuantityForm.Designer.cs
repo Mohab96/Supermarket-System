@@ -48,7 +48,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.Location = new System.Drawing.Point(13, 154);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(282, 64);
             this.button1.TabIndex = 0;
@@ -98,7 +98,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(288, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 18);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +111,7 @@
             this.txtqty.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtqty.Location = new System.Drawing.Point(114, 13);
-            this.txtqty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtqty.Margin = new System.Windows.Forms.Padding(4);
             this.txtqty.Name = "txtqty";
             this.txtqty.Size = new System.Drawing.Size(68, 29);
             this.txtqty.TabIndex = 7;
@@ -135,8 +135,8 @@
             this.Controls.Add(this.lbloff);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtqty);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuantityForm";

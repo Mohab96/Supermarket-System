@@ -21,15 +21,16 @@ namespace supermarketSystem
         private void userMainMenu_Load(object sender, EventArgs e)
         {
             name.Text = Global.currCustomer.FullName;
-            money.Text = Global.currCustomer.CashBalance.ToString() + "LE.";
+            money.Text = Global.currCustomer.CashBalance.ToString() + " $";
             foreach (var item in Global.mainMenuProducts)
             {
                 itemForUserMainMenu newItem = new itemForUserMainMenu();
                 product curProduct = Global.allProducts[item]; // The current product
                 newItem.prdctPic.Image = curProduct.image;
                 newItem.prdctName.Text = curProduct.Name;
-                newItem.prdctPrice.Text = curProduct.Price.ToString();
+                newItem.prdctPrice.Text = curProduct.Price.ToString() + " $" ;
                 newItem.Product = curProduct;
+                newItem.dis = curProduct.Discount.ToString();
                 //newItem.Click += new EventHandler(this.Item_click);
                 newItem.TopLevel = false;
                 newItem.Show();
@@ -74,6 +75,16 @@ namespace supermarketSystem
             about.Show();
             close = false;
             this.Close();
+
+        }
+
+        private void money_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productsMenu_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

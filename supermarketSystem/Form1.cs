@@ -109,7 +109,8 @@ namespace supermarketSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            EmailTextbox.Text = "";
+            PasswordTextbox.Text = "";
         }
 
         private void isShow_CheckedChanged(object sender, EventArgs e)

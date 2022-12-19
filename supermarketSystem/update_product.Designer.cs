@@ -201,6 +201,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_name);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "update_product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "update product";
