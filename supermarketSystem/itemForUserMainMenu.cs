@@ -35,12 +35,14 @@ namespace supermarketSystem
             InitializeComponent();
         }
         public product Product;
+        public userMainMenu menu;
 
         private void btnadd_Click(object sender, EventArgs e)
         {
             Global.currProduct = this.Product;
             QuantityForm Qf = new QuantityForm();
             Qf.ShowDialog();
+            this.menu.generateControls();
         }
 
         private void prdctPrice_Click(object sender, EventArgs e)

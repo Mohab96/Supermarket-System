@@ -16,13 +16,13 @@ namespace supermarketSystem
         public userMainMenu()
         {
             InitializeComponent();
-            generateControls();
         }
 
-        void generateControls()
+        public void generateControls()
         {
             name.Text = Global.currCustomer.FullName;
             money.Text = Global.currCustomer.CashBalance.ToString() + " $";
+            this.productsMenu.Controls.Clear();
             foreach (var item in Global.mainMenuProducts)
             {
                 itemForUserMainMenu newItem = new itemForUserMainMenu();
@@ -32,6 +32,7 @@ namespace supermarketSystem
                 newItem.prdctPrice.Text = curProduct.Price.ToString() + " $";
                 newItem.Product = curProduct;
                 newItem.dis = curProduct.Discount.ToString();
+                newItem.menu = this;
                 //newItem.Click += new EventHandler(this.Item_click);
                 newItem.TopLevel = false;
                 newItem.Show();
