@@ -51,21 +51,22 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.ForeColor = System.Drawing.Color.Crimson;
-            this.lbl_name.Location = new System.Drawing.Point(189, 9);
+            this.lbl_name.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.lbl_name.Location = new System.Drawing.Point(128, 9);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(206, 39);
+            this.lbl_name.Size = new System.Drawing.Size(270, 51);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "product name";
             this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_name.Click += new System.EventHandler(this.lbl_name_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(345, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(367, 97);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 252);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -75,8 +76,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(12, 109);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.label2.Location = new System.Drawing.Point(37, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(237, 29);
             this.label2.TabIndex = 0;
@@ -88,8 +89,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(12, 190);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.label3.Location = new System.Drawing.Point(78, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 29);
             this.label3.TabIndex = 0;
@@ -100,7 +101,7 @@
             // 
             this.quan_lbl.AutoSize = true;
             this.quan_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quan_lbl.Location = new System.Drawing.Point(240, 113);
+            this.quan_lbl.Location = new System.Drawing.Point(277, 111);
             this.quan_lbl.Name = "quan_lbl";
             this.quan_lbl.Size = new System.Drawing.Size(24, 25);
             this.quan_lbl.TabIndex = 0;
@@ -111,7 +112,7 @@
             // 
             this.price_lbl.AutoSize = true;
             this.price_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price_lbl.Location = new System.Drawing.Point(191, 190);
+            this.price_lbl.Location = new System.Drawing.Point(175, 153);
             this.price_lbl.Name = "price_lbl";
             this.price_lbl.Size = new System.Drawing.Size(24, 25);
             this.price_lbl.TabIndex = 0;
@@ -122,11 +123,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(12, 290);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.label6.Location = new System.Drawing.Point(52, 207);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 29);
+            this.label6.Size = new System.Drawing.Size(127, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Your Cash :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,7 +136,7 @@
             // 
             this.cash_lbl.AutoSize = true;
             this.cash_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cash_lbl.Location = new System.Drawing.Point(188, 294);
+            this.cash_lbl.Location = new System.Drawing.Point(175, 207);
             this.cash_lbl.Name = "cash_lbl";
             this.cash_lbl.Size = new System.Drawing.Size(76, 25);
             this.cash_lbl.TabIndex = 0;
@@ -146,8 +147,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Crimson;
-            this.label8.Location = new System.Drawing.Point(48, 362);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.label8.Location = new System.Drawing.Point(25, 257);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(490, 29);
             this.label8.TabIndex = 0;
@@ -158,8 +159,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label9.Location = new System.Drawing.Point(155, 458);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.label9.Location = new System.Drawing.Point(147, 357);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(169, 29);
             this.label9.TabIndex = 0;
@@ -170,7 +171,7 @@
             // 
             this.total_price.AutoSize = true;
             this.total_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_price.Location = new System.Drawing.Point(340, 462);
+            this.total_price.Location = new System.Drawing.Point(322, 361);
             this.total_price.Name = "total_price";
             this.total_price.Size = new System.Drawing.Size(36, 25);
             this.total_price.TabIndex = 0;
@@ -181,9 +182,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(150, 510);
+            this.button1.Location = new System.Drawing.Point(137, 401);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(245, 74);
             this.button1.TabIndex = 3;
@@ -194,9 +195,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 57);
+            this.pictureBox2.Size = new System.Drawing.Size(64, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -204,7 +205,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 408);
+            this.textBox1.Location = new System.Drawing.Point(137, 307);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(245, 36);
             this.textBox1.TabIndex = 5;
@@ -214,9 +215,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(595, 627);
+            this.ClientSize = new System.Drawing.Size(531, 493);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);

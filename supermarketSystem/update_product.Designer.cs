@@ -72,7 +72,7 @@
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(49, 147);
+            this.txtname.Location = new System.Drawing.Point(58, 154);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(268, 22);
             this.txtname.TabIndex = 2;
@@ -80,39 +80,39 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.label2.Location = new System.Drawing.Point(45, 112);
+            this.label2.Location = new System.Drawing.Point(53, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.Size = new System.Drawing.Size(156, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "product name :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.label3.Location = new System.Drawing.Point(45, 219);
+            this.label3.Location = new System.Drawing.Point(53, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "quantity : ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.label4.Location = new System.Drawing.Point(45, 324);
+            this.label4.Location = new System.Drawing.Point(53, 327);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "price :";
             // 
             // btn_done
             // 
-            this.btn_done.BackColor = System.Drawing.Color.Lime;
+            this.btn_done.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_done.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_done.ForeColor = System.Drawing.Color.White;
             this.btn_done.Location = new System.Drawing.Point(386, 483);
@@ -139,7 +139,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button3.Location = new System.Drawing.Point(386, 390);
             this.button3.Name = "button3";
@@ -162,7 +162,7 @@
             // 
             // txtquan
             // 
-            this.txtquan.Location = new System.Drawing.Point(49, 255);
+            this.txtquan.Location = new System.Drawing.Point(58, 262);
             this.txtquan.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -175,7 +175,7 @@
             // 
             // txtprice
             // 
-            this.txtprice.Location = new System.Drawing.Point(49, 359);
+            this.txtprice.Location = new System.Drawing.Point(58, 365);
             this.txtprice.Maximum = new decimal(new int[] {
             10000,
             0,
