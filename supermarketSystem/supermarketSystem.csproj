@@ -259,7 +259,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Resources\icons8-left-100.png" />
     <None Include="Resources\add 2.0.png" />
+    <None Include="Resources\bacccck.png" />
     <Content Include="Resources\Cart.jpeg" />
     <Content Include="Resources\abouticon.jpeg" />
     <None Include="Resources\offer3.png" />
