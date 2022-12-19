@@ -105,5 +105,12 @@ namespace supermarketSystem
         {
 
         }
+
+        private void btncash_Click(object sender, EventArgs e)
+        {
+            accessLog al = new accessLog();
+            al.ShowDialog();
+            this.generateControls();
+        }
     }
 }
