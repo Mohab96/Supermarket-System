@@ -22,7 +22,7 @@ namespace supermarketSystem
         bool close = true;
         public void generatecontrols()
         {
-            lblcash.Text = Global.cashBalance.ToString();
+            lblcash.Text = Global.CashBalance.ToString();
             lblname.Text = Global.currAdmin.FullName;
             flowLayoutPanel1.Controls.Clear();
             if (Global.allProducts.Count > 0)

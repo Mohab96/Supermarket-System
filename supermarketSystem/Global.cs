@@ -59,6 +59,7 @@ namespace supermarketSystem
         public static string fixedPathForAllProductsIDs = "AllProductsIDs.txt";
         public static string fixedPathForAllInvoicesIDs = "AllInvoicesIDs.txt";
         public static string fixedPathForGeneralID = "GeneralID.txt";
+        public static string fixedPathForCashBalance = "Cash.txt";
 
         public static admin currAdmin;  // holds the admin object that currently signed in
         public static customer currCustomer;  // holds the customer object that currently signed in
@@ -81,7 +82,25 @@ namespace supermarketSystem
         public static Hashtable usersCredentials = new Hashtable(); // email, password
         public static Hashtable adminsCredentials = new Hashtable(); // email, password
 
-        public static double cashBalance = 100000;
+        public static double cashBalance = CashBalance;
+
+        public static double CashBalance
+        {
+            get
+            {
+                List<string> cash = readFromFile(fixedPathForCashBalance);
+                if (cash.Count == 0) return 10000;
+                return double.Parse(cash[0]);
+            }
+            set
+            {
+                List<string> cash = readFromFile(fixedPathForCashBalance);
+                cashBalance = value;
+                if (cash.Count == 0) cash.Add(value.ToString());
+                else cash[0] = value.ToString();
+            }
+        }
+
         public static List<string> mainMenuProducts = new List<string>(); // ID of the product .. if you want to access it use allProducts
     }
 }

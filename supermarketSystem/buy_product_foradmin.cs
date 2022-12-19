@@ -70,16 +70,16 @@ namespace supermarketSystem
             
             tot_price = txt_pec * Global.currProduct.Price;
 
-            if (tot_price > Global.cashBalance)
+            if (tot_price > Global.CashBalance)
             {
                 MessageBox.Show("You don't have enough cash");
                 return;
             }
 
             Global.currProduct.Quantity += Convert.ToInt32(txt_pec);
-            Global.cashBalance -= tot_price;
+            Global.CashBalance -= tot_price;
 
-            MessageBox.Show("Done.. your cash now " + Global.cashBalance.ToString());
+            MessageBox.Show("Done.. your cash now " + Global.CashBalance.ToString());
 
             this.Close();
         }
@@ -95,7 +95,7 @@ namespace supermarketSystem
             pictureBox1.Image = Global.currProduct.image;
             quan_lbl.Text = Global.currProduct.Quantity.ToString();
             price_lbl.Text = Global.currProduct.Price.ToString();
-            cash_lbl.Text = Global.cashBalance.ToString();
+            cash_lbl.Text = Global.CashBalance.ToString();
         }
 
         private void textBox1_ValueChanged(object sender, EventArgs e)

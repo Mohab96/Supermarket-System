@@ -106,7 +106,7 @@ namespace supermarketSystem
             }
             MessageBox.Show("Products have bought successfully", "Done");
             Global.currCustomer.CashBalance -= totalCashNeeded;
-            Global.cashBalance = totalCashNeeded;
+            Global.CashBalance = totalCashNeeded;
             updateQuantity(); // updating the quantity of all bought items
             int ID = currID();
 
