@@ -51,7 +51,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.panel1.Controls.Add(this.roundButton3);
             this.panel1.Controls.Add(this.pictuer1);
             this.panel1.Controls.Add(this.label4);
@@ -65,7 +65,7 @@
             // 
             // roundButton3
             // 
-            this.roundButton3.BackColor = System.Drawing.Color.Crimson;
+            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton3.Location = new System.Drawing.Point(112, 359);
@@ -99,7 +99,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 459);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(339, 110);
+            this.label4.Size = new System.Drawing.Size(357, 120);
             this.label4.TabIndex = 1;
             this.label4.Text = "Internet marketing program, \r\nand you will enjoy with us buying \r\neverything you " +
     "need with ease,\r\n without the need to move from home\r\n  ";
@@ -111,7 +111,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 22);
+            this.label1.Size = new System.Drawing.Size(146, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Developed By:";
             // 
@@ -122,7 +122,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(8, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 198);
+            this.label2.Size = new System.Drawing.Size(148, 216);
             this.label2.TabIndex = 7;
             this.label2.Text = "#Mostafa fouad\r\n\r\n#Mostafa ameen\r\n\r\n#Arwa Ibrahim \r\n\r\n#Mohab yaser\r\n\r\n#Youssif ah" +
     "med\r\n";
@@ -205,7 +205,7 @@
             // 
             // roundButton2
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.Crimson;
+            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton2.Location = new System.Drawing.Point(378, 549);
@@ -219,7 +219,7 @@
             // 
             // roundButton1
             // 
-            this.roundButton1.BackColor = System.Drawing.Color.Crimson;
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton1.Location = new System.Drawing.Point(93, 549);

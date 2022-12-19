@@ -113,5 +113,10 @@ namespace supermarketSystem
         {
 
         }
+
+        private void lbl_name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
