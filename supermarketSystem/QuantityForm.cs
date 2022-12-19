@@ -53,12 +53,31 @@ namespace supermarketSystem
 
         private void txtqty_ValueChanged(object sender, EventArgs e)
         {
+            
             qty = int.Parse(txtqty.Value.ToString());
             lblprice.Text = "$ " + (price * qty).ToString();
             lblfinalprice.Text = "$ " + ((price * qty) * (100-discount) / 100.0).ToString();
+            if (txtqty.Value == txtqty.Maximum)
+            {
+                lblwarning.Visible = true;
+            }
+            else
+            {
+                lblwarning.Visible = false;
+            }
         }
 
         private void lblfinalprice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbloff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblprice_Click(object sender, EventArgs e)
         {
 
         }
