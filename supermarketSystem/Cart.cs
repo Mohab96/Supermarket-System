@@ -18,6 +18,7 @@ namespace supermarketSystem
             InitializeComponent();
         }
         double totalCashNeeded = 0;
+        double totalPrice = 0;  
         void showUserMainMenu()
         {
             this.Hide();
@@ -44,6 +45,34 @@ namespace supermarketSystem
             // then the customer will not be able to buy two Pieces but he can buy 1 instead 
         }
 
+        void Updatee() 
+        {
+            balance.Text = Global.currCustomer.CashBalance.ToString();
+            balance.Text += '$';
+            foreach (var pro in Global.currCustomer.cart)
+            {
+                string Name = pro.Key.Name;
+
+                int quantity = pro.Value;
+                string curiD = pro.Key.Id;
+
+                quantity = checkCurrQuantity(pro.Key.Id, quantity);
+
+                 totalPrice = (quantity * pro.Key.Price) * ((100 - pro.Key.Discount) / 100.0);
+
+                totalCashNeeded += totalPrice;
+
+                string viewPrice = totalPrice.ToString();
+
+                string viewName = Name.ToString();
+                string viewQuantity = quantity.ToString();
+                viewQuantity += 'x';
+                Object[] dataToBeAdded = { curiD,viewName, viewQuantity, viewPrice };
+                cartView.Rows.Add(dataToBeAdded);
+            }
+            displayPrice.Text = totalCashNeeded.ToString(); // showing the total price
+            displayPrice.Text += '$';
+        }
         private void Cart_Load(object sender, EventArgs e)
         {
             if (Global.currCustomer.cart.Count == 0)
@@ -53,40 +82,8 @@ namespace supermarketSystem
                 checkoutBtn.Enabled = false;
                 return;
             }
-            balance.Text = Global.currCustomer.CashBalance.ToString();
-            balance.Text += '$';
-            foreach (var pro in Global.currCustomer.cart)
-            {
-                string Name = pro.Key.Name;
-
-                int quantity = pro.Value;
-
-                quantity = checkCurrQuantity(pro.Key.Id, quantity);
-
-                double totalPrice = (quantity * pro.Key.Price) * ((100 - pro.Key.Discount) / 100.0);
-
-                totalCashNeeded += totalPrice;
-
-                string viewPrice = totalPrice.ToString();
-
-                string viewName = Name.ToString();
-
-                viewName = viewName + "   ";
-
-                string viewQuantity = quantity.ToString();
-
-                viewQuantity = viewQuantity + "X   ";
-
-                viewPrice = viewPrice + "   ";
-                string tot = viewName + viewQuantity + totalPrice+'$';
-
-
-                checkout_ListBox.Items.Add(tot);
-                checkout_ListBox.Items.Add("-----------------------");
-
-            }
-            displayPrice.Text = totalCashNeeded.ToString(); // showing the total price
-            displayPrice.Text += '$';
+            Updatee();
+          
         }
 
         int currID()
@@ -132,8 +129,23 @@ namespace supermarketSystem
             this.Close();
         }
 
-        private void checkout_ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void cartView_DoubleClick(object sender, EventArgs e)
         {
+            if (cartView.CurrentRow != null)
+            {
+                string id = cartView.CurrentRow.Cells[0].Value.ToString();
+                foreach (var cur in Global.currCustomer.cart) {
+                    if (cur.Key.Id == id) {
+                        totalCashNeeded -= (cur.Value * cur.Key.Price) * ((100 - cur.Key.Discount) / 100.0);
+                        displayPrice.Text= totalCashNeeded.ToString();
+                        Global.currCustomer.cart.Remove(cur.Key);
+                        cartView.Rows.Remove(cartView.CurrentRow);
+                        break;
+                    }
+                }
+
+            }
+
 
         }
     }
