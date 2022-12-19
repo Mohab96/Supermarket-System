@@ -44,11 +44,11 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(303, 15);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(227, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(806, 643);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(605, 523);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -56,10 +56,9 @@
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(71, 30);
-            this.lblname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblname.Location = new System.Drawing.Point(53, 24);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(74, 29);
+            this.lblname.Size = new System.Drawing.Size(59, 23);
             this.lblname.TabIndex = 3;
             this.lblname.Text = "NAME";
             this.lblname.Click += new System.EventHandler(this.lblname_Click);
@@ -68,10 +67,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
+            this.label1.Size = new System.Drawing.Size(67, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cash : ";
             // 
@@ -79,20 +77,19 @@
             // 
             this.lblcash.AutoSize = true;
             this.lblcash.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcash.Location = new System.Drawing.Point(116, 66);
-            this.lblcash.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcash.ForeColor = System.Drawing.Color.Green;
+            this.lblcash.Location = new System.Drawing.Point(87, 54);
             this.lblcash.Name = "lblcash";
-            this.lblcash.Size = new System.Drawing.Size(81, 29);
+            this.lblcash.Size = new System.Drawing.Size(65, 23);
             this.lblcash.TabIndex = 7;
             this.lblcash.Text = "0.00 $";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::supermarketSystem.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -101,17 +98,18 @@
             // 
             this.btnlogs.BackColor = System.Drawing.Color.White;
             this.btnlogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogs.Location = new System.Drawing.Point(24, 118);
-            this.btnlogs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlogs.Location = new System.Drawing.Point(18, 471);
             this.btnlogs.Name = "btnlogs";
-            this.btnlogs.Size = new System.Drawing.Size(231, 54);
+            this.btnlogs.Size = new System.Drawing.Size(173, 44);
             this.btnlogs.TabIndex = 9;
             this.btnlogs.Text = "Check Logs";
             this.btnlogs.UseVisualStyleBackColor = false;
+            this.btnlogs.Visible = false;
             this.btnlogs.Click += new System.EventHandler(this.btnlogs_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnsign);
             this.panel1.Controls.Add(this.btnabout);
@@ -120,10 +118,9 @@
             this.panel1.Controls.Add(this.lblname);
             this.panel1.Controls.Add(this.lblcash);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(278, 643);
+            this.panel1.Size = new System.Drawing.Size(209, 523);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -131,10 +128,9 @@
             // 
             this.btnsign.BackColor = System.Drawing.Color.Firebrick;
             this.btnsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsign.Location = new System.Drawing.Point(24, 241);
-            this.btnsign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsign.Location = new System.Drawing.Point(18, 145);
             this.btnsign.Name = "btnsign";
-            this.btnsign.Size = new System.Drawing.Size(231, 54);
+            this.btnsign.Size = new System.Drawing.Size(173, 44);
             this.btnsign.TabIndex = 11;
             this.btnsign.Text = "Sign out";
             this.btnsign.UseVisualStyleBackColor = false;
@@ -144,10 +140,9 @@
             // 
             this.btnabout.BackColor = System.Drawing.SystemColors.GrayText;
             this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnabout.Location = new System.Drawing.Point(24, 180);
-            this.btnabout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnabout.Location = new System.Drawing.Point(18, 95);
             this.btnabout.Name = "btnabout";
-            this.btnabout.Size = new System.Drawing.Size(231, 54);
+            this.btnabout.Size = new System.Drawing.Size(173, 44);
             this.btnabout.TabIndex = 10;
             this.btnabout.Text = "About";
             this.btnabout.UseVisualStyleBackColor = false;
@@ -155,13 +150,13 @@
             // 
             // adminMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 665);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(843, 540);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "adminMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

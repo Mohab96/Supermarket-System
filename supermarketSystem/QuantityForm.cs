@@ -15,7 +15,6 @@ namespace supermarketSystem
         public QuantityForm()
         {
             InitializeComponent();
-            MessageBox.Show(Global.currProduct.Price.ToString());
         }
         double price = Global.currProduct.Price;
         double discount = Global.currProduct.Discount;
@@ -25,7 +24,8 @@ namespace supermarketSystem
             txtqty.Maximum = Global.currProduct.Quantity;
             lblprice.Text = "$ " + price.ToString();
             lbloff.Text = discount.ToString() + "% OFF";
-            lblfinalprice.Text = "$ " + (price * (100-discount)/100.0).ToString();
+            lblfinalprice.Text = "$ " + (price * (100 - discount) / 100.0).ToString();
+            if (txtqty.Maximum == qty) lblwarning.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace supermarketSystem
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {       
-            if(Global.currCustomer.cart.ContainsKey(Global.currProduct))
+        {
+            if (Global.currCustomer.cart.ContainsKey(Global.currProduct))
             {
                 Global.currCustomer.cart[Global.currProduct] += int.Parse(txtqty.Text);
             }
@@ -43,23 +43,25 @@ namespace supermarketSystem
             {
                 Global.currCustomer.cart.Add(Global.currProduct, int.Parse(txtqty.Text));
             }
+
             this.Close();
         }
 
         private void txtqty_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtqty_ValueChanged(object sender, EventArgs e)
         {
-            
+
             qty = int.Parse(txtqty.Value.ToString());
             lblprice.Text = "$ " + (price * qty).ToString();
-            lblfinalprice.Text = "$ " + ((price * qty) * (100-discount) / 100.0).ToString();
+            lblfinalprice.Text = "$ " + ((price * qty) * (100 - discount) / 100.0).ToString();
             if (txtqty.Value == txtqty.Maximum)
             {
                 lblwarning.Visible = true;
+                //Global.mainMenuProducts.Remove(Global.currProduct.Id);
             }
             else
             {

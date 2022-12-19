@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace supermarketSystem
@@ -16,10 +17,11 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
-
+        bool close = true;
         private void button1_Click(object sender, EventArgs e)
         {
             Application.OpenForms[0].Show();
+            close = false;
             this.Close();
         }
 
@@ -42,6 +44,32 @@ namespace supermarketSystem
             this.Close();
         }
 
+        bool IsValidEmail(string email)
+        {
+            string trimmedEmail = email.Trim();
+
+            if (trimmedEmail.EndsWith(".")) return false;
+            if (!email.Contains('.')) return false;
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool IsPhoneNumber(string number)
+        {
+            foreach (var item in number)
+            {
+                if (item < '0' || item > '9') return false;
+            }
+            return number.Length == 11;
+        }
+
         int currID()
         {
             List<string> generalIdFile = Global.readFromFile(Global.fixedPathForGeneralID);
@@ -59,6 +87,14 @@ namespace supermarketSystem
                 // If there is any empty field
                 MessageBox.Show("Please fill all the fields", "Warning");
             }
+            else if (!IsValidEmail(email.Text))
+            {
+                MessageBox.Show("Please enter a valid email", "Warning");
+            }
+            else if (!IsPhoneNumber(phoneNumber.Text))
+            {
+                MessageBox.Show("Please enter a valid phone number", "Warning");
+            }
             else if (Global.adminsCredentials.Contains(email.Text) || Global.usersCredentials.Contains(email.Text))
             {
                 // If the email already exists
@@ -68,6 +104,10 @@ namespace supermarketSystem
             {
                 // If the two passwords don't match
                 MessageBox.Show("The passwords don't match !!", "Warning");
+            }
+            else if (password.Text.Length <= 8)
+            {
+                MessageBox.Show("Please enter a valid password (not less than 8 charachters)", "Warning");
             }
             else
             {
@@ -95,15 +135,31 @@ namespace supermarketSystem
         {
             if (checkBox1.Checked)
             {
-                password.PasswordChar = '*';
-                cnfrmPassword.PasswordChar = '*';
-            }
-            else
-            {
                 password.PasswordChar = '\0';
                 cnfrmPassword.PasswordChar = '\0';
             }
+            else
+            {
+                password.PasswordChar = '*';
+                cnfrmPassword.PasswordChar = '*';
+            }
 
+        }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+            fullName.Text = String.Empty;
+            email.Text = String.Empty;
+            address.Text = String.Empty;
+            phoneNumber.Text = String.Empty;
+            password.Text = String.Empty;
+            cnfrmPassword.Text = String.Empty;
+        }
+
+        private void Signup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(close == true)
+            Environment.Exit(0);
         }
     }
 }

@@ -17,25 +17,33 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
-        public bool close = true;
-        private void userMainMenu_Load(object sender, EventArgs e)
+
+        public void generateControls()
         {
             name.Text = Global.currCustomer.FullName;
             money.Text = Global.currCustomer.CashBalance.ToString() + " $";
+            this.productsMenu.Controls.Clear();
             foreach (var item in Global.mainMenuProducts)
             {
                 itemForUserMainMenu newItem = new itemForUserMainMenu();
                 product curProduct = Global.allProducts[item]; // The current product
                 newItem.prdctPic.Image = curProduct.image;
                 newItem.prdctName.Text = curProduct.Name;
-                newItem.prdctPrice.Text = curProduct.Price.ToString() + " $" ;
+                newItem.prdctPrice.Text = curProduct.Price.ToString() + " $";
                 newItem.Product = curProduct;
                 newItem.dis = curProduct.Discount.ToString();
+                newItem.menu = this;
                 //newItem.Click += new EventHandler(this.Item_click);
                 newItem.TopLevel = false;
                 newItem.Show();
                 productsMenu.Controls.Add(newItem);
             }
+        }
+
+        public bool close = true;
+        private void userMainMenu_Load(object sender, EventArgs e)
+        {
+            generateControls();
         }
 
         //void Item_click(object sender, EventArgs e)
@@ -66,7 +74,17 @@ namespace supermarketSystem
         private void userMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (close == true)
-                Application.Exit();
+            {
+                DialogResult result = MessageBox.Show("Are you sure you wish to Quit?", "Exit Application", MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void btnabout_Click(object sender, EventArgs e)

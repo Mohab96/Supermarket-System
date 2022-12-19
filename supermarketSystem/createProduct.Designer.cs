@@ -48,6 +48,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.discountLbl = new System.Windows.Forms.Label();
             this.discountTxtBx = new System.Windows.Forms.TextBox();
+            this.percentView = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productImage)).BeginInit();
             this.ExpireDateContents.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -86,7 +87,7 @@
             // nameTxtBx
             // 
             this.nameTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTxtBx.Location = new System.Drawing.Point(152, 34);
+            this.nameTxtBx.Location = new System.Drawing.Point(216, 37);
             this.nameTxtBx.Name = "nameTxtBx";
             this.nameTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.nameTxtBx.Size = new System.Drawing.Size(156, 27);
@@ -95,7 +96,7 @@
             // quantityTxtBx
             // 
             this.quantityTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityTxtBx.Location = new System.Drawing.Point(152, 70);
+            this.quantityTxtBx.Location = new System.Drawing.Point(216, 68);
             this.quantityTxtBx.Name = "quantityTxtBx";
             this.quantityTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.quantityTxtBx.Size = new System.Drawing.Size(156, 27);
@@ -104,7 +105,7 @@
             // priceTxtBx
             // 
             this.priceTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxtBx.Location = new System.Drawing.Point(152, 109);
+            this.priceTxtBx.Location = new System.Drawing.Point(216, 101);
             this.priceTxtBx.Name = "priceTxtBx";
             this.priceTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.priceTxtBx.Size = new System.Drawing.Size(156, 27);
@@ -240,7 +241,7 @@
             this.groupBox1.Controls.Add(this.priceTxtBx);
             this.groupBox1.Location = new System.Drawing.Point(16, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 153);
+            this.groupBox1.Size = new System.Drawing.Size(378, 153);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Main Info";
@@ -258,19 +259,32 @@
             // 
             // discountTxtBx
             // 
-            this.discountTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountTxtBx.Location = new System.Drawing.Point(113, 381);
+            this.discountTxtBx.AccessibleDescription = "";
+            this.discountTxtBx.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountTxtBx.Location = new System.Drawing.Point(111, 379);
             this.discountTxtBx.Name = "discountTxtBx";
             this.discountTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.discountTxtBx.Size = new System.Drawing.Size(195, 27);
+            this.discountTxtBx.Size = new System.Drawing.Size(36, 33);
             this.discountTxtBx.TabIndex = 16;
-            this.discountTxtBx.Text = "Leave empty if there is no discount";
+            this.discountTxtBx.Tag = "";
+            this.discountTxtBx.Text = "0";
+            // 
+            // percentView
+            // 
+            this.percentView.AutoSize = true;
+            this.percentView.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentView.Location = new System.Drawing.Point(164, 381);
+            this.percentView.Name = "percentView";
+            this.percentView.Size = new System.Drawing.Size(93, 30);
+            this.percentView.TabIndex = 17;
+            this.percentView.Text = "Percent";
             // 
             // createProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 583);
+            this.Controls.Add(this.percentView);
             this.Controls.Add(this.discountTxtBx);
             this.Controls.Add(this.discountLbl);
             this.Controls.Add(this.groupBox1);
@@ -319,5 +333,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label discountLbl;
         private System.Windows.Forms.TextBox discountTxtBx;
+        private System.Windows.Forms.Label percentView;
     }
 }

@@ -22,7 +22,7 @@ namespace supermarketSystem
         bool close = true;
         public void generatecontrols()
         {
-            lblcash.Text = Global.cashBalance.ToString();
+            lblcash.Text = Global.CashBalance.ToString();
             lblname.Text = Global.currAdmin.FullName;
             flowLayoutPanel1.Controls.Clear();
             if (Global.allProducts.Count > 0)
@@ -100,8 +100,19 @@ namespace supermarketSystem
 
         private void adminMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(close == true)
-            Application.Exit();
+            if (close == true)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you wish to Quit?", "Exit Application", MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    //Application.Exit();
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
