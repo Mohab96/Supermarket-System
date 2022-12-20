@@ -16,7 +16,11 @@ namespace supermarketSystem
         {
             InitializeComponent();
         }
-
+        void clear()
+        {
+            EmailTextbox.Text = "";
+            PasswordTextbox.Text = "";
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide(); // hiding the current form 
@@ -86,6 +90,8 @@ namespace supermarketSystem
                 {
                     Global.currCustomer = (customer)Global.allCustomers[curr_ID];
                 }
+                // Clears the login form
+                clear();
                 // show the user main menu 
                 showUserMainMenu();
 
@@ -99,6 +105,8 @@ namespace supermarketSystem
                 {
                     Global.currAdmin = (admin)Global.allAdmins[curr_ID];
                 }
+                // Clears the login form
+                clear();
                 // show the admin main menu
                 showAdminMainMenu();
                 return;
@@ -109,8 +117,7 @@ namespace supermarketSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            EmailTextbox.Text = "";
-            PasswordTextbox.Text = "";
+            clear();
         }
 
         private void isShow_CheckedChanged(object sender, EventArgs e)
