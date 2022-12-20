@@ -34,11 +34,11 @@
             this.currCashInAcc = new System.Windows.Forms.Label();
             this.balance = new System.Windows.Forms.Label();
             this.cartView = new System.Windows.Forms.DataGridView();
-            this.DeleteLabel = new System.Windows.Forms.Label();
             this.proID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cartView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +48,10 @@
             this.displayPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.displayPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayPrice.ForeColor = System.Drawing.Color.Green;
-            this.displayPrice.Location = new System.Drawing.Point(141, 412);
+            this.displayPrice.Location = new System.Drawing.Point(188, 507);
+            this.displayPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.displayPrice.Name = "displayPrice";
-            this.displayPrice.Size = new System.Drawing.Size(37, 24);
+            this.displayPrice.Size = new System.Drawing.Size(46, 29);
             this.displayPrice.TabIndex = 7;
             this.displayPrice.Text = "NA";
             // 
@@ -59,9 +60,10 @@
             this.totalPriceLbl.AutoSize = true;
             this.totalPriceLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.totalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLbl.Location = new System.Drawing.Point(26, 412);
+            this.totalPriceLbl.Location = new System.Drawing.Point(35, 507);
+            this.totalPriceLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalPriceLbl.Name = "totalPriceLbl";
-            this.totalPriceLbl.Size = new System.Drawing.Size(109, 24);
+            this.totalPriceLbl.Size = new System.Drawing.Size(142, 29);
             this.totalPriceLbl.TabIndex = 6;
             this.totalPriceLbl.Text = "Total Price :";
             // 
@@ -71,9 +73,10 @@
             this.checkoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutBtn.Location = new System.Drawing.Point(305, 441);
+            this.checkoutBtn.Location = new System.Drawing.Point(407, 543);
+            this.checkoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkoutBtn.Name = "checkoutBtn";
-            this.checkoutBtn.Size = new System.Drawing.Size(129, 40);
+            this.checkoutBtn.Size = new System.Drawing.Size(172, 49);
             this.checkoutBtn.TabIndex = 5;
             this.checkoutBtn.Text = "Checkout";
             this.checkoutBtn.UseVisualStyleBackColor = false;
@@ -84,9 +87,10 @@
             this.currCashInAcc.AutoSize = true;
             this.currCashInAcc.BackColor = System.Drawing.Color.Transparent;
             this.currCashInAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currCashInAcc.Location = new System.Drawing.Point(13, 13);
+            this.currCashInAcc.Location = new System.Drawing.Point(17, 16);
+            this.currCashInAcc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currCashInAcc.Name = "currCashInAcc";
-            this.currCashInAcc.Size = new System.Drawing.Size(63, 24);
+            this.currCashInAcc.Size = new System.Drawing.Size(80, 29);
             this.currCashInAcc.TabIndex = 8;
             this.currCashInAcc.Text = "Cash :";
             // 
@@ -96,9 +100,10 @@
             this.balance.BackColor = System.Drawing.Color.Transparent;
             this.balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.balance.ForeColor = System.Drawing.Color.Green;
-            this.balance.Location = new System.Drawing.Point(82, 13);
+            this.balance.Location = new System.Drawing.Point(109, 16);
+            this.balance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.balance.Name = "balance";
-            this.balance.Size = new System.Drawing.Size(40, 25);
+            this.balance.Size = new System.Drawing.Size(48, 29);
             this.balance.TabIndex = 9;
             this.balance.Text = "NA";
             // 
@@ -115,21 +120,12 @@
             this.proQuantity,
             this.proPrice});
             this.cartView.GridColor = System.Drawing.SystemColors.Desktop;
-            this.cartView.Location = new System.Drawing.Point(46, 49);
+            this.cartView.Location = new System.Drawing.Point(61, 60);
+            this.cartView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cartView.Name = "cartView";
-            this.cartView.Size = new System.Drawing.Size(645, 360);
+            this.cartView.Size = new System.Drawing.Size(860, 443);
             this.cartView.TabIndex = 11;
             this.cartView.DoubleClick += new System.EventHandler(this.cartView_DoubleClick);
-            // 
-            // DeleteLabel
-            // 
-            this.DeleteLabel.AutoSize = true;
-            this.DeleteLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLabel.Location = new System.Drawing.Point(417, 19);
-            this.DeleteLabel.Name = "DeleteLabel";
-            this.DeleteLabel.Size = new System.Drawing.Size(298, 18);
-            this.DeleteLabel.TabIndex = 12;
-            this.DeleteLabel.Text = "Double Click to remove a product from the cart";
             // 
             // proID
             // 
@@ -156,12 +152,23 @@
             this.proPrice.Name = "proPrice";
             this.proPrice.ReadOnly = true;
             // 
+            // DeleteLabel
+            // 
+            this.DeleteLabel.AutoSize = true;
+            this.DeleteLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLabel.Location = new System.Drawing.Point(556, 23);
+            this.DeleteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DeleteLabel.Name = "DeleteLabel";
+            this.DeleteLabel.Size = new System.Drawing.Size(372, 22);
+            this.DeleteLabel.TabIndex = 12;
+            this.DeleteLabel.Text = "Double Click to remove a product from the cart";
+            // 
             // Cart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(727, 495);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(969, 609);
             this.Controls.Add(this.DeleteLabel);
             this.Controls.Add(this.cartView);
             this.Controls.Add(this.balance);
@@ -170,6 +177,7 @@
             this.Controls.Add(this.checkoutBtn);
             this.Controls.Add(this.totalPriceLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

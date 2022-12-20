@@ -268,12 +268,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Resources\enrollment.png" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\user1.png" />
     <None Include="Resources\shopping.png" />
     <None Include="Resources\WhatsApp Image 2022-12-20 at 7.10.04 PM.jpeg" />
     <None Include="Resources\icons8-left-100.png" />
     <None Include="Resources\add 2.0.png" />
     <None Include="Resources\bacccck.png" />
     <None Include="Resources\admin.png" />
+    <None Include="Resources\add-friend.png" />
+    <None Include="Resources\admin %282%29.png" />
     <Content Include="Resources\Cart.jpeg" />
     <Content Include="Resources\abouticon.jpeg" />
     <None Include="Resources\offer3.png" />
