@@ -65,6 +65,7 @@ namespace supermarketSystem
 
         private void btnsign_Click(object sender, EventArgs e)
         {
+            Global.currCustomer.cart.Clear();
             Global.currCustomer = null;
             Application.OpenForms[0].Show();
             close = false;
