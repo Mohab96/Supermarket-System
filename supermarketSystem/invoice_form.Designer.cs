@@ -77,6 +77,7 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Id :";
             // 
+
             // label4
             // 
             this.label4.AutoSize = true;
@@ -129,8 +130,10 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.ForeColor = System.Drawing.Color.CornflowerBlue;
+
             this.panel1.Location = new System.Drawing.Point(-11, 262);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1353, 10);
             this.panel1.TabIndex = 11;
@@ -158,6 +161,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(-11, 366);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -197,6 +201,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(717, 294);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(270, 62);
             this.button2.TabIndex = 22;
@@ -319,6 +324,7 @@
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.Name = "invoice_form";
             this.Text = "invoice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
