@@ -195,7 +195,7 @@ namespace supermarketSystem
 
         private void invoice_form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Global.currCustomer.cart = null;
+            Global.currCustomer.cart.Clear();
             Global.currCustomer = null;
             Application.OpenForms[0].Show();
         }

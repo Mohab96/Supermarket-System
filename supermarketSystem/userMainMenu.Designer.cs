@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.cash);
             this.panel1.Controls.Add(this.welcome);
             this.panel1.Location = new System.Drawing.Point(12, 9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1297, 112);
             this.panel1.TabIndex = 0;
@@ -62,10 +62,11 @@
             // btncash
             // 
             this.btncash.BackColor = System.Drawing.Color.Green;
+            this.btncash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncash.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncash.ForeColor = System.Drawing.Color.White;
             this.btncash.Location = new System.Drawing.Point(664, 5);
-            this.btncash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncash.Margin = new System.Windows.Forms.Padding(4);
             this.btncash.Name = "btncash";
             this.btncash.Size = new System.Drawing.Size(243, 100);
             this.btncash.TabIndex = 5;
@@ -76,10 +77,11 @@
             // btnabout
             // 
             this.btnabout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.btnabout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnabout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnabout.ForeColor = System.Drawing.Color.White;
             this.btnabout.Location = new System.Drawing.Point(915, 54);
-            this.btnabout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnabout.Margin = new System.Windows.Forms.Padding(4);
             this.btnabout.Name = "btnabout";
             this.btnabout.Size = new System.Drawing.Size(124, 48);
             this.btnabout.TabIndex = 4;
@@ -90,10 +92,11 @@
             // btnsign
             // 
             this.btnsign.BackColor = System.Drawing.Color.Crimson;
+            this.btnsign.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsign.ForeColor = System.Drawing.Color.White;
             this.btnsign.Location = new System.Drawing.Point(915, 4);
-            this.btnsign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsign.Margin = new System.Windows.Forms.Padding(4);
             this.btnsign.Name = "btnsign";
             this.btnsign.Size = new System.Drawing.Size(124, 48);
             this.btnsign.TabIndex = 3;
@@ -104,10 +107,11 @@
             // goToPayForm
             // 
             this.goToPayForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.goToPayForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.goToPayForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goToPayForm.ForeColor = System.Drawing.Color.White;
             this.goToPayForm.Location = new System.Drawing.Point(1045, 4);
-            this.goToPayForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goToPayForm.Margin = new System.Windows.Forms.Padding(4);
             this.goToPayForm.Name = "goToPayForm";
             this.goToPayForm.Size = new System.Drawing.Size(243, 100);
             this.goToPayForm.TabIndex = 4;
@@ -170,7 +174,7 @@
             this.productsMenu.AutoScroll = true;
             this.productsMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.productsMenu.Location = new System.Drawing.Point(12, 128);
-            this.productsMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsMenu.Margin = new System.Windows.Forms.Padding(4);
             this.productsMenu.Name = "productsMenu";
             this.productsMenu.Size = new System.Drawing.Size(1297, 555);
             this.productsMenu.TabIndex = 1;
@@ -184,7 +188,7 @@
             this.Controls.Add(this.productsMenu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "userMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -18,6 +18,8 @@ namespace supermarketSystem
             InitializeComponent();
         }
         bool close = true;
+
+        /// switch to login
         private void button1_Click(object sender, EventArgs e)
         {
             Application.OpenForms[0].Show();

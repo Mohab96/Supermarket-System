@@ -62,7 +62,7 @@
             this.productNamelbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.productNamelbl.Location = new System.Drawing.Point(6, 34);
             this.productNamelbl.Name = "productNamelbl";
-            this.productNamelbl.Size = new System.Drawing.Size(140, 23);
+            this.productNamelbl.Size = new System.Drawing.Size(178, 30);
             this.productNamelbl.TabIndex = 0;
             this.productNamelbl.Text = "Product Name :";
             // 
@@ -73,7 +73,7 @@
             this.quantityLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.quantityLbl.Location = new System.Drawing.Point(6, 68);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(91, 23);
+            this.quantityLbl.Size = new System.Drawing.Size(117, 30);
             this.quantityLbl.TabIndex = 1;
             this.quantityLbl.Text = "Quantity :";
             // 
@@ -84,7 +84,7 @@
             this.priceLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.priceLbl.Location = new System.Drawing.Point(7, 109);
             this.priceLbl.Name = "priceLbl";
-            this.priceLbl.Size = new System.Drawing.Size(61, 23);
+            this.priceLbl.Size = new System.Drawing.Size(76, 30);
             this.priceLbl.TabIndex = 2;
             this.priceLbl.Text = "Price :";
             // 
@@ -94,7 +94,7 @@
             this.nameTxtBx.Location = new System.Drawing.Point(216, 37);
             this.nameTxtBx.Name = "nameTxtBx";
             this.nameTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.nameTxtBx.Size = new System.Drawing.Size(156, 23);
+            this.nameTxtBx.Size = new System.Drawing.Size(156, 27);
             this.nameTxtBx.TabIndex = 0;
             // 
             // quantityTxtBx
@@ -103,7 +103,7 @@
             this.quantityTxtBx.Location = new System.Drawing.Point(216, 73);
             this.quantityTxtBx.Name = "quantityTxtBx";
             this.quantityTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.quantityTxtBx.Size = new System.Drawing.Size(156, 23);
+            this.quantityTxtBx.Size = new System.Drawing.Size(156, 27);
             this.quantityTxtBx.TabIndex = 1;
             // 
             // priceTxtBx
@@ -112,7 +112,7 @@
             this.priceTxtBx.Location = new System.Drawing.Point(216, 109);
             this.priceTxtBx.Name = "priceTxtBx";
             this.priceTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.priceTxtBx.Size = new System.Drawing.Size(156, 23);
+            this.priceTxtBx.Size = new System.Drawing.Size(156, 27);
             this.priceTxtBx.TabIndex = 2;
             // 
             // productImage
@@ -128,6 +128,7 @@
             // uploadbtn
             // 
             this.uploadbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.uploadbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uploadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadbtn.ForeColor = System.Drawing.Color.White;
@@ -142,6 +143,7 @@
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
@@ -156,6 +158,7 @@
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Red;
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
@@ -191,7 +194,7 @@
             this.dayTxtBx.Location = new System.Drawing.Point(216, 131);
             this.dayTxtBx.Name = "dayTxtBx";
             this.dayTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.dayTxtBx.Size = new System.Drawing.Size(156, 23);
+            this.dayTxtBx.Size = new System.Drawing.Size(156, 27);
             this.dayTxtBx.TabIndex = 2;
             // 
             // monthTxtBx
@@ -200,7 +203,7 @@
             this.monthTxtBx.Location = new System.Drawing.Point(216, 82);
             this.monthTxtBx.Name = "monthTxtBx";
             this.monthTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.monthTxtBx.Size = new System.Drawing.Size(156, 23);
+            this.monthTxtBx.Size = new System.Drawing.Size(156, 27);
             this.monthTxtBx.TabIndex = 1;
             // 
             // yearTxtBx
@@ -209,7 +212,7 @@
             this.yearTxtBx.Location = new System.Drawing.Point(216, 32);
             this.yearTxtBx.Name = "yearTxtBx";
             this.yearTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.yearTxtBx.Size = new System.Drawing.Size(156, 23);
+            this.yearTxtBx.Size = new System.Drawing.Size(156, 27);
             this.yearTxtBx.TabIndex = 0;
             // 
             // label2
@@ -219,7 +222,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(6, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 23);
+            this.label2.Size = new System.Drawing.Size(66, 30);
             this.label2.TabIndex = 13;
             this.label2.Text = "Day :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -231,7 +234,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(6, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 23);
+            this.label1.Size = new System.Drawing.Size(97, 30);
             this.label1.TabIndex = 12;
             this.label1.Text = "Month :";
             // 
@@ -242,7 +245,7 @@
             this.Year.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Year.Location = new System.Drawing.Point(6, 32);
             this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(57, 23);
+            this.Year.Size = new System.Drawing.Size(71, 30);
             this.Year.TabIndex = 11;
             this.Year.Text = "Year :";
             // 
@@ -269,7 +272,7 @@
             this.discountLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discountLbl.Location = new System.Drawing.Point(24, 421);
             this.discountLbl.Name = "discountLbl";
-            this.discountLbl.Size = new System.Drawing.Size(93, 23);
+            this.discountLbl.Size = new System.Drawing.Size(119, 30);
             this.discountLbl.TabIndex = 12;
             this.discountLbl.Text = "Discount :";
             // 
@@ -280,7 +283,7 @@
             this.discountTxtBx.Location = new System.Drawing.Point(233, 421);
             this.discountTxtBx.Name = "discountTxtBx";
             this.discountTxtBx.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.discountTxtBx.Size = new System.Drawing.Size(36, 28);
+            this.discountTxtBx.Size = new System.Drawing.Size(36, 33);
             this.discountTxtBx.TabIndex = 2;
             this.discountTxtBx.Tag = "";
             this.discountTxtBx.Text = "0";
@@ -291,7 +294,7 @@
             this.percentView.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.percentView.Location = new System.Drawing.Point(296, 424);
             this.percentView.Name = "percentView";
-            this.percentView.Size = new System.Drawing.Size(74, 23);
+            this.percentView.Size = new System.Drawing.Size(93, 30);
             this.percentView.TabIndex = 17;
             this.percentView.Text = "Percent";
             // 
@@ -302,14 +305,14 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.label3.Location = new System.Drawing.Point(133, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(323, 39);
+            this.label3.Size = new System.Drawing.Size(391, 48);
             this.label3.TabIndex = 0;
             this.label3.Text = "create new product";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // createProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(658, 583);

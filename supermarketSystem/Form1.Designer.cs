@@ -44,7 +44,7 @@
             this.Loginbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Loginbutton.Font = new System.Drawing.Font("Microsoft YaHei UI", 13F, System.Drawing.FontStyle.Bold);
             this.Loginbutton.Location = new System.Drawing.Point(1, 4);
-            this.Loginbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Loginbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Loginbutton.Name = "Loginbutton";
             this.Loginbutton.Size = new System.Drawing.Size(223, 49);
             this.Loginbutton.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(232, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 49);
             this.button2.TabIndex = 1;
@@ -80,7 +80,7 @@
             // 
             this.EmailTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTextbox.Location = new System.Drawing.Point(168, 138);
-            this.EmailTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmailTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailTextbox.Name = "EmailTextbox";
             this.EmailTextbox.Size = new System.Drawing.Size(260, 26);
             this.EmailTextbox.TabIndex = 3;
@@ -100,7 +100,7 @@
             // 
             this.PasswordTextbox.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextbox.Location = new System.Drawing.Point(165, 236);
-            this.PasswordTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.PasswordChar = '*';
             this.PasswordTextbox.Size = new System.Drawing.Size(261, 28);
@@ -112,11 +112,11 @@
             this.EnterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EnterButton.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.EnterButton.Location = new System.Drawing.Point(137, 361);
-            this.EnterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EnterButton.Margin = new System.Windows.Forms.Padding(4);
             this.EnterButton.Name = "EnterButton";
             this.EnterButton.Size = new System.Drawing.Size(163, 43);
             this.EnterButton.TabIndex = 6;
-            this.EnterButton.Text = "Enter";
+            this.EnterButton.Text = "Login";
             this.EnterButton.UseVisualStyleBackColor = false;
             this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
@@ -124,7 +124,7 @@
             // 
             this.isShow.AutoSize = true;
             this.isShow.Location = new System.Drawing.Point(165, 272);
-            this.isShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.isShow.Margin = new System.Windows.Forms.Padding(4);
             this.isShow.Name = "isShow";
             this.isShow.Size = new System.Drawing.Size(125, 21);
             this.isShow.TabIndex = 7;

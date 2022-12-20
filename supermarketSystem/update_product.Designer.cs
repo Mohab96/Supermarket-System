@@ -53,20 +53,18 @@
             this.lbl_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.lbl_name.Location = new System.Drawing.Point(87, 15);
-            this.lbl_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_name.Location = new System.Drawing.Point(116, 18);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(288, 46);
+            this.lbl_name.Size = new System.Drawing.Size(358, 58);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "product name ";
             // 
-
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(44, 125);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtname.Location = new System.Drawing.Point(59, 154);
+            this.txtname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(202, 20);
+            this.txtname.Size = new System.Drawing.Size(268, 22);
             this.txtname.TabIndex = 0;
             // 
             // label2
@@ -74,10 +72,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.label2.Location = new System.Drawing.Point(40, 93);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(53, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.Size = new System.Drawing.Size(156, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "product name :";
             // 
@@ -86,10 +83,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.label3.Location = new System.Drawing.Point(40, 180);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(53, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "quantity : ";
             // 
@@ -98,10 +94,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.label4.Location = new System.Drawing.Point(40, 266);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(53, 327);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
+            this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "price :";
             // 
@@ -110,10 +105,10 @@
             this.btn_done.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_done.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_done.ForeColor = System.Drawing.Color.White;
-            this.btn_done.Location = new System.Drawing.Point(290, 392);
-            this.btn_done.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_done.Location = new System.Drawing.Point(387, 482);
+            this.btn_done.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_done.Name = "btn_done";
-            this.btn_done.Size = new System.Drawing.Size(189, 54);
+            this.btn_done.Size = new System.Drawing.Size(252, 66);
             this.btn_done.TabIndex = 4;
             this.btn_done.Text = "done";
             this.btn_done.UseVisualStyleBackColor = false;
@@ -124,10 +119,10 @@
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(37, 392);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(49, 482);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 54);
+            this.button2.Size = new System.Drawing.Size(251, 66);
             this.button2.TabIndex = 5;
             this.button2.Text = "cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -138,41 +133,40 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button3.Location = new System.Drawing.Point(290, 317);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(387, 390);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 37);
+            this.button3.Size = new System.Drawing.Size(252, 46);
             this.button3.TabIndex = 3;
             this.button3.Text = "change image";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-
             // txtquan
             // 
-            this.txtquan.Location = new System.Drawing.Point(44, 213);
-            this.txtquan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtquan.Location = new System.Drawing.Point(59, 262);
+            this.txtquan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtquan.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.txtquan.Name = "txtquan";
-            this.txtquan.Size = new System.Drawing.Size(201, 20);
+            this.txtquan.Size = new System.Drawing.Size(268, 22);
             this.txtquan.TabIndex = 1;
             this.txtquan.ValueChanged += new System.EventHandler(this.txtquan_ValueChanged);
             // 
             // txtprice
             // 
-            this.txtprice.Location = new System.Drawing.Point(44, 297);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtprice.Location = new System.Drawing.Point(59, 366);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtprice.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.txtprice.Name = "txtprice";
-            this.txtprice.Size = new System.Drawing.Size(201, 20);
+            this.txtprice.Size = new System.Drawing.Size(268, 22);
             this.txtprice.TabIndex = 2;
             this.txtprice.ValueChanged += new System.EventHandler(this.txtquan_ValueChanged);
             // 
@@ -180,8 +174,9 @@
             // 
             this.pictureBox2.Image = global::supermarketSystem.Properties.Resources.bacccck;
             this.pictureBox2.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 57);
+            this.pictureBox2.Size = new System.Drawing.Size(81, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -190,19 +185,20 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(386, 115);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 80);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(252, 304);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // update_product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(502, 466);
+            this.ClientSize = new System.Drawing.Size(669, 574);
             this.Controls.Add(this.txtprice);
             this.Controls.Add(this.txtquan);
             this.Controls.Add(this.pictureBox2);
@@ -217,7 +213,7 @@
             this.Controls.Add(this.lbl_name);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "update_product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

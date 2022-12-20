@@ -109,6 +109,12 @@
     <Compile Include="adminMainMenu.Designer.cs">
       <DependentUpon>adminMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminORuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminORuser.Designer.cs">
+      <DependentUpon>adminORuser.cs</DependentUpon>
+    </Compile>
     <Compile Include="buy_product_foradmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <EmbeddedResource Include="adminMainMenu.resx">
       <DependentUpon>adminMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adminORuser.resx">
+      <DependentUpon>adminORuser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="buy_product_foradmin.resx">
       <DependentUpon>buy_product_foradmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,9 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Resources\shopping.png" />
+    <None Include="Resources\WhatsApp Image 2022-12-20 at 7.10.04 PM.jpeg" />
     <None Include="Resources\icons8-left-100.png" />
     <None Include="Resources\add 2.0.png" />
     <None Include="Resources\bacccck.png" />
+    <None Include="Resources\admin.png" />
     <Content Include="Resources\Cart.jpeg" />
     <Content Include="Resources\abouticon.jpeg" />
     <None Include="Resources\offer3.png" />

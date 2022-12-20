@@ -83,6 +83,16 @@ namespace supermarketSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap admin {
+            get {
+                object obj = ResourceManager.GetObject("admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bacccck {
             get {
                 object obj = ResourceManager.GetObject("bacccck", resourceCulture);
@@ -173,9 +183,29 @@ namespace supermarketSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shopping {
+            get {
+                object obj = ResourceManager.GetObject("shopping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2022_12_20_at_7_10_04_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2022-12-20 at 7.10.04 PM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

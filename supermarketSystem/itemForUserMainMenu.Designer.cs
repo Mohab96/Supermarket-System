@@ -42,10 +42,9 @@
             // 
             this.prdctName.AutoSize = true;
             this.prdctName.Font = new System.Drawing.Font("Microsoft Tai Le", 15F, System.Drawing.FontStyle.Bold);
-            this.prdctName.Location = new System.Drawing.Point(12, 143);
-            this.prdctName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.prdctName.Location = new System.Drawing.Point(16, 176);
             this.prdctName.Name = "prdctName";
-            this.prdctName.Size = new System.Drawing.Size(64, 26);
+            this.prdctName.Size = new System.Drawing.Size(80, 33);
             this.prdctName.TabIndex = 1;
             this.prdctName.Text = "name";
             this.prdctName.Click += new System.EventHandler(this.prdctName_Click);
@@ -55,10 +54,9 @@
             this.prdctPrice.AutoSize = true;
             this.prdctPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 20F, System.Drawing.FontStyle.Bold);
             this.prdctPrice.ForeColor = System.Drawing.Color.ForestGreen;
-            this.prdctPrice.Location = new System.Drawing.Point(10, 176);
-            this.prdctPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.prdctPrice.Location = new System.Drawing.Point(13, 217);
             this.prdctPrice.Name = "prdctPrice";
-            this.prdctPrice.Size = new System.Drawing.Size(79, 34);
+            this.prdctPrice.Size = new System.Drawing.Size(99, 44);
             this.prdctPrice.TabIndex = 2;
             this.prdctPrice.Text = "price";
             this.prdctPrice.Click += new System.EventHandler(this.prdctPrice_Click);
@@ -66,12 +64,13 @@
             // btnadd
             // 
             this.btnadd.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnadd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnadd.Location = new System.Drawing.Point(14, 224);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnadd.Location = new System.Drawing.Point(19, 276);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(160, 72);
+            this.btnadd.Size = new System.Drawing.Size(213, 89);
             this.btnadd.TabIndex = 4;
             this.btnadd.Text = "Add to cart";
             this.btnadd.UseVisualStyleBackColor = false;
@@ -81,10 +80,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::supermarketSystem.Properties.Resources.offer3;
-            this.pictureBox1.Location = new System.Drawing.Point(122, 150);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(163, 185);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -93,10 +92,10 @@
             // 
             this.prdctPic.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.prdctPic.BackColor = System.Drawing.Color.Transparent;
-            this.prdctPic.Location = new System.Drawing.Point(14, 10);
-            this.prdctPic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.prdctPic.Location = new System.Drawing.Point(19, 12);
+            this.prdctPic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.prdctPic.Name = "prdctPic";
-            this.prdctPic.Size = new System.Drawing.Size(158, 127);
+            this.prdctPic.Size = new System.Drawing.Size(211, 156);
             this.prdctPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.prdctPic.TabIndex = 0;
             this.prdctPic.TabStop = false;
@@ -107,19 +106,18 @@
             this.lbldis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(169)))), ((int)(((byte)(48)))));
             this.lbldis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(17)))), ((int)(((byte)(5)))));
-            this.lbldis.Location = new System.Drawing.Point(133, 158);
-            this.lbldis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbldis.Location = new System.Drawing.Point(177, 194);
             this.lbldis.Name = "lbldis";
-            this.lbldis.Size = new System.Drawing.Size(31, 15);
+            this.lbldis.Size = new System.Drawing.Size(35, 18);
             this.lbldis.TabIndex = 6;
             this.lbldis.Text = "100";
             // 
             // itemForUserMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(182, 305);
+            this.ClientSize = new System.Drawing.Size(243, 375);
             this.Controls.Add(this.lbldis);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnadd);
@@ -127,7 +125,7 @@
             this.Controls.Add(this.prdctName);
             this.Controls.Add(this.prdctPic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "itemForUserMainMenu";
             this.Text = "50";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

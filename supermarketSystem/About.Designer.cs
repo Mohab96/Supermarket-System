@@ -65,7 +65,7 @@
             // 
             // roundButton3
             // 
-            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.roundButton3.BackColor = System.Drawing.Color.White;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton3.Location = new System.Drawing.Point(112, 359);
@@ -218,7 +218,7 @@
             // 
             // roundButton2
             // 
-            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton2.Location = new System.Drawing.Point(378, 549);
@@ -232,7 +232,7 @@
             // 
             // roundButton1
             // 
-            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.roundButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundButton1.Location = new System.Drawing.Point(93, 549);
