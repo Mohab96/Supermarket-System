@@ -139,5 +139,13 @@ namespace supermarketSystem
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // hiding the current form 
+            Signup signup = new Signup(); //taking object of the signup form 
+            signup.Show();  //showing the contents of the signup form
+            //this.Close();  // closing the current form to avoid memory issues
+        }
     }
 }

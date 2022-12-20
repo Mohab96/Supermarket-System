@@ -164,5 +164,12 @@ namespace supermarketSystem
             if(close == true)
             Environment.Exit(0);
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms[0].Show();
+            close = false;
+            this.Close();
+        }
     }
 }
