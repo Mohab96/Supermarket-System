@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundButton3 = new supermarketSystem.RoundButton();
-            this.pictuer1 = new supermarketSystem.pictuer();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,13 +38,15 @@
             this.linkarwa = new System.Windows.Forms.LinkLabel();
             this.linkmohab = new System.Windows.Forms.LinkLabel();
             this.linkyossif = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.roundButton2 = new supermarketSystem.RoundButton();
             this.roundButton1 = new supermarketSystem.RoundButton();
             this.pictuer2 = new supermarketSystem.pictuer();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.roundButton3 = new supermarketSystem.RoundButton();
+            this.pictuer1 = new supermarketSystem.pictuer();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,36 +62,6 @@
             this.panel1.Size = new System.Drawing.Size(369, 750);
             this.panel1.TabIndex = 3;
             this.panel1.Tag = "";
-            // 
-            // roundButton3
-            // 
-            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(112, 359);
-            this.roundButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(140, 71);
-            this.roundButton3.TabIndex = 3;
-            this.roundButton3.Text = "who are we";
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
-            // pictuer1
-            // 
-            this.pictuer1.Bordcapstyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictuer1.Bordercolor = System.Drawing.Color.RoyalBlue;
-            this.pictuer1.Bordercolor2 = System.Drawing.Color.Crimson;
-            this.pictuer1.Borderlinestyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.pictuer1.Bordersize = 4;
-            this.pictuer1.GradientAngle = 50F;
-            this.pictuer1.Image = global::supermarketSystem.Properties.Resources.Cart;
-            this.pictuer1.Location = new System.Drawing.Point(13, 2);
-            this.pictuer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictuer1.Name = "pictuer1";
-            this.pictuer1.Size = new System.Drawing.Size(344, 267);
-            this.pictuer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictuer1.TabIndex = 2;
-            this.pictuer1.TabStop = false;
             // 
             // label4
             // 
@@ -203,6 +173,18 @@
             this.linkyossif.Text = "githibyoussif";
             this.linkyossif.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkyossif_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Matura MT Script Capitals", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(162, 58);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(421, 23);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/Mohab96/Supermarket-System";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // roundButton2
             // 
             this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
@@ -248,17 +230,35 @@
             this.pictuer2.TabIndex = 14;
             this.pictuer2.TabStop = false;
             // 
-            // linkLabel1
+            // roundButton3
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Matura MT Script Capitals", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(162, 58);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(421, 23);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://github.com/Mohab96/Supermarket-System";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Location = new System.Drawing.Point(112, 359);
+            this.roundButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Size = new System.Drawing.Size(140, 71);
+            this.roundButton3.TabIndex = 3;
+            this.roundButton3.Text = "who are we";
+            this.roundButton3.UseVisualStyleBackColor = false;
+            // 
+            // pictuer1
+            // 
+            this.pictuer1.Bordcapstyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictuer1.Bordercolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.pictuer1.Bordercolor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.pictuer1.Borderlinestyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.pictuer1.Bordersize = 4;
+            this.pictuer1.GradientAngle = 50F;
+            this.pictuer1.Image = global::supermarketSystem.Properties.Resources.Cart;
+            this.pictuer1.Location = new System.Drawing.Point(13, 2);
+            this.pictuer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictuer1.Name = "pictuer1";
+            this.pictuer1.Size = new System.Drawing.Size(344, 267);
+            this.pictuer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictuer1.TabIndex = 2;
+            this.pictuer1.TabStop = false;
             // 
             // About
             // 
@@ -289,8 +289,8 @@
             this.Load += new System.EventHandler(this.About_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

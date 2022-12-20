@@ -41,7 +41,7 @@ namespace supermarketSystem
             else
             {
                 Global.currProduct.Name = txtname.Text;
-                if (Global.currProduct.Quantity == 0) Global.mainMenuProducts.Add(Global.currProduct.Id);
+                if (Global.currProduct.Quantity > 0) Global.mainMenuProducts.Add(Global.currProduct.Id);
                 Global.currProduct.Quantity = int.Parse(txtquan.Text);
                 Global.currProduct.Price = double.Parse(txtprice.Text);
                 Global.currProduct.Image = pictureBox1.ImageLocation;

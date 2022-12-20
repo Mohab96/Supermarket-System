@@ -100,9 +100,12 @@
             // money
             // 
             this.money.AutoSize = true;
-            this.money.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.money.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.money.Location = new System.Drawing.Point(107, 46);
+
+            this.money.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.money.ForeColor = System.Drawing.Color.Green;
+            this.money.Location = new System.Drawing.Point(143, 57);
+            this.money.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+
             this.money.Name = "money";
             this.money.Size = new System.Drawing.Size(90, 29);
             this.money.TabIndex = 3;
