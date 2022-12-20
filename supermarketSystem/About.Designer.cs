@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.roundButton3 = new supermarketSystem.RoundButton();
+            this.pictuer1 = new supermarketSystem.pictuer();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,11 +44,9 @@
             this.roundButton2 = new supermarketSystem.RoundButton();
             this.roundButton1 = new supermarketSystem.RoundButton();
             this.pictuer2 = new supermarketSystem.pictuer();
-            this.roundButton3 = new supermarketSystem.RoundButton();
-            this.pictuer1 = new supermarketSystem.pictuer();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,16 +63,47 @@
             this.panel1.TabIndex = 3;
             this.panel1.Tag = "";
             // 
+            // roundButton3
+            // 
+            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Location = new System.Drawing.Point(112, 359);
+            this.roundButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.Size = new System.Drawing.Size(140, 71);
+            this.roundButton3.TabIndex = 3;
+            this.roundButton3.Text = "who are we";
+            this.roundButton3.UseVisualStyleBackColor = false;
+            // 
+            // pictuer1
+            // 
+            this.pictuer1.Bordcapstyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pictuer1.Bordercolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
+            this.pictuer1.Bordercolor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
+            this.pictuer1.Borderlinestyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.pictuer1.Bordersize = 4;
+            this.pictuer1.GradientAngle = 50F;
+            this.pictuer1.Image = global::supermarketSystem.Properties.Resources.Cart;
+            this.pictuer1.Location = new System.Drawing.Point(13, 2);
+            this.pictuer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictuer1.Name = "pictuer1";
+            this.pictuer1.Size = new System.Drawing.Size(344, 267);
+            this.pictuer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictuer1.TabIndex = 2;
+            this.pictuer1.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 459);
+            this.label4.Location = new System.Drawing.Point(9, 460);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(357, 120);
             this.label4.TabIndex = 1;
             this.label4.Text = "Internet marketing program, \r\nand you will enjoy with us buying \r\neverything you " +
     "need with ease,\r\n without the need to move from home\r\n  ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -230,36 +261,6 @@
             this.pictuer2.TabIndex = 14;
             this.pictuer2.TabStop = false;
             // 
-            // roundButton3
-            // 
-            this.roundButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(112, 359);
-            this.roundButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.Size = new System.Drawing.Size(140, 71);
-            this.roundButton3.TabIndex = 3;
-            this.roundButton3.Text = "who are we";
-            this.roundButton3.UseVisualStyleBackColor = false;
-            // 
-            // pictuer1
-            // 
-            this.pictuer1.Bordcapstyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pictuer1.Bordercolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
-            this.pictuer1.Bordercolor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
-            this.pictuer1.Borderlinestyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.pictuer1.Bordersize = 4;
-            this.pictuer1.GradientAngle = 50F;
-            this.pictuer1.Image = global::supermarketSystem.Properties.Resources.Cart;
-            this.pictuer1.Location = new System.Drawing.Point(13, 2);
-            this.pictuer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictuer1.Name = "pictuer1";
-            this.pictuer1.Size = new System.Drawing.Size(344, 267);
-            this.pictuer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictuer1.TabIndex = 2;
-            this.pictuer1.TabStop = false;
-            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,8 +290,8 @@
             this.Load += new System.EventHandler(this.About_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictuer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

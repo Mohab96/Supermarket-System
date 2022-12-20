@@ -112,5 +112,10 @@ namespace supermarketSystem
             al.ShowDialog();
             this.generateControls();
         }
+
+        private void name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
