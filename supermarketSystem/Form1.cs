@@ -88,7 +88,7 @@ namespace supermarketSystem
                 MessageBox.Show("Please Fill All The Information");
                 return;
             }
-            if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text] == PasswordTextbox.Text)
+            if (Global.usersCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.usersCredentials[EmailTextbox.Text] == PasswordTextbox.Text && radioButton2.Checked == true)
             {   // checking that the Email and password are right
                 string curr_ID = currUserId(EmailTextbox.Text);  // holds the current signed in customer id
                 if (curr_ID != null)
@@ -101,7 +101,7 @@ namespace supermarketSystem
 
                 return;
             }
-            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.adminsCredentials[EmailTextbox.Text] == PasswordTextbox.Text)
+            if (Global.adminsCredentials.ContainsKey(EmailTextbox.Text) && (string)Global.adminsCredentials[EmailTextbox.Text] == PasswordTextbox.Text && radioButton1.Checked == true)
             {   // checking that the Email and password are right
 
                 string curr_ID = currAdminId(EmailTextbox.Text); // holds the current signed in admin id
@@ -146,6 +146,29 @@ namespace supermarketSystem
             Signup signup = new Signup(); //taking object of the signup form 
             signup.Show();  //showing the contents of the signup form
             //this.Close();  // closing the current form to avoid memory issues
+            clear();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+            label2.Visible = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            label2.Visible = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_login_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
