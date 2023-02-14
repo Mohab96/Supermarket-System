@@ -51,9 +51,9 @@
             this.displayPrice.Location = new System.Drawing.Point(188, 507);
             this.displayPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.displayPrice.Name = "displayPrice";
-            this.displayPrice.Size = new System.Drawing.Size(46, 29);
+            this.displayPrice.Size = new System.Drawing.Size(26, 29);
             this.displayPrice.TabIndex = 7;
-            this.displayPrice.Text = "NA";
+            this.displayPrice.Text = "0";
             // 
             // totalPriceLbl
             // 
@@ -74,7 +74,7 @@
             this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutBtn.Location = new System.Drawing.Point(407, 543);
-            this.checkoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkoutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.checkoutBtn.Name = "checkoutBtn";
             this.checkoutBtn.Size = new System.Drawing.Size(172, 49);
             this.checkoutBtn.TabIndex = 5;
@@ -103,9 +103,9 @@
             this.balance.Location = new System.Drawing.Point(109, 16);
             this.balance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.balance.Name = "balance";
-            this.balance.Size = new System.Drawing.Size(48, 29);
+            this.balance.Size = new System.Drawing.Size(27, 29);
             this.balance.TabIndex = 9;
-            this.balance.Text = "NA";
+            this.balance.Text = "0";
             // 
             // cartView
             // 
@@ -121,7 +121,7 @@
             this.proPrice});
             this.cartView.GridColor = System.Drawing.SystemColors.Desktop;
             this.cartView.Location = new System.Drawing.Point(61, 60);
-            this.cartView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cartView.Margin = new System.Windows.Forms.Padding(4);
             this.cartView.Name = "cartView";
             this.cartView.Size = new System.Drawing.Size(860, 443);
             this.cartView.TabIndex = 11;
@@ -177,7 +177,7 @@
             this.Controls.Add(this.checkoutBtn);
             this.Controls.Add(this.totalPriceLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

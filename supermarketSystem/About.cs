@@ -56,8 +56,9 @@ namespace supermarketSystem
             DialogResult result = MessageBox.Show("Are you sure you wish to Quit?", "Exit Application", MessageBoxButtons.YesNo);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                Application.Exit();
+                Environment.Exit(0);
             }
+            
         }
 
         private void roundButton1_Click(object sender, EventArgs e)
